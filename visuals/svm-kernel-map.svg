@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustrasi pemetaan kernel untuk data berbentuk lingkaran</title>
+  <desc id="desc">Di ruang asal, dua kelas berupa lingkaran tidak dapat dipisahkan oleh satu garis. Setelah memakai fitur kuadrat, proyeksi jarak kuadrat dari pusat dapat dipisahkan dengan ambang linear.</desc>
+  <defs>
+    <style>
+      text { font-family: Inter, Arial, sans-serif; }
+      .title { font-size: 22px; font-weight: 700; fill: #152b3c; }
+      .head { font-size: 16px; font-weight: 700; fill: #173c5a; }
+      .small { font-size: 13px; fill: #5c7180; }
+      .axis { stroke: #7890a0; stroke-width: 1.6; }
+      .inner { fill: #7b61a8; stroke: #513c77; stroke-width: 1.5; }
+      .outer { fill: #009e73; stroke: #006c50; stroke-width: 1.5; }
+      .threshold { stroke: #d55e00; stroke-width: 2.5; stroke-dasharray: 7 6; }
+      .panel { fill: #fbfdfe; stroke: #dfe7ec; stroke-width: 1.5; }
+    </style>
+  </defs>
+  <rect width="1000" height="470" rx="18" fill="#ffffff"/>
+  <text class="title" x="34" y="38">Kernel: batas melengkung di ruang asal dapat menjadi linear di ruang fitur</text>
+  <rect class="panel" x="28" y="66" width="420" height="330" rx="16"/>
+  <rect class="panel" x="552" y="66" width="420" height="330" rx="16"/>
+  <text class="head" x="238" y="96" text-anchor="middle">Ruang fitur asal (x₁, x₂)</text>
+  <text class="head" x="762" y="96" text-anchor="middle">Salah satu proyeksi ruang fitur baru</text>
+
+  <path class="axis" d="M78 245 H398 M238 130 V365"/>
+  <text class="small" x="393" y="280">x₁</text>
+  <text class="small" x="248" y="139">x₂</text>
+  <circle cx="238" cy="245" r="112" fill="#f2edf8" fill-opacity="0.65" stroke="#d55e00" stroke-width="2.5" stroke-dasharray="7 6"/>
+  <circle cx="238" cy="245" r="55" fill="none" stroke="#cfc4df" stroke-width="1.5"/>
+  <circle class="inner" cx="238" cy="190" r="7"/><circle class="inner" cx="277" cy="206" r="7"/>
+  <circle class="inner" cx="293" cy="245" r="7"/><circle class="inner" cx="277" cy="284" r="7"/>
+  <circle class="inner" cx="238" cy="300" r="7"/><circle class="inner" cx="199" cy="284" r="7"/>
+  <circle class="inner" cx="183" cy="245" r="7"/><circle class="inner" cx="199" cy="206" r="7"/>
+  <rect class="outer" x="232" y="110" width="12" height="12" rx="2"/><rect class="outer" x="329" y="150" width="12" height="12" rx="2"/>
+  <rect class="outer" x="374" y="239" width="12" height="12" rx="2"/><rect class="outer" x="329" y="334" width="12" height="12" rx="2"/>
+  <rect class="outer" x="232" y="366" width="12" height="12" rx="2"/><rect class="outer" x="135" y="334" width="12" height="12" rx="2"/>
+  <rect class="outer" x="90" y="239" width="12" height="12" rx="2"/><rect class="outer" x="135" y="150" width="12" height="12" rx="2"/>
+  <text class="small" x="238" y="426" text-anchor="middle">Dua kelas melingkar sulit dipisahkan dengan satu garis.</text>
+
+  <path d="M458 230 H530" stroke="#506d7d" stroke-width="3" fill="none"/>
+  <path d="M520 220 L532 230 L520 240" stroke="#506d7d" stroke-width="3" fill="none"/>
+  <text class="small" x="494" y="208" text-anchor="middle">pemetaan</text>
+  <text class="small" x="494" y="258" text-anchor="middle">φ(x)</text>
+
+  <text x="590" y="144" font-size="14" fill="#263f50">Fitur turunan, misalnya r² = x₁² + x₂²</text>
+  <path class="axis" d="M610 276 H920"/>
+  <path class="threshold" d="M770 185 V340"/>
+  <text class="small" x="770" y="176" text-anchor="middle">ambang τ</text>
+  <circle class="inner" cx="650" cy="276" r="8"/><circle class="inner" cx="690" cy="276" r="8"/>
+  <circle class="inner" cx="720" cy="276" r="8"/><circle class="inner" cx="744" cy="276" r="8"/>
+  <rect class="outer" x="812" y="268" width="16" height="16" rx="2"/><rect class="outer" x="848" y="268" width="16" height="16" rx="2"/>
+  <rect class="outer" x="883" y="268" width="16" height="16" rx="2"/><rect class="outer" x="908" y="268" width="16" height="16" rx="2"/>
+  <text class="small" x="694" y="312" text-anchor="middle">kelas dalam</text>
+  <text class="small" x="866" y="312" text-anchor="middle">kelas luar</text>
+  <text class="small" x="762" y="358" text-anchor="middle">Di proyeksi ini, ambang linear memisahkan keduanya.</text>
+  <text class="small" x="34" y="456">Skema penyederhanaan. Demonstrasi video menambahkan x₁², x₂², dan x₁x₂ sebelum melatih SVC linear.</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustrasi voting kNN dengan k sama dengan lima</title>
+  <desc id="desc">Tiga tetangga terdekat dari kelas A dan dua dari kelas B mengelilingi data uji, sehingga voting mayoritas memilih kelas A.</desc>
+  <defs>
+    <style>
+      text { font-family: Inter, Arial, sans-serif; }
+      .title { font-size: 22px; font-weight: 700; fill: #152b3c; }
+      .small { font-size: 13px; fill: #5c7180; }
+      .axis { stroke: #6f8492; stroke-width: 1.8; }
+      .grid { stroke: #e7edf1; stroke-width: 1; }
+      .a { fill: #d55e00; stroke: #8f3f00; stroke-width: 2; }
+      .b { fill: #0072b2; stroke: #004a75; stroke-width: 2; }
+      .neighborRing { fill: none; stroke: #173c5a; stroke-width: 2; }
+      .query { fill: #ffffff; stroke: #793f98; stroke-width: 3; }
+      .panel { fill: #f5f8fa; stroke: #d9e3e9; stroke-width: 1.5; }
+    </style>
+  </defs>
+  <rect width="820" height="470" rx="18" fill="#ffffff"/>
+  <text class="title" x="34" y="38">kNN: memilih kelas lewat tetangga terdekat</text>
+  <text class="small" x="34" y="61">Skema untuk k = 5; titik tidak berskala dan bukan data contoh video.</text>
+
+  <g>
+    <path class="grid" d="M75 115 H500 M75 175 H500 M75 235 H500 M75 295 H500 M75 355 H500 M135 90 V390 M195 90 V390 M255 90 V390 M315 90 V390 M375 90 V390 M435 90 V390"/>
+    <path class="axis" d="M75 390 H510 M75 390 V86"/>
+    <text class="small" x="510" y="410">x₁</text>
+    <text class="small" x="57" y="91">x₂</text>
+    <circle cx="280" cy="225" r="128" fill="#f6c85f" fill-opacity="0.08" stroke="#8a6d1d" stroke-width="2" stroke-dasharray="8 7"/>
+
+    <circle class="a" cx="242" cy="169" r="9"/><circle class="neighborRing" cx="242" cy="169" r="14"/>
+    <circle class="a" cx="330" cy="197" r="9"/><circle class="neighborRing" cx="330" cy="197" r="14"/>
+    <circle class="a" cx="300" cy="289" r="9"/><circle class="neighborRing" cx="300" cy="289" r="14"/>
+    <circle class="a" cx="160" cy="115" r="8"/>
+    <circle class="a" cx="158" cy="315" r="8"/>
+
+    <rect class="b" x="197" y="262" width="16" height="16" rx="2"/><rect class="neighborRing" x="193" y="258" width="24" height="24" rx="4"/>
+    <rect class="b" x="372" y="222" width="16" height="16" rx="2"/><rect class="neighborRing" x="368" y="218" width="24" height="24" rx="4"/>
+    <rect class="b" x="402" y="127" width="16" height="16" rx="2"/>
+    <rect class="b" x="387" y="322" width="16" height="16" rx="2"/>
+
+    <path class="query" d="M280 209 L296 225 L280 241 L264 225 Z"/>
+    <circle cx="280" cy="225" r="3.5" fill="#793f98"/>
+    <text class="small" x="292" y="252">data uji</text>
+  </g>
+
+  <g transform="translate(555 92)">
+    <circle class="a" cx="10" cy="12" r="8"/><text x="28" y="17" font-size="14" fill="#263f50">Kelas A</text>
+    <rect class="b" x="2" y="42" width="16" height="16" rx="2"/><text x="28" y="56" font-size="14" fill="#263f50">Kelas B</text>
+    <path class="query" d="M10 76 L20 86 L10 96 L0 86 Z"/><text x="28" y="91" font-size="14" fill="#263f50">Data uji</text>
+    <circle cx="10" cy="125" r="14" fill="none" stroke="#8a6d1d" stroke-width="2" stroke-dasharray="6 5"/><text x="28" y="130" font-size="14" fill="#263f50">5 tetangga terdekat</text>
+  </g>
+  <rect class="panel" x="548" y="265" width="235" height="126" rx="14"/>
+  <text x="570" y="295" font-size="16" font-weight="700" fill="#173c5a">Hasil voting</text>
+  <text x="570" y="324" font-size="15" fill="#263f50">k = 5</text>
+  <text x="570" y="350" font-size="15" fill="#263f50">3 suara A, 2 suara B</text>
+  <text x="570" y="378" font-size="16" font-weight="700" fill="#a24600">Prediksi: kelas A</text>
+  <text class="small" x="34" y="448">Garis putus-putus menandai lingkungan lima tetangga; simbol bercincin adalah tetangga yang ikut voting.</text>
+</svg>

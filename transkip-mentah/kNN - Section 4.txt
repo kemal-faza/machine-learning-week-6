@@ -1,0 +1,63 @@
+[0.92 --> 3.62] selanjutnya kita akan membahas
+[3.62 --> 6.16] mengenai kelemahan-kelemahan
+[6.16 --> 7.76] dari network classification
+[7.76 --> 10.84] jadi seperti yang kita ketahui tadi
+[10.84 --> 14.24] ketika menggunakan
+[14.24 --> 16.16] konsep dari foreign net isolation
+[16.16 --> 19.40] kita akan memiliki
+[19.40 --> 22.78] bisa saja memiliki decision boundary
+[22.78 --> 25.10] atau model classificationnya
+[25.10 --> 26.48] tidak dalam bentuk linear
+[26.48 --> 29.06] nah sekarang misalnya saja
+[30.28 --> 40.28] di sampel sebelumnya, titik ini merupakan titik biru, sehingga classification boundary-nya hanya buka garis ini saja
+[40.28 --> 49.28] tetapi sekarang kalau misalnya ternyata sample data ini tadi yang saya beli di lingkaran ini
+[49.28 --> 57.28] bukan sample data kelas biru, tetapi merupakan sample data kelas merah
+[57.28 --> 61.28] atau ini biasa disebut sebagai data outlier
+[61.28 --> 73.28] nah maka secara otomatis decision atau classification boundary-nya menjadi berubah gitu ya bertambah dengan garis yang ini
+[73.28 --> 85.28] jadi hal ini maka bisa dikatakan bahwasanya model klasifikasi atau decision boundary
+[85.28 --> 87.28] dari network
+[87.28 --> 95.28] dan nilai sniper ini merupakan salah satu algoritma yang sensitif terhadap outlier
+[95.28 --> 98.28] sangat sensitif terhadap outlier
+[98.28 --> 108.28] artinya ketika ada satu saja sampel data yang, maksudnya sampel training data gitu ya
+[108.28 --> 115.28] yang memiliki label yang
+[117.09 --> 135.47] tidak semestinya atau sebagai mislabel data maka akan mengubah decision boundarynya secara frontal
+[135.47 --> 150.19] lalu kelemahan yang kedua yaitu pada saat kita mengatakan oke ketika kita memiliki sebuah sampel data X
+[150.19 --> 160.55] maka ketika kita akan memprediksi sampel data X tersebut sebagai kelas Y itu tidak ada
+[162.50 --> 164.22] tingkat keyakinan gitu ya
+[164.22 --> 167.10] jadi tidak ada confidence interval
+[167.10 --> 168.76] yang mengatakan bahwasannya
+[168.76 --> 171.56] oke saya akan menyebutkan bahwasannya
+[171.56 --> 173.42] berapa sih probabilitasnya
+[173.42 --> 175.14] data X tersebut
+[175.14 --> 177.24] dikatakan
+[177.24 --> 178.14] sebagai kelas C
+[178.14 --> 179.66] jadi tidak ada
+[179.66 --> 182.60] tingkat keyakinan untuk
+[182.60 --> 183.90] mengatakan
+[183.90 --> 186.78] berapa probabilitasnya
+[186.78 --> 189.22] lalu yang berikutnya
+[189.22 --> 190.86] kalau tadi ke outlier itu
+[190.86 --> 193.68] niris negeri sangat sensitif
+[193.68 --> 194.56] tetapi untuk
+[194.56 --> 196.74] kelas prior
+[196.74 --> 199.30] jadi untuk kelas sebelumnya ini
+[199.30 --> 201.34] algoritma
+[201.34 --> 202.64] niris negeri ini
+[202.64 --> 204.80] sangat tidak
+[204.80 --> 206.34] sensitif
+[211.01 --> 231.89] Lalu bagaimana sih sebenarnya solusi untuk membuat supaya algoritma Nearest Neighbor ini menjadi sensitif terhadap kelas-kelas yang sudah kita ketahui sebelumnya.
+[231.89 --> 245.93] Nah, ide-nya adalah dengan membuat lebih dari satu tetangga terdekat atau satu nearest neighbor yang digunakan untuk mengambil keputusan.
+[246.63 --> 255.73] Lalu yang berikutnya kita akan menghitung jumlah kelas yang paling banyak.
+[255.73 --> 261.37] Jadi kalau misalnya kita ternyata menggunakan 5 tetangga terdekat.
+[261.37 --> 267.55] Dari 5 tetangga terdekat itu, maka kita akan mencari tahu.
+[268.69 --> 274.87] Dan misalnya ternyata ada 3 yang termasuk kelas merah dan 2 yang termasuk kelas biru.
+[274.99 --> 281.41] Berarti kan di situ dominan akan diprediksi sebagai kelas merah.
+[281.41 --> 291.27] Maka berarti kita akan mengambil kesimpulan bahwasannya sampel data uji baru termasuk.
+[291.37 --> 292.35] Dalam kelas merah.
+[293.45 --> 301.65] Dan juga pada saat kita sudah menerapkan lebih dari satu tetangga terdekat.
+[301.65 --> 314.57] Maka akan membuat model klasifikasi atau classification boundary atau decision boundary-nya menjadi lebih stabil atau dengan kata lain.
+[314.89 --> 319.65] Tadi dia tidak lagi sensitif.
+[321.37 --> 322.73] Terhadap.
+[322.73 --> 324.13] Hmm.
+[325.85 --> 355.83] Terima kasih telah menonton
+[328.69 --> 330.93] kelas priornya gitu ya

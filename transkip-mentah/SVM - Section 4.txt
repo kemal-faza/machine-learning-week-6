@@ -1,0 +1,133 @@
+[0.69 --> 7.69] Selanjutnya, kita akan masuk ke pembahasan berikutnya yaitu mengenai laluan aslinya.
+[7.69 --> 12.69] Seperti yang sudah saya jelaskan di awal-awal video ini,
+[12.69 --> 16.69] sebuah model superfacer ini,
+[16.69 --> 19.69] dia
+[20.79 --> 31.89] Terdapat pembagian atau terdapat kategori apakah termasuk ke dalam linear reseperable atau non-linear reseperable.
+[31.89 --> 36.45] Jadi kalau Anda lihat di atas ini.
+[37.93 --> 38.75] Terima kasih.
+[39.94 --> 43.04] kita bisa tahu kalau
+[44.36 --> 47.40] jempol kata yang terdiri dari
+[47.40 --> 49.96] satu buah fitur ini
+[50.32 --> 51.32] dia
+[51.54 --> 52.54] me
+[54.18 --> 57.18] yang terdiri dari satu buah foto ini
+[57.18 --> 57.92] merupakan
+[57.92 --> 59.80] data yang diselenggaris
+[60.95 --> 90.93] Jangan lupa like, share dan subscribe channel ini untuk mendapatkan informasi terbaru.
+[71.64 --> 101.62] Terima kasih telah menonton.
+[77.43 --> 89.87] Dan kita bisa lihat data yang di sebelah kanan ini menunjukkan warna biru, atau misalnya kita misalkan beri kelas positif.
+[90.87 --> 103.65] Dan selanjutnya, yang di sebelah kiri ini menunjukkan sampel data dari kelas merah, misalnya beri sebagai kelas negatif.
+[103.65 --> 123.65] Maka kita ternyata bisa menunjukkan modifikasi-modifikasi linear dalam hal ini karena ini adalah data dengan sebuah fitur, maka berarti prinsiprasi-prinsiprasi ini berupa garis linear.
+[126.45 --> 137.45] selanjutnya bagaimana kalau misalnya kita bercinta dengan data masih di posisi
+[139.54 --> 142.22] terdiri dari sebuah fitur yaitu X
+[142.22 --> 144.30] ini, tetapi kita lihat
+[144.30 --> 146.76] kelas merahnya
+[146.76 --> 148.46] ini ada di sisi sebelah
+[148.46 --> 150.12] kiri dan di sisi sebelah kanan
+[150.12 --> 152.38] lalu ada kelas kiri yang ada
+[152.38 --> 154.80] di tangan
+[154.80 --> 156.50] sekarang kalau
+[156.50 --> 158.84] misalnya kita mau
+[158.84 --> 159.88] apa namanya
+[159.88 --> 162.30] membuat
+[162.30 --> 164.44] fungsi persamaan
+[164.44 --> 165.62] linear, misalnya
+[165.62 --> 167.42] fungsi persamaan
+[167.42 --> 170.18] linearnya itu ada di
+[170.18 --> 172.00] sini
+[172.00 --> 174.26] misalnya, otomatis akan
+[174.26 --> 176.12] ini sebagai kelas positif
+[176.12 --> 178.32] ini sebagai kelas negatif, karena ada misklasifat
+[178.32 --> 180.54] segala macam, lalu kalau misalnya
+[180.54 --> 182.62] saya posisikan di sini
+[182.62 --> 186.02] juga sama, gitu ya
+[186.02 --> 188.88] karena ini misklasifat
+[188.88 --> 189.98] dan ini juga misklasifat
+[189.98 --> 191.74] misalnya kita akan dimana itu
+[191.74 --> 193.96] akan ada banyak data yang
+[193.96 --> 196.00] misklasifat, sedangkan
+[196.00 --> 197.22] kita akan membangun
+[197.22 --> 199.36] modul klasifikasi kan harapannya
+[199.36 --> 201.26] yang misklasifatnya
+[201.26 --> 203.56] rendah, gitu ya, maka di sini
+[203.56 --> 205.58] biasanya yang perlu kita lakukan
+[205.58 --> 207.38] apa yang perlu kita lakukan adalah kita akan
+[207.38 --> 209.08] memetakan ke dalam
+[209.08 --> 211.46] ruang dimensi yang lebih
+[211.46 --> 213.82] tinggi dalam hal ini, karena awalnya
+[213.82 --> 215.76] adalah hanya terdiri
+[215.76 --> 217.48] satu keluar fitur, gitu ya, atau
+[217.48 --> 220.12] one dimension, gitu ya, maka
+[220.12 --> 221.74] kita bisa memetakan
+[221.74 --> 223.32] ke dalam ruang dimensi yang lebih tinggi
+[223.32 --> 225.30] dalam hal ini adalah ruang
+[225.30 --> 226.74] dua dimensi
+[227.22 --> 230.16] dimana ini adalah
+[230.16 --> 232.32] nilai X
+[232.32 --> 234.38] lalu di atas ini adalah nilai
+[234.38 --> 236.28] X
+[236.28 --> 238.12] kuadratnya, ya, jadi
+[238.12 --> 240.22] setiap titik-titik ini
+[240.22 --> 241.56] akan kita
+[241.56 --> 244.66] memetakan
+[244.66 --> 246.66] menjadi ruang dimensi yang lebih tinggi
+[246.66 --> 247.56] jadi misalnya ini
+[247.56 --> 248.94] kita lakukan di sini
+[251.77 --> 257.45] misalnya ini 1 2, gede-gede, dan jumlahnya akan di tekan item seterusnya
+[257.45 --> 269.73] Nah, maka misalnya yang terbentuk adalah gambar seperti ini, maka setelah ini kita bisa membuat harddisk lainnya
+[271.14 --> 276.64] Atau dengan kata lain, data yang kita menggunakan sekarang sudah lumiaris seperti itu.
+[276.64 --> 286.66] Jadi kita bisa membuat versi lumiar untuk memisahkan kelas biru dengan kelas merah.
+[292.87 --> 306.07] Kondisi seperti ini, jadi pemetaan data ke dalam ruang dimensi yang lebih tinggi ini sering disebut sebagai kernel tricks.
+[306.07 --> 312.27] Jadi pada saat kita menerapkan kernel tricks, sebenarnya kita menerapkan satu fungsi matematis tertentu.
+[313.27 --> 321.95] Ini contoh yang lain, data yang awalnya ada di dua dimensi, lalu disini sama, kita kalau bisa membuat garis dimanapun,
+[321.95 --> 328.15] itu hasilnya pasti akan banyak memisikasi, maka kita akan meletakkan di dalam ruang dimensi yang lebih tinggi.
+[328.15 --> 336.35] Dalam hal ini saya meletakkan di dalam ruang tiga dimensi, ternyata juga datanya sudah bisa linearisable.
+[336.35 --> 342.55] Jadi di dalam ruang tiga dimensi berarti, apa namanya,
+[344.42 --> 347.64] mode pengklasifikasinya
+[347.64 --> 350.16] berupa
+[350.16 --> 351.58] fungsi linear
+[351.58 --> 353.88] tapi fungsi linear ini membentuk
+[353.88 --> 354.98] suatu bidang
+[354.98 --> 356.72] yang biasa disebut sebagai
+[356.72 --> 359.62] nah lalu
+[360.79 --> 368.87] Proses perubahan dari ruang dimensi yang rendah ke dalam ruang dimensi yang tinggi itu
+[368.87 --> 371.71] Anda disebut sebagai kernel tricks
+[371.71 --> 379.03] Dimana kita menerapkan fungsi kernel berupa suatu fungsi matematis tertentu
+[379.03 --> 380.91] Nah sekarang ada apa saja
+[380.91 --> 385.69] Nah disini yang paling penting misalnya ada polinomial
+[385.69 --> 386.81] Ya polinomial
+[386.81 --> 397.47] Ya misalnya disini ada xy maka akan kita kan jadi x transpose dikalikan y pangkat d
+[397.47 --> 398.61] Ini adalah derajatnya
+[398.61 --> 404.23] Nah lalu kalau bagaimana kalau misalnya ada suatu konsantra tertentu
+[404.23 --> 407.03] Jadi ini kan kalau lewatnya 0,0
+[407.03 --> 409.45] Nah ini kalau misalnya ada konsantra tertentu maka kita tambahkan c
+[409.45 --> 413.71] Berarti derajatnya sampai dengan ke d
+[413.71 --> 415.67] Lalu ada
+[415.67 --> 417.09] Kursi yang rbf
+[417.09 --> 419.07] Jadi ini rumusnya
+[419.07 --> 422.55] Lalu ada sigmoid
+[422.55 --> 424.25] Atau tangan hiperbolic
+[424.25 --> 428.71] Dari sigmoid
+[428.71 --> 429.59] Jadi itu juga bisa
+[429.59 --> 431.39] Dan lain sebagainya
+[431.39 --> 433.83] Dalam perkembangannya penelitian
+[433.83 --> 435.81] Si svm ini
+[436.98 --> 439.58] muncul berbagai macam kernel
+[439.58 --> 441.82] jadi karena kondisi data
+[441.82 --> 443.52] yang semakin kompleks, akhirnya
+[443.52 --> 445.66] tidak bisa disesuaikan dengan kernel
+[445.66 --> 447.76] misalnya yang paling sederhana polinom
+[447.76 --> 448.88] lalu muncul yang berbeda
+[448.88 --> 452.32] lalu ternyata tidak bisa muncul yang lain-lain
+[453.67 --> 464.81] Nah, kernel linear ini digunakan ketika data yang regulasi-regulasi dapat terpisah dengan sebuah garis atau hyperplane, seperti yang contoh-contoh sebelumnya.
+[465.21 --> 467.19] Nah, terus ada kernel non-linear.
+[467.19 --> 474.57] Nah, non-linear ini memang ketika datanya ini tidak dapat dibisahkan secara linear, gitu ya.
+[474.57 --> 483.89] Nah, maka kalau tidak bisa dibisahkan secara linear atau dengan kata lain, misalnya kalau yang contoh-contoh sebelumnya ini kan sebenarnya fungsi lingkaran, gitu ya.
+[483.89 --> 501.59] Nah, maka di sini perlu kita menerapkan suatu kernel, karena apanya ketika sudah dipetakan gerang-gerang dengan silip yang lebih tinggi, kita bisa menerapkan fungsi linear, gitu ya.
+[501.59 --> 504.55] Atau jadi, kita jadi memiliki classifier.
+[504.57 --> 508.05] Terdalam bentuk linear atau hyperplane-nya adalah.
+[510.69 --> 513.93] secara singkat mengenai
+[513.93 --> 515.57] kernel di SVM
+[515.57 --> 516.73] kurang lebih seperti itu
+[520.58 --> 536.38] Ya, mungkin nanti selanjutnya akan ada penjelasan sedikit mengenai salah satu pengenal yang non-linear ini, saya jelaskan pada video yang selanjutnya.
+[537.56 --> 539.14] Oke, terima kasih.

@@ -1,0 +1,176 @@
+[1.37 --> 10.73] Masuk ke bagian kedua, kita akan membahas konsep matematis yang mendasari SVM, khususnya yaitu linear SVM.
+[11.73 --> 24.73] Sekarang, coba kita perhatikan untuk bisa mendapatkan hyperplane atau classifier boundary ini.
+[25.69 --> 29.59] Maka kita akan
+[32.04 --> 35.30] tiga buah
+[35.30 --> 36.44] garis gitu ya
+[36.44 --> 38.70] kita belum men-spesifikasikan
+[38.70 --> 40.92] tiga buah garis, yang pertama adalah
+[40.92 --> 43.00] hyperplane itu sendiri
+[43.00 --> 45.34] yang akan kita cari
+[45.34 --> 46.48] lalu
+[46.48 --> 49.06] yang kedua yaitu
+[49.06 --> 50.40] plusplane
+[51.37 --> 61.25] atau garis yang melalui support vector yang merepresentasikan kelas positif
+[61.25 --> 65.99] dan yang ketiga adalah minus plane
+[65.99 --> 75.71] atau garis yang melalui support vector yang merepresentasikan kelas negatif atau minus satu
+[75.71 --> 78.15] jadi positif atau kelas plus satu
+[78.15 --> 83.13] nah berdasarkan ketiga garis tersebut
+[83.13 --> 90.15] maka kita memiliki dua buah area
+[90.15 --> 97.05] yaitu area yang pertama yang ada di atas plus plane ini
+[97.05 --> 104.41] atau disebut sebagai area yang akan dikrediksi sebagai kelas plus satu
+[104.41 --> 108.13] dan yang kedua adalah area yang
+[108.13 --> 110.89] berada di bawah minus plane
+[110.89 --> 116.71] yaitu area yang akan dikrediksi sebagai kelas minus satu
+[116.71 --> 124.67] nah pertanyaan berikutnya adalah bagaimana caranya kita merepresentasikan hal-hal tersebut secara matematis
+[124.67 --> 128.31] berarti dalam artian
+[130.33 --> 134.67] Hai berdasarkan n-input dimensi gitu
+[135.25 --> 137.25] Sekarang
+[138.01 --> 147.33] kita bisa mendefinisikan plus plan disini sebagai fungsi x
+[147.33 --> 151.25] dimana wx plus b sama dengan plus 1
+[151.25 --> 157.03] sedangkan untuk minus plan disini kita bisa definisikan sebagai fungsi x
+[157.03 --> 161.95] dimana wx plus b nya sama dengan minus 1
+[161.95 --> 165.53] dan untuk proses klasifikasi
+[165.53 --> 171.01] maka bisa dilakukan dengan penonton sebagai berikut
+[171.01 --> 178.29] jika wx plus b jadi area yang diatas dari plus plan
+[178.29 --> 180.47] lebih besar dari 1
+[180.47 --> 184.25] maka akan diklasifikasikan sebagai kelas plus 1
+[184.25 --> 191.43] lalu untuk jika wx plus b kurang dari minus 1
+[191.43 --> 195.43] maka akan diklasifikasikan sebagai kelas minus
+[195.53 --> 200.37] lalu bagaimana dengan area yang ada diantaranya
+[200.37 --> 205.79] jadi ketika minus 1 kurang dari wx plus b kurang dari 1
+[205.79 --> 214.17] maka area tersebut merupakan area yang akan membentuk margin
+[219.65 --> 226.97] Bagaimana caranya kita menghitung lebar margin
+[226.97 --> 230.11] atau disini diatakan sebagai M besar
+[230.11 --> 236.31] sebagai fungsi dari W dan B.
+[237.67 --> 245.21] Hai nah pada pembahasan sebelumnya kita sudah memiliki tamu definisikan
+[245.21 --> 251.31] Mbah plus plan dan juga minus plan
+[253.14 --> 257.24] Maka selanjutnya kita bisa menetapkan klaim bahwasannya
+[257.24 --> 268.02] vektor W tersebut merupakan vektor yang tegak lurus terhadap plus plan.
+[268.02 --> 275.18] Nah pertanyaannya adalah kenapa kita bisa mengatakan bahwasannya
+[275.18 --> 282.14] vektor W tersebut merupakan vektor yang tegak lurus terhadap plus plan.
+[282.14 --> 291.30] Nah disini misalkan kita memiliki dua buah vektor yaitu vektor U dan vektor W
+[291.30 --> 306.20] yang berada pada plus plan maka akan berlaku nilai W.U-V disini
+[306.20 --> 309.54] dia akan bernilai sama dengan 0.
+[309.54 --> 312.02] Atau dengan kata lain berarti
+[312.02 --> 314.02] Eee...
+[314.90 --> 315.90] memiliki
+[315.90 --> 318.30] sifat
+[318.30 --> 320.10] ortogonal
+[320.10 --> 321.52] yang berarti
+[321.52 --> 323.34] W
+[323.34 --> 325.06] bisa dikatakan
+[325.06 --> 327.06] tegak lurus terhadap
+[327.06 --> 327.86] plus plane
+[327.86 --> 330.24] dan tentunya hal
+[330.24 --> 332.56] yang sama ini
+[332.56 --> 333.84] juga
+[333.84 --> 336.80] akan berlaku pada
+[336.80 --> 338.50] minus plane
+[338.50 --> 341.38] yaitu vektor W juga akan
+[341.38 --> 343.42] tegak lurus terhadap
+[343.42 --> 345.04] minus plane
+[347.11 --> 377.09] Terima kasih.
+[349.35 --> 360.87] Selanjutnya, misalkan kita menyebut titik yang ada di dalam minus plane sebagai x-
+[360.87 --> 372.21] dan titik pada plus plane yang terdekat dengan x- disini dinotasikan sebagai x+.
+[373.14 --> 394.54] Maka kita bisa mengklaim bahwasannya X plus sama dengan X min ditambah dengan lambda kali W untuk beberapa nilai B.
+[394.54 --> 400.80] Nah, berikutnya lagi, kenapa kita bisa mengklaim kondisi ini?
+[400.80 --> 408.80] Nah, sekarang kita perhatikan, jadi misalnya...
+[411.05 --> 419.87] Kita memiliki garis dari X minus ke X plus.
+[420.82 --> 430.58] merupakan garis yang tegak lurus terhadap minus plane maupun plus plane
+[430.58 --> 438.78] sehingga untuk bisa bergerak dari X minus ke X
+[441.21 --> 444.71] ini minusnya bergerak dari
+[444.71 --> 447.61] X minus ke X plus
+[447.61 --> 449.91] akan menempuh
+[449.91 --> 452.83] jarak tertentu
+[452.83 --> 456.75] yang searah dengan
+[456.75 --> 458.13] W
+[459.27 --> 468.11] Sehingga bisa dinotasikan juga sebagai tadi X plus sama dengan X min plus lambda kali W.
+[469.17 --> 473.91] Nah, selanjutnya berarti kita sudah memiliki berapa persamaan.
+[474.31 --> 482.11] Yang pertama yaitu W dot X plus ditambah B sama dengan persatu.
+[482.35 --> 485.81] Yang kedua W dot X min plus B sama dengan minus satu.
+[485.81 --> 494.57] Lalu yang ketiga X plus sama dengan X min plus lambda kali W.
+[494.89 --> 507.71] Lalu yang berikutnya kita bisa mendefinisikan margin atau M ini sebagai jarak atau besar antara X plus min X min.
+[507.71 --> 515.07] Dan selanjutnya otomatis kita akan bisa dengan mudah.
+[515.81 --> 523.15] Mendapatkan M sebagai fungsi dari W dan B.
+[524.65 --> 538.85] Sekarang coba kita perhatikan dari persamaan pertama yaitu w.x plus ditambah b sama dengan plus 1
+[538.85 --> 547.61] dimana kita bisa mensubstitusikan dari persamaan ketiga yaitu x plus sama dengan x min plus lambda w
+[547.61 --> 555.23] kita substitusikan maka akan menghasilkan w dikalikan x
+[556.28 --> 557.20] Min jadi
+[558.81 --> 561.13] ini ya, kita masukkan
+[561.13 --> 561.69] ke sini
+[561.69 --> 564.45] maka hasilnya w kali
+[564.45 --> 566.93] x min plus
+[566.93 --> 568.85] lambda w plus b sama dengan
+[568.85 --> 569.37] 1
+[569.37 --> 572.49] maka akan sama dengan w
+[572.49 --> 574.67] ke dot x min
+[574.67 --> 576.99] plus b
+[576.99 --> 578.47] ditambah
+[578.47 --> 580.47] lambda w dot w
+[580.47 --> 581.43] sama dengan 1
+[583.56 --> 599.70] Nah, dari persamaan kedua, kita tahu bahwasannya w.xmin plus b sama dengan minus 1.
+[599.70 --> 602.70] Sehingga nilai ini.
+[604.73 --> 606.19] sama dengan 1
+[606.19 --> 607.47] atau minus 1
+[607.47 --> 610.07] plus lambda kali w.w
+[610.07 --> 611.17] sama dengan 1
+[611.17 --> 613.79] ini pindah ruas ke kanan
+[613.79 --> 615.21] maka akan menghasilkan
+[615.21 --> 617.03] lambda sama dengan
+[618.58 --> 619.58] 2
+[620.26 --> 623.26] 1, 2, 3
+[623.46 --> 624.46] 4
+[630.02 --> 636.08] Hai dan selanjutnya dari bersamaan ini ya eh
+[636.08 --> 666.06] Terima kasih telah menonton
+[636.90 --> 637.90] X
+[640.10 --> 641.70] plus min
+[641.70 --> 644.26] x min
+[644.26 --> 646.60] maka disini
+[646.60 --> 648.30] akan
+[649.86 --> 651.38] Sama dengan
+[651.38 --> 654.28] Bisa saya tuliskan gini ya
+[654.28 --> 655.06] Awalnya ya
+[655.06 --> 656.96] Dari ini
+[658.82 --> 660.30] Berarti...
+[661.62 --> 662.38] X-Men
+[664.21 --> 666.23] Blast from the way
+[667.64 --> 669.76] Min X Min
+[669.76 --> 670.54] Ini kan ya
+[670.54 --> 672.30] Ini hapus
+[672.30 --> 673.60] Maka hasilnya adalah
+[673.60 --> 674.88] M sama dengan
+[677.14 --> 679.20] besar jarak dari lambda
+[679.20 --> 680.94] W
+[680.94 --> 682.46] karena
+[682.46 --> 684.42] lambda ini
+[684.42 --> 687.02] konstanta maka bisa kita
+[687.02 --> 689.06] keluarkan jadi lambda
+[689.06 --> 690.18] kali panjang
+[690.18 --> 692.44] vector W dimana
+[692.44 --> 695.32] panjang vector W bisa kita tuliskan
+[695.32 --> 697.02] sebagai akar
+[697.02 --> 698.44] dari W.W
+[699.46 --> 701.82] maka kita mendapatkan
+[701.82 --> 703.56] lambda kali akat
+[703.56 --> 704.84] W dot W
+[704.84 --> 706.44] dan dari
+[706.44 --> 709.00] persamaan sebelumnya kita tahu bahwa
+[709.00 --> 711.08] lambda sendiri sama dengan
+[711.08 --> 714.22] 2 per W dot W
+[714.22 --> 716.30] ini kita
+[716.30 --> 718.40] substitusikan
+[719.73 --> 721.95] 2 per W dot W
+[721.95 --> 724.13] dikalikan dengan akar
+[724.13 --> 726.03] W dot W
+[726.03 --> 727.03] atau bisa dituliskan
+[727.03 --> 729.67] 2 akar W dot W
+[729.67 --> 731.65] dibagi W dot W
+[731.65 --> 733.13] atau hasil akhirnya adalah
+[733.13 --> 735.41] 2 per
+[735.41 --> 736.83] akar
+[736.83 --> 739.73] W dot W
+[740.89 --> 751.79] Dan dari situ kita bisa tahu bahwa rumus margin-nya adalah ini atau dengan kata lain ini merupakan objektif function-nya.
+[753.67 --> 756.19] Jadi kita akan
+[757.89 --> 768.03] Mencari nilai margin yang paling maksimal atau nilai 2 per akar W yang paling.
+[769.06 --> 777.70] besar Nah selanjutnya Bagaimana caranya ya kita tinggal eh apa namanya menantinya tinggal
+[777.70 --> 788.20] menerapkan konsep kuadratrik kuadratik kuadratik programming untuk bisa mendapatkan nilai m tersebut

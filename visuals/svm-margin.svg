@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">Hyperplane dan margin pada contoh SVM linear</title>
+  <desc id="desc">Garis x satu tambah x dua dikurangi satu sama dengan nol memisahkan kelas positif dan negatif. Tiga titik bercincin adalah support vector.</desc>
+  <defs>
+    <style>
+      text { font-family: Inter, Arial, sans-serif; }
+      .title { font-size: 22px; font-weight: 700; fill: #152b3c; }
+      .small { font-size: 13px; fill: #5c7180; }
+      .axis { stroke: #586f7f; stroke-width: 1.7; }
+      .margin { stroke: #277da1; stroke-width: 2; stroke-dasharray: 8 7; }
+      .hyper { stroke: #d55e00; stroke-width: 3.5; }
+      .sv { fill: none; stroke: #172f42; stroke-width: 2; stroke-dasharray: 4 3; }
+      .pos { fill: #d55e00; stroke: #8f3f00; stroke-width: 2; }
+      .neg { fill: #0072b2; stroke: #004a75; stroke-width: 2; }
+    </style>
+  </defs>
+  <rect width="960" height="560" rx="18" fill="#ffffff"/>
+  <text class="title" x="34" y="38">SVM linear: hyperplane, margin, dan support vector</text>
+
+  <rect x="100" y="60" width="420" height="420" fill="#fbfdfe" stroke="#dfe7ec"/>
+  <polygon points="100,130 450,480 520,410 205,60" fill="#d8edf3" fill-opacity="0.78"/>
+  <path class="axis" d="M100 305 H535 M275 480 V48"/>
+  <path class="margin" d="M100 130 L450 480"/>
+  <path class="hyper" d="M100 60 L520 480"/>
+  <path class="margin" d="M205 60 L520 410"/>
+
+  <text class="small" x="518" y="324">x₁</text>
+  <text class="small" x="283" y="57">x₂</text>
+  <text class="small" x="276" y="497">0</text>
+  <text class="small" x="105" y="501">−2.5</text>
+  <text class="small" x="498" y="501">3.5</text>
+  <text class="small" x="62" y="66">3.5</text>
+  <text class="small" x="66" y="480">−2.5</text>
+
+  <circle class="sv" cx="345" cy="235" r="16"/>
+  <circle class="pos" cx="345" cy="235" r="9"/>
+  <rect class="sv" x="329" y="359" width="32" height="32" rx="2"/>
+  <rect class="neg" x="337" y="367" width="16" height="16" rx="2"/>
+  <rect class="sv" x="189" y="219" width="32" height="32" rx="2"/>
+  <rect class="neg" x="197" y="227" width="16" height="16" rx="2"/>
+  <rect class="neg" x="197" y="367" width="16" height="16" rx="2"/>
+
+  <text x="357" y="223" font-size="13" fill="#263f50">(1, 1)</text>
+  <text x="363" y="388" font-size="13" fill="#263f50">(1, −1)</text>
+  <text x="142" y="226" font-size="13" fill="#263f50">(−1, 1)</text>
+  <text x="157" y="385" font-size="13" fill="#263f50">(−1, −1)</text>
+
+  <g transform="translate(590 104)">
+    <path class="hyper" d="M0 0 H58"/><text x="72" y="5" font-size="15" fill="#263f50">Hyperplane: x₁ + x₂ − 1 = 0</text>
+    <path class="margin" d="M0 40 H58"/><text x="72" y="45" font-size="15" fill="#263f50">Batas margin: wᵀx + b = ±1</text>
+    <circle class="pos" cx="10" cy="88" r="8"/><text x="72" y="93" font-size="15" fill="#263f50">Kelas +1</text>
+    <rect class="neg" x="2" y="119" width="16" height="16" rx="2"/><text x="72" y="133" font-size="15" fill="#263f50">Kelas −1</text>
+    <circle class="sv" cx="10" cy="171" r="14"/><text x="72" y="176" font-size="15" fill="#263f50">Penanda putus-putus: support vector</text>
+  </g>
+  <rect x="584" y="334" width="336" height="110" rx="14" fill="#f2f7fa" stroke="#d8e3e9"/>
+  <text x="606" y="366" font-size="15" font-weight="700" fill="#173c5a">Untuk contoh ini</text>
+  <text x="606" y="393" font-size="14" fill="#263f50">w = (1, 1), b = −1</text>
+  <text x="606" y="420" font-size="14" fill="#263f50">Lebar margin = 2 / ||w||</text>
+  <text class="small" x="34" y="535">Tiga titik bercincin berada tepat pada batas margin; titik (−1, −1) berada lebih jauh dari hyperplane.</text>
+</svg>

@@ -1,0 +1,112 @@
+[1.05 --> 8.27] Setelah kita mendapatkan intuisi yang mendasari pengembangan algoritma nearest neighbor,
+[8.27 --> 19.17] pada seksion ketiga ini kita akan membahas mengenai bagaimana cara kerja dari algoritma nearest neighbor sebagai
+[22.20 --> 23.86] algoritma untuk
+[23.86 --> 25.18] klasifikasi
+[25.18 --> 27.96] sekarang kita lihat
+[27.96 --> 28.82] ketika kita
+[28.82 --> 31.02] memiliki
+[31.02 --> 32.72] data
+[34.98 --> 54.86] Dataset yang berbeda dengan tadi gitu ya kalau tadi itu kan semua warna sampel-sampel data dari kelas merah mengumpul di bagian kanan atas sedangkan untuk sampel-sampel data kelas biru terdapat di bagian kiri bawah gitu.
+[54.86 --> 70.82] Nah sekarang bagaimana kalau pola sebaran datanya seperti ini gitu ya jadi ya terlihat apa namanya sangat beragam gitu ya.
+[70.82 --> 81.20] Nah sekarang bagaimana ketika sama masih kasus yang sama ya kita memiliki dua kelas yaitu kelas biru dan kelas merah.
+[81.80 --> 84.82] Nah sekarang kita punya sama-sama punya data berbeda.
+[84.86 --> 95.28] Baru gitu tetapi posisinya ada di seperti yang ada di gambar gitu ya di bagian ini.
+[96.28 --> 108.92] Nah sekarang pertanyaannya kita akan memprediksi sampel data tersebut sebagai kelas biru atau kelas merah gitu ya.
+[108.92 --> 112.92] Kalau menggunakan intuisi yang tadi sudah disebutkan sebelumnya.
+[113.60 --> 114.84] Maka saya.
+[114.86 --> 123.86] Saya bisa mengatakan bahwasannya untuk satu posisi yang terdekat kita bisa mengatakan bahwasannya sampel data tersebut termasuk ke dalam kelas biru.
+[123.86 --> 144.78] Nah akan tetapi kalau kita memperhatikan lebih banyak sampel data maka misalnya kita membandingkan dengan apa namanya 4 ya 4 atau 5 lah mungkin ya 5 5 buah sampel data terdekat.
+[144.86 --> 155.86] Maka kita bisa melihat bahwasannya dia dekat dengan sampel data biru hanya berjumlah satu ya dengan ini.
+[155.86 --> 165.86] Nah tetapi ketika kita bandingkan dengan sampel data merah meskipun tidak yang paling dekat tapi jumlahnya lebih banyak jadi ada satu di sini 2 3.
+[167.24 --> 176.82] Nah, dengan kondisi seperti itu maka berarti akan sedikit memberikan
+[178.82 --> 194.40] kebingungan gitu ya. Jadi apakah memang harus dikategorikan sebagai sampel atau harus diprediksi atau diklasifikasikan sebagai kelas biru atau kelas merah.
+[195.86 --> 206.86] nah selain menggunakan intuisi tadi kita juga bisa memandangnya lebih jauh lagi gitu ya
+[206.86 --> 214.02] jadi kita tidak melihat ketika ada satu buah sampel data uji kita akan uji dia dekat dengan mana
+[214.02 --> 233.22] tapi justru kita akan membuat batasan atau boundary untuk menunjukkan bahwasannya area mana saja sih yang bisa dikatakan sebagai area yang mirip dengan sampel data ini misalnya
+[233.22 --> 242.66] lalu di area mana lagi yang bisa dikategorikan sebagai sampel data yang mirip dengan
+[244.34 --> 248.48] sampel data kedua ini
+[248.48 --> 250.20] jadi di area yang mana saja
+[250.20 --> 251.72] di sekelilingnya yang bisa dikatakan
+[251.72 --> 254.20] kalau ada data di situ berarti kita akan
+[254.20 --> 255.18] memprediksi sebagai
+[255.18 --> 258.48] kelas biru dan seterusnya
+[261.62 --> 269.76] Nah untuk membentuk atau untuk bisa membuat boundary atau batasan tersebut
+[269.76 --> 277.94] Maka kita bisa membuat yang namanya diagram voronoi
+[277.94 --> 281.88] Atau biasa juga dikenal sebagai voronoi tessellation
+[281.88 --> 291.38] Dimana voronoi tessellation ini akan membagi setiap ruang yang ada di dalam gambar ini
+[291.38 --> 297.26] Kedalam area-area yang tidak tumpang tindih
+[297.26 --> 308.36] Nah biasanya satu batasan area ini hanya akan terdiri dari satu buah sampel data
+[308.36 --> 312.36] Nah lalu yang berikutnya
+[312.36 --> 321.36] Batasan ini juga akan memisahkan dua buah sampel data
+[321.38 --> 328.64] Di posisi yang jaraknya sama
+[328.64 --> 334.92] Jadi boundary yang terbentuk antara misalnya titik ini dengan titik ini
+[334.92 --> 343.52] Maka kita akan membentuk batasan dimana jarak antara titik yang di atas dengan misalnya disini ya batasan ini
+[343.52 --> 346.56] Jarak antara titik yang di atas disini
+[346.56 --> 350.00] Dengan jarak antara sini-sini
+[351.38 --> 352.92] Ini merupakan jarak yang
+[354.92 --> 368.00] sama seperti itu Nah tapi nantinya kita membuatnya untuk eh ke seluruhan sampel data yang ada
+[368.85 --> 378.03] Hai nah seneng nanti saya akan menjelaskan dengan sampel data yang akan coba saya gambarkan supaya
+[378.03 --> 384.27] bisa lebih memahami bagaimana foronet isolation ini bisa terbentuk atau dibuat Oke
+[386.74 --> 394.92] di sini saya akan mencoba mencontohkan bagaimana membentuk voronoi tessellation
+[394.92 --> 400.20] dengan sampel data yang coba saya atur jaraknya agak lebih jauh
+[400.20 --> 402.68] supaya lebih bisa dibahami
+[402.68 --> 408.04] jadi intinya misalnya saya akan fokus menggambar area
+[408.04 --> 414.40] mana saja sih sebenarnya yang menjadi boundary atau batasan dari sampel data ini
+[414.40 --> 415.88] ini saya beli hitam-hitam
+[415.88 --> 420.50] ini sampel data yang akan kita buatkan boundary-nya
+[420.50 --> 429.38] nah caranya tadi kita akan membentuk sebuah area yang tidak overlap
+[429.38 --> 436.98] jadi nanti untuk satu area berarti hanya berisi sampel data biru yang saya hitam-hitam ini saja
+[436.98 --> 445.80] caranya bagaimana kita akan membagi area yang dibentuk oleh
+[445.80 --> 445.86] dan kita akan membagi area yang dibentuk oleh data yang kita buatkan
+[445.86 --> 447.28] jadi kita akan membuat dua buah sampel data
+[447.28 --> 453.26] dimana kita akan memberikan batasan
+[453.26 --> 457.78] dimana jarak antara satu sampel data dengan batasan
+[457.78 --> 462.76] dan jarak antara batasan dengan sampel data yang lain ini bernilai sama
+[462.76 --> 465.90] nah caranya misalnya kita lihat di sini
+[465.90 --> 469.24] jaraknya seperti ini gitu ya sejauh ini
+[469.24 --> 472.28] maka detik tengahnya misalnya ada di sini
+[473.38 --> 480.36] Nah, selanjutnya kita bisa membuat gambar garis tegak lurus.
+[481.81 --> 483.15] Seperti ini
+[483.15 --> 485.23] Lalu sebelumnya selanjutnya
+[485.23 --> 486.21] Jarakin dengan ini
+[487.35 --> 500.07] Misalnya disini ya, terus saya buat kembali garis tegak lurus, lalu jarak ini dengan ini, tengah-tengahnya misalnya disini, saya buatkan lagi garis tegak lurus.
+[501.23 --> 507.79] Antara ini dengan ini, saya buatkan lagi, tengah-tengah saya buatkan lagi garis tegak lurus.
+[508.59 --> 513.89] Ini dengan ini, titik tengahnya ada disini, saya buatkan garis tegak lurus.
+[515.78 --> 518.24] lalu antara ini dengan ini
+[518.24 --> 520.30] titik tengahnya disini
+[522.44 --> 524.44] saya buat ganda riset-riset
+[525.19 --> 531.61] Nah, maka kita bisa melihat ada titik perpotongan di sini.
+[534.50 --> 535.50] Sampai jumpa.
+[544.82 --> 574.80] Terima kasih telah menonton
+[549.17 --> 550.89] bisa menghapus
+[552.18 --> 555.18] Keritik berpotongan dari depan dan depan
+[570.37 --> 572.27] Sampai jumpa lagi.
+[573.83 --> 574.55] Terima kasih.
+[579.75 --> 592.11] jadi saya bisa membentuk bahwasanya hasil voronoi untuk sampel data ini adalah bentuk seperti ini
+[593.89 --> 601.37] Jadi kita bisa mengatakan ketika kita punya sembarang sampel data baru di sini,
+[601.69 --> 605.37] atau di sini, atau di sini, atau mungkin di sini,
+[606.03 --> 610.27] atau di sini, di sini, serta di sini,
+[610.27 --> 618.55] maka akan dikatakan sebagai, atau diprediksi, atau diklasifikasi sebagai kelas biru,
+[618.63 --> 621.27] karena dia posisinya masih ada di dalam boundary ini.
+[621.27 --> 631.67] Boundary yang menunjukkan kedekatan fitur atau kesamaan fitur dengan sampel data segitiga ini.
+[633.83 --> 639.49] Nah, sekarang kita kembali lagi ke sampel data yang sebelumnya gitu ya.
+[639.59 --> 643.51] Ketika Anda sudah memahami bagaimana foreign rate isolation itu dibangun.
+[643.51 --> 646.33] Nah, kita punya jumlah sampel data yang cukup banyak.
+[646.49 --> 654.19] Maka kita perlu menggambarkan bagaimana batasan antara satu titik dengan titik yang lainnya untuk keseluruhan data.
+[654.53 --> 660.65] Nah, di sini kita sudah bisa mendapatkan foreign rate isolation-nya seperti ini.
+[660.65 --> 667.55] Maka selanjutnya ketika kita akan memisahkan mana yang termasuk kelas merah dan mana yang termasuk ke dalam kelas biru,
+[667.55 --> 676.41] kita sudah memiliki classification boundary yang baru yaitu yang digambarkan dengan garis arsiran merah ini.
+[677.31 --> 682.99] Nah, ini merupakan batas untuk memisahkan sampel-sampel data yang termasuk kelas merah, berarti yang ada di sini.
+[683.99 --> 687.67] Dan kelas data yang termasuk ke dalam kelas biru yang ada di sini.
+[688.39 --> 689.55] Nah, kita bisa melihat berarti...
+[689.55 --> 690.55] Berarti...
+[690.65 --> 699.17] Dengan pendekatan nearest neighbor ini sebenarnya untuk classification boundary-nya termasuk bentuk yang non-linear.
+[699.17 --> 701.05] Jadi bukan...
+[701.05 --> 705.17] Artinya...
+[705.85 --> 717.03] Nearest neighbor ini tidak hanya bisa digunakan untuk menyelesaikan permasalahan linear reciprocal, gitu ya.
+[717.33 --> 720.17] Tetapi juga bisa digunakan untuk menyelesaikan permasalahan...
+[720.65 --> 721.79] Non-linear.
+[722.53 --> 723.25] Dan...
+[723.25 --> 724.19] Apa namanya?
+[725.09 --> 734.43] Biasanya hasil classification boundary-nya ini akan sangat jelas gitu ya, merefleksikan batasan antara satu kelas dengan kelas yang lainnya.
+[734.97 --> 742.25] Dan biasanya hasilnya cukup bagus untuk metode yang sangat sederhana atau sangat ringkas.

@@ -1,0 +1,341 @@
+[0.28 --> 1.54] Bismillahirrahmanirrahim
+[1.54 --> 3.78] Assalamualaikum warahmatullahi wabarakatuh
+[3.78 --> 7.26] pada pertemuan ketiga kali ini
+[7.26 --> 8.12] kita akan
+[8.12 --> 10.62] masuk ke materi
+[10.62 --> 11.86] selanjutnya
+[11.86 --> 13.70] masih pembahasan mengenai
+[13.70 --> 16.28] metodologi atau metode
+[16.28 --> 18.76] supervised learning
+[18.76 --> 20.28] yaitu
+[20.28 --> 21.58] decision tree
+[21.58 --> 24.46] jika minggu lalu kita membahas
+[24.46 --> 26.30] salah satu
+[26.30 --> 28.20] metode supervised learning
+[28.20 --> 29.12] yang
+[29.12 --> 32.12] masih termasuk ke dalam
+[32.12 --> 33.92] kategori lazy learning yaitu
+[33.92 --> 34.86] generous neighbor
+[34.86 --> 38.20] pada kesempatan hari ini kita akan membahas
+[38.82 --> 40.20] metode
+[40.20 --> 43.68] supervised learning
+[43.68 --> 45.78] yang termasuk ke dalam
+[45.78 --> 47.70] kategori eager learning
+[48.68 --> 52.24] disini yang akan kita bahas adalah decision tree
+[52.24 --> 59.70] jadi ada beberapa bagian yang akan saya jelaskan
+[59.70 --> 64.32] yang pertama yaitu mengenai definisi dari decision tree
+[64.32 --> 69.88] lalu yang kedua bagaimana cara kerja dari decision tree
+[69.88 --> 74.06] sebagai metode klasifikasi
+[74.06 --> 77.86] atau metode yang bisa digunakan untuk melakukan prediksi
+[77.86 --> 85.02] lalu yang ketiga yaitu bagaimana algoritma di dalam decision tree
+[85.02 --> 88.36] khususnya yaitu ID tree
+[88.36 --> 95.02] dalam memilih atribut yang akan digunakan sebagai acuan untuk melakukan splitting
+[95.02 --> 101.14] lalu yang berikutnya karena model klasifikasi atau model prediksi
+[101.14 --> 106.44] yang dihasilkan oleh decision tree ini adalah dalam bentuk tree
+[106.44 --> 107.62] dan kita
+[107.62 --> 111.24] pada saat ingin menerapkan kita perlu
+[111.24 --> 115.98] merubahnya menjadi set of rules
+[115.98 --> 119.06] jadi sekumpulan dari aturan-aturan
+[119.06 --> 124.90] nah ini nanti bagaimana proses perubahan dari tree menjadi rules akan dijelaskan berikutnya
+[124.90 --> 130.50] lalu yang berikutnya terkait dengan kinerja dari decision tree sebagai model klasifikasi
+[130.50 --> 135.68] kita akan membahas bagaimana overfitting pada decision tree
+[137.62 --> 141.02] sebagai strategi untuk mengatasinya
+[141.02 --> 150.68] lalu yang berikutnya pembahasan mengenai varian pengembangan dari ID tree yaitu algoritma C45
+[150.68 --> 155.18] jadi yang akan saya sampaikan tidak terlalu detail tapi hanya
+[155.18 --> 160.54] apa namanya ukuran yang digunakan untuk
+[161.16 --> 162.84] Nah...
+[163.78 --> 167.20] atau melakukan proses splitting itu tadi
+[167.20 --> 169.08] lalu yang berikutnya
+[169.08 --> 172.24] dua bagian terakhir
+[172.24 --> 173.82] sebenarnya terkait dengan
+[173.82 --> 175.32] isu-isu gitu ya
+[175.32 --> 177.64] yang biasanya dihadapi
+[177.64 --> 179.70] pada saat kita mengembangkan
+[179.70 --> 181.36] algoritma decision tree itu
+[181.36 --> 183.92] bagaimana cara kita menghandle
+[183.92 --> 185.68] atau mengatasi ketika datanya
+[185.68 --> 187.62] berupa data kontinus
+[187.62 --> 191.34] lalu yang berikutnya yaitu
+[191.34 --> 194.04] selain dari jenis datanya
+[194.04 --> 195.80] yang kontinus juga kita
+[195.80 --> 196.46] akan
+[196.46 --> 198.68] perlu
+[198.68 --> 201.24] menggali lebih dalam bagaimana
+[201.24 --> 203.62] merepresentasikan data
+[203.62 --> 205.66] ketika datanya
+[205.66 --> 207.36] masih berupa data diskret tapi
+[207.36 --> 208.40] kemungkinan
+[209.80 --> 211.30] atau data kategorikal
+[211.30 --> 212.74] tapi
+[212.74 --> 214.86] kemungkinannya
+[214.86 --> 217.68] bukan nilai binar gitu ya
+[217.68 --> 219.46] tetapi lebih
+[219.46 --> 220.22] dari
+[220.22 --> 223.80] dua kemungkinan untuk setiap atributnya
+[223.80 --> 226.00] bagaimana cara kita mengatasinya
+[226.00 --> 227.76] ini dibahas
+[227.76 --> 229.38] di bagian terakhir yaitu
+[229.38 --> 230.66] mengenai representasi data
+[231.75 --> 240.93] Baik, langsung saja kita mulai di seksion pertama yaitu mengenai definisi.
+[241.53 --> 256.57] Jadi seperti yang kita ketahui bahwasannya decision tree ini menggunakan struktur tree atau pohon untuk menspesifikasikan sekumpulan.
+[257.85 --> 265.73] atau serangkaian proses pengambilan keputusan dan konsekuensinya.
+[267.67 --> 277.95] karena tadi menggunakan struktur tri maka kita bisa mengenali struktur dari
+[277.95 --> 283.03] disinteri ini sama seperti pohon gitu ya jadi kita punya root gitu ya lalu kita
+[283.03 --> 291.27] punya French lalu kita punya live dan juga kita punya
+[293.51 --> 295.31] yang disini sebagai internal
+[295.31 --> 296.73] node
+[298.09 --> 298.85] disini
+[298.85 --> 300.29] eee
+[304.02 --> 305.82] decision tree ini
+[305.82 --> 307.94] biasanya kita akan
+[307.94 --> 309.18] mengenal adanya
+[309.18 --> 311.72] depth atau kedalaman gitu ya
+[311.72 --> 313.66] kedalaman dari
+[313.66 --> 316.22] tree yang terbentuk
+[316.22 --> 316.56] gitu
+[316.56 --> 320.14] kedalamannya ini
+[320.14 --> 322.02] sebenarnya
+[322.02 --> 323.76] kalau untuk contoh
+[323.76 --> 325.90] gambar decision tree yang kita
+[325.90 --> 327.74] miliki ini dihitung
+[327.74 --> 328.52] dari
+[328.52 --> 331.32] root node ke
+[331.32 --> 333.70] internal node terakhir
+[333.70 --> 334.60] gitu ya jadi
+[334.60 --> 337.58] di contoh ini saya
+[337.58 --> 338.34] menggunakan
+[338.34 --> 341.64] node nya ini menggunakan
+[341.64 --> 343.06] simbol
+[343.06 --> 345.66] ellipse ini ya ini untuk
+[347.53 --> 348.21] Note
+[348.21 --> 350.95] Lalu yang berikutnya
+[353.16 --> 363.92] jadi setiap node ini berkaitan dengan satu buah variable atau fitur atau kriteria gitu ya
+[363.92 --> 375.62] lalu yang berikutnya pada saat kita memilih atau menerapkan sebuah
+[379.06 --> 387.90] menerapkan sebuah atribut atau fitur atau kriteria maka atribut atau kriteria tersebut akan mempunyai
+[387.90 --> 396.92] berapa kemungkinan nah berapa kemungkinan ini di contoh ini disimpulkan menggunakan kotak gitu ya
+[396.92 --> 408.58] ini yang disebut sebagai branch nah tadi yang saya sampaikan branch disini sebenarnya bisa berupa nilai
+[408.58 --> 419.40] binar jadi kalau contoh yang ada disini gender ini untuk bentuk data yang diskret bisa memiliki dua kemungkinan nilai
+[419.40 --> 429.16] yaitu laki-laki dan perempuan tapi juga ada kemungkinan suatu atribut yang mana branchnya atau cabangnya ini tidak hanya dua
+[429.16 --> 434.82] tidak hanya memiliki nilai binar gitu tapi lebih dari dua
+[434.82 --> 438.16] lalu yang berikutnya
+[438.58 --> 449.28] contoh yang di bagian ini merupakan sampel ketika datanya tidak diskret atau bukan data kategorikal gitu ya
+[449.28 --> 453.20] tapi berupa data kontinus gitu
+[453.20 --> 464.80] maka branch node-nya ini berupa suatu rentang kebetulan di dua contoh ini masih menggunakan binar gitu ya
+[464.80 --> 467.40] jadi hanya ada dua kemungkinan
+[468.58 --> 470.28] lalu yang terakhir
+[470.28 --> 470.94] jadi
+[474.05 --> 475.39] kelasnya gitu ya
+[475.39 --> 476.23] kelas yang
+[477.45 --> 481.63] Akan kita prediksi atau kita klasifikasikan ini
+[481.63 --> 486.35] Direpresentasikan menggunakan rounded rectangle
+[486.35 --> 493.45] Rounded rectangle itu kotak tapi yang tidak siku
+[493.45 --> 498.65] Nah ini biasa disebut sebagai leaf node
+[498.65 --> 506.89] Jadi kalau node untuk menggambarkan sebuah kriteria fitur atau atribut
+[506.89 --> 510.11] Yang letaknya paling atas itu sering disebut sebagai root node
+[510.11 --> 513.65] Sedangkan untuk node-node untuk proses pengambilan keputusan
+[513.65 --> 519.01] Berdasarkan kriteria-kriteria lain yang ada di bawah root node ini
+[519.01 --> 521.79] Sering disebut sebagai internal node
+[521.79 --> 526.83] Nah kedalaman ini diukur berdasarkan
+[530.02 --> 538.80] Berapa internal node yang terdapat di dalam struktur tree yang kita miliki
+[541.49 --> 551.07] Nah, pertanyaannya apakah kita harus selalu menggambarkan, menggunakan notasi seperti ini.
+[551.07 --> 556.07] Jadi, not ini ellipse, selalu branch atau...
+[557.97 --> 560.21] cabangnya ini selalu menggunakan
+[561.81 --> 569.97] rectangle gitu ya lalu untuk lift notenya menggunakan rounded rectangle gitu ya sebenarnya
+[571.33 --> 572.81] ada
+[574.21 --> 584.35] alternatif yang lain gitu ya misalnya disini tetep not saya menggunakan ellipse
+[584.35 --> 592.39] gini ya tapi pada saat saya akan menjelaskan apa namanya branchnya saya
+[592.39 --> 597.49] tidak menggunakan notasi tapi langsung dituliskan di sini misalnya female
+[597.49 --> 616.75] hai hai
+[620.83 --> 623.83] hai hai
+[599.01 --> 600.05] lalu disini
+[602.81 --> 607.91] Lalu masuk ke internal load, sama kita masih menggunakan
+[609.40 --> 618.12] Hai apa namanya ellipse disini juga menggunakan edge tapi disini saya hanya menggunakan
+[618.12 --> 648.10] hai hai hai hai hai
+[620.73 --> 623.15] sebagai caption saja untuk
+[625.01 --> 628.17] kurang dari sama dengan Rp45.000
+[630.02 --> 632.34] lebih besar dari Rp45.000
+[637.09 --> 639.09] kurang dari sama dengan 40
+[639.09 --> 640.47] lebih dari 40
+[642.37 --> 648.25] Hai ini berarti sudah keputusannya itu ya berarti saya bisa saya
+[648.25 --> 651.97] disini saya tidak menggunakan ronde tapi sih menggunakan Yes
+[651.97 --> 681.95] hai hai
+[652.84 --> 653.98] Rectangle saja
+[657.64 --> 658.84] dan ini is
+[660.25 --> 690.23] Terima kasih telah menonton
+[662.87 --> 665.55] Ini juga masih acceptable gitu ya.
+[666.03 --> 668.73] Jadi kita pada saat menghitung depth-nya ya tetap sama.
+[669.37 --> 670.57] Ini depth-nya berarti.
+[675.41 --> 678.05] Ini tetap sebagai root note.
+[682.36 --> 683.40] Dua ini.
+[684.95 --> 686.59] sebagai internal
+[688.09 --> 689.09] Terima kasih.
+[691.72 --> 693.16] di tempat ini
+[696.77 --> 726.75] Terima kasih telah menonton.
+[701.22 --> 702.68] Nah ini layar yang ada di sini.
+[703.88 --> 713.48] male, female, kurang dari 45 ribu, lebih dari 45 ribu, kurang dari 40, kurang dari 40, lebih dari 40, ini juga termasuk branch node.
+[714.44 --> 722.50] Tetapi tidak kita gambarkan secara ekspresif menggunakan satu notasi, tetapi hanya dituliskan nilai kemungkinannya saja.
+[724.63 --> 733.91] Oke, nah sekarang pada saat kita memiliki data seperti ini, kira-kira bagaimana
+[735.54 --> 737.46] decision tree yang kita
+[737.46 --> 739.76] bangun gitu ya yang bisa kita bangun
+[739.76 --> 741.54] tanpa kita perlu melakukan
+[741.54 --> 743.82] perhitungan secara matematis
+[743.82 --> 745.78] tetapi cukup melihatnya
+[745.78 --> 747.94] secara visual gitu ya
+[747.94 --> 749.48] untuk memisahkan
+[749.48 --> 751.18] antara
+[753.32 --> 761.36] memisahkan antara data-data yang direpresentasikan menggunakan
+[763.14 --> 771.42] Hai titik-titik gitu ya Nah dimana terdiri dari dua kelas yaitu kelas biru dan kelas
+[771.42 --> 779.96] hijau lalu fitur yang digunakan disini yaitu ada dua yang pertama adalah fitur
+[779.96 --> 789.32] H1 dan yang kedua adalah fitur H2 nah kira-kira bagaimana cara kita
+[790.77 --> 792.27] Maaf.
+[793.78 --> 794.78] Membangunkan
+[795.80 --> 797.40] apa namanya, decision tree
+[797.40 --> 799.10] untuk kasus tersebut gitu ya
+[799.10 --> 801.14] jadi yang pertama
+[801.14 --> 802.60] kita
+[802.60 --> 804.78] misalnya saya akan melihat
+[804.78 --> 806.64] jadi kalau kita amati disini
+[806.64 --> 808.48] semua
+[808.48 --> 811.32] yang data yang ada di dalam
+[811.32 --> 813.24] atau yang letaknya
+[813.24 --> 814.16] tepat di
+[814.16 --> 817.02] garis ini, dia akan termasuk
+[817.02 --> 818.10] ke dalam kelas biru
+[818.10 --> 820.78] nah semua data yang
+[820.78 --> 822.58] ada di dalam
+[822.58 --> 825.04] yang terletak tepat pada garis
+[825.04 --> 829.14] X1 sama dengan 2
+[829.14 --> 831.54] ataupun X1 sama dengan 8
+[831.54 --> 833.06] ini termasuk ke dalam kelas
+[833.06 --> 834.62] hijau, maka
+[834.62 --> 837.38] kita bisa membuat
+[837.38 --> 838.88] decision tree nya, yang pertama
+[838.88 --> 840.04] misalnya saya melihat
+[840.04 --> 843.26] kriteria yang akan saya
+[843.26 --> 847.00] cek pertama kali adalah
+[847.00 --> 848.92] X2 gitu ya
+[848.92 --> 851.18] jadi disini saya menggunakan node
+[851.18 --> 853.14] fiturnya adalah X2
+[855.13 --> 856.41] berarti
+[856.41 --> 858.29] disini
+[859.77 --> 865.89] Hai ada eh dua kemungkinan gitu ya kemungkinan
+[866.87 --> 868.63] Yang pertama
+[875.21 --> 882.55] Apakah X2 di sini kurang dari sama dengan?
+[883.72 --> 884.34] 5
+[886.31 --> 890.57] Atau lebih dari 5.
+[890.91 --> 895.09] Artinya kalau kurang dari 5, berarti di bagian sebelah kiri ini ya.
+[895.61 --> 896.51] Kurang dari sama dengan 5.
+[897.41 --> 902.29] Lalu kalau di bagian sini, berarti X lebih dari 5.
+[903.59 --> 904.93] Nah, lalu yang berikutnya.
+[908.05 --> 912.99] Untuk X2 kurang dari sama dengan 5, berarti saya membahas semua yang ada di sini ya.
+[915.64 --> 918.48] Maka yang berikutnya.
+[920.47 --> 932.29] kita bisa melakukan pengecekan gitu kan ya tadi kan kalau misalnya dia ada di apa namanya di
+[932.29 --> 939.37] atas bagian atas ini dia akan masuk ke kelas biru kalau ada di bawah ini dan termasuk yang ada di
+[939.37 --> 947.89] garis ini termasuk kelas hijau berarti kita berikutnya melakukan pengecekan terhadap fitur
+[947.89 --> 956.89] x1 dengan dua kemungkinan yang pertama yaitu Apakah kurang dari sama dengan
+[956.89 --> 963.25] dua jika iya berarti akan masuk ke kelas hijau
+[965.78 --> 974.04] Lalu yang berikutnya jika lebih dari 2, berarti dia akan termasuk kelas biru.
+[976.28 --> 979.52] Nah, sekarang tinggal yang sisi sebelah kanan.
+[979.70 --> 985.02] Sisi sebelah kanan berarti kita sama-sama akan melihat berdasarkan fitur X1 gitu ya.
+[986.26 --> 988.44] X1 disini tetapi
+[988.44 --> 990.68] batasnya ini bukan lagi
+[990.68 --> 992.76] kurang dari sama dengan 2 dan lebih dari 2
+[992.76 --> 994.20] tapi nilai
+[994.20 --> 996.64] X1 apakah
+[996.64 --> 998.92] kurang dari
+[1000.23 --> 1000.95] 8
+[1003.88 --> 1013.00] Hai ya kalau kurang dari delapan berarti dia akan masuk ke kelas biru
+[1014.12 --> 1026.08] Tapi ketika dia nilainya lebih besar dari sama dengan 8, maka berarti dia akan termasuk ke dalam kelas 7.
+[1029.05 --> 1035.49] Nah, dari sini berarti kita sudah tahu ya, ini merupakan root node.
+[1039.13 --> 1043.53] ini merupakan internal node
+[1046.01 --> 1047.87] Hai lalu ini
+[1047.87 --> 1077.85] Terima kasih.
+[1052.26 --> 1053.16] adalah
+[1053.16 --> 1053.76] ini
+[1055.21 --> 1066.25] not begin ini ini ini ini ini dia termasuk ke dalam French not nah
+[1066.89 --> 1069.99] Lalu, berapa kedalaman dari trinya?
+[1070.23 --> 1070.99] Kedalaman
+[1072.10 --> 1073.14] Atau
+[1073.14 --> 1074.58] Depth-nya
+[1077.00 --> 1084.44] Hai jawabannya adalah satu karena jarak antara root note ke internal note yang terakhir hanya
+[1084.44 --> 1094.46] ada satu maka kedalaman atau depannya adalah satu Nah apakah kita mungkin untuk memiliki
+[1094.46 --> 1103.22] eh di sentri yang lain ya sangat mungkin kalau tadi kita melihatnya dari
+[1104.79 --> 1109.33] Pertama atribut yang kita gunakan adalah X.
+[1110.89 --> 1113.31] 2, maka kemungkinan yang pertama
+[1113.31 --> 1115.29] actually, kemungkinan yang kedua
+[1115.29 --> 1117.45] yang kita jadikan sebagai
+[1117.45 --> 1119.61] root node, bukan lagi x2
+[1119.61 --> 1121.01] tapi kita gunakan
+[1121.01 --> 1123.29] x1
+[1126.18 --> 1126.92] Terima kasih.
+[1127.75 --> 1131.17] Kira-kira bagaimana Anda bisa memikirkannya?
+[1134.95 --> 1137.75] Baik, bagaimana sudah punya ide?
+[1138.83 --> 1140.29] Ya, coba kita coba ya.
+[1140.39 --> 1142.43] Jadi, pertama kita gunakan.
+[1143.51 --> 1145.81] root notenya
+[1145.81 --> 1147.25] adalah
+[1149.94 --> 1151.68] Nah, seperti ini bagian atas.
+[1152.73 --> 1156.49] Hai ya rupanya adalah X1
+[1158.23 --> 1163.23] Disini saya akan melihat pertama berdasarkan garis ini ya
+[1163.23 --> 1172.09] Garis X1 apakah X1 nya kurang dari sama dengan 2 atau lebih dari 2
+[1172.09 --> 1177.55] Berarti disini apakah X1 kurang dari sama dengan 2
+[1179.43 --> 1191.91] Atau lebih dari dua kalau kurang dari sama dengan berarti semua sampai kesini ya sana
+[1191.91 --> 1201.15] ini berarti ada masih terbagi kedalam dua kelas gitu ya masih ada kelas di yang masuk kelas hijau
+[1201.15 --> 1209.79] kan ada masuk kelas biru nah sedangkan disini kita mau ketika yang mendapatkan hanya bagian
+[1209.79 --> 1215.97] ini berarti kita harus menerapkan kriteria yang kedua yaitu kita lihat X2 nya
+[1217.21 --> 1219.95] Disini ada 2 kemungkinan juga
+[1219.95 --> 1222.59] Apakah
+[1222.59 --> 1225.43] Kurang dari 5
+[1227.80 --> 1229.42] Atau lebih dari 5
+[1229.42 --> 1229.94] Tadi kan
+[1229.94 --> 1233.18] Di awal saya nyebutkan bahwasannya yang tepat
+[1233.18 --> 1233.80] Ada di
+[1235.21 --> 1237.67] garis X2 sama dengan 5 ini
+[1237.67 --> 1239.07] masuk ke kelas biru
+[1239.07 --> 1240.99] berarti untuk yang masuk ke kelas hijau disini
+[1240.99 --> 1243.33] ketika kurang dari 5
+[1243.33 --> 1245.31] maka dia akan
+[1245.31 --> 1247.41] masuk ke kelas hijau
+[1248.49 --> 1257.23] Lalu yang berikutnya, jika lebih besar dari sama dengan 5, maka dia akan masuk ke kelas 5.
+[1258.66 --> 1271.32] Lalu yang berikutnya, ketika nilainya X1-nya ini lebih dari 2, X1 lebih dari 2 berarti daerah ini
+[1272.79 --> 1273.85] Kata setia.
+[1275.00 --> 1284.20] Nah, sekarang kita melakukan pengecekan terlebih dahulu ketika kurang dari 5 berarti yang ada di sini.
+[1287.13 --> 1289.83] kita lakukan pengecekan
+[1290.95 --> 1291.87] Coba tarik nih saya.
+[1294.12 --> 1294.48] Sampai jumpa.
+[1297.25 --> 1298.51] Dua nya disini
+[1300.13 --> 1330.11] selamat menikmati
+[1302.15 --> 1304.19] Kurang dari 5 kalau iya.
+[1305.16 --> 1313.74] Berarti untuk semua yang nilai X1-nya kurang, eh sorry maaf, lebih dari 2,
+[1314.44 --> 1324.84] dan kita melakukan pengecekan apakah X2-nya kurang dari 5, maka dia masuk ke kelas.
+[1326.65 --> 1332.95] Sebaliknya pada saat kita ambil sisi yang sebelah kanan
+[1332.95 --> 1341.47] Jadi ketika X1 lebih dari 2 dan X2 lebih besar dari sama dengan 5
+[1341.47 --> 1342.85] Di sini masih ada 2 kemungkinan
+[1342.85 --> 1347.13] Ada kemungkinan kelas biru dan ada kemungkinan kelas hijau
+[1347.13 --> 1349.95] Berarti kita harus menetapkan satu kriteria lagi
+[1349.95 --> 1351.29] Kita cek lagi X1
+[1353.83 --> 1355.23] X1 disini
+[1358.57 --> 1370.89] Apakah X1 ini kurang dari 8 atau lebih besar dari sama dengan 8?
+[1372.04 --> 1373.22] kurang dari 8
+[1373.22 --> 1375.32] dan itu bisa jadi sama dengan 8
+[1375.32 --> 1377.30] kalau kurang dari 8
+[1377.30 --> 1379.02] berarti dia masuk ke kelas
+[1380.98 --> 1381.98] Biru
+[1383.57 --> 1385.53] berarti masih berkelas
+[1386.84 --> 1416.82] Sampai jumpa di video selanjutnya
+[1388.41 --> 1390.41] Kita sudah selesai, berarti...
+[1392.34 --> 1392.80] Terima kasih.
+[1404.89 --> 1406.03] Bapak dan Desmond
+[1410.05 --> 1440.03] Terima kasih telah menonton
+[1412.90 --> 1415.98] Nah, internal note-nya di sini.
+[1417.67 --> 1418.67] ini
+[1423.01 --> 1424.13] Terima kasih.
+[1425.00 --> 1433.70] Hai ini juga termasuk internal jadi kita bisa tahu bahwasanya depth atau kedalamannya sama
+[1433.70 --> 1441.12] dengan dua karena jari dari root note ke internal note yang terakhir sebanyak dua tingkatan
+[1444.57 --> 1458.85] Kira-kira dari kedua hasil decision tree yang terbentuk ini lebih efektif yang pertama atau lebih efektif yang kedua.
+[1459.07 --> 1467.57] Jadi kalau kita perhatikan karena yang pertama kedalamannya lebih kecil gitu ya.
+[1467.57 --> 1474.73] Jadi kita bisa mengatakan bahwasannya akan lebih efektif ketika kita menggunakan bentuk decision tree yang pertama.
+[1474.99 --> 1478.87] Jadi ketika kita menetapkan root node-nya adalah X2.
+[1479.13 --> 1490.91] Nah dari situ maka algoritma dari metode decision tree ini pada saat kita melakukan splitting kita akan mencari yang paling optimal.
+[1490.91 --> 1494.03] Paling optimal ini dalam artian ya nanti.
+[1495.78 --> 1506.06] Harapannya itu untuk proses splitting berikutnya tidak terlalu banyak yang perlu dilakukan.

@@ -1,0 +1,164 @@
+[1.88 --> 10.60] Hai baik kita akan masuk ke section terakhir yaitu mengenai isu-isu terkait dengan generis
+[10.60 --> 20.16] negeri jadi yang pertama ini yang tadi sudah saya sebutkan bahwasanya pada saat kita menggunakan
+[20.16 --> 30.50] memilih nilai K itu ada baiknya menggunakan nilai yang ganjil gitu ya Kenapa supaya pada
+[30.50 --> 36.86] saat kita mengambil kelas yang paling dominan pasti akan ada satu kelas yang jumlahnya lebih
+[36.86 --> 48.20] banyak yaitu n minimal 50% satu itu Nah kalau kita misalnya menggunakan jumlah yang kenap maka
+[48.20 --> 58.04] ada kemungkinan akan menghasilkan ini yang sama ya menghasilkan keputusan yang sama gitu Nah terus
+[58.04 --> 60.48] bagaimana kalau kita menggunakan apa
+[60.48 --> 62.12] namanya jumlah
+[62.12 --> 64.10] eh
+[64.10 --> 70.46] hai hai
+[70.46 --> 75.36] hai hai
+[75.36 --> 80.72] hai hai
+[80.72 --> 87.48] hai hai
+[87.48 --> 89.60] hai hai
+[68.28 --> 71.32] jika kita menggunakan nilai K yang sama
+[71.32 --> 76.48] dan ternyata hasilnya adalah 50% untuk kelas 1 dan 50% untuk kelas 2
+[76.48 --> 78.60] maka kita bisa
+[80.60 --> 83.98] menentukan keputusan akhirnya
+[83.98 --> 86.96] dengan secara random
+[86.96 --> 89.38] ibaratnya kita menggunakan koin
+[89.38 --> 91.30] untuk menilai positif atau negatif
+[91.30 --> 95.14] atau yang berikutnya
+[95.14 --> 97.18] kita bisa
+[98.53 --> 100.41] menggantinya tidak menggunakan
+[100.41 --> 102.03] generis neighbor
+[102.03 --> 103.79] tapi menggunakan one nearest neighbor
+[103.79 --> 105.23] jadi pasti hanya ada satu
+[105.23 --> 108.65] atau yang berikutnya
+[108.65 --> 110.09] kita bisa
+[110.09 --> 112.39] menggunakan
+[112.39 --> 114.89] knowledge prior
+[114.89 --> 117.13] jadi dari keseluruhan
+[117.13 --> 118.75] sampel data
+[118.75 --> 119.73] yang
+[121.24 --> 123.24] probabilitasnya lebih tinggi yang mana
+[123.24 --> 125.20] kelas yang mana, itu yang kita ambil
+[125.20 --> 127.78] jadi meskipun
+[127.78 --> 129.76] bisa diberikan
+[129.76 --> 131.50] solusi yang lain, tetapi
+[131.50 --> 133.42] alangkah baiknya ketika
+[133.42 --> 135.76] kita langsung menggunakan
+[135.76 --> 136.60] nilai k yang
+[136.60 --> 139.16] ganjil
+[139.16 --> 141.50] lalu
+[141.50 --> 143.72] permasalahan yang biasanya muncul kedua
+[143.72 --> 144.96] yaitu adanya
+[144.96 --> 147.48] missing value
+[147.48 --> 149.48] jadi missing value ini misalnya
+[149.48 --> 150.34] ada satu
+[150.34 --> 153.62] nilai atribut pada suatu
+[153.62 --> 155.58] sampel data yang kosong
+[155.58 --> 156.38] atau null
+[156.38 --> 158.38] maka
+[158.38 --> 161.86] kita perlu menyelesaikan terlebih dahulu
+[161.86 --> 163.68] karena kalau tidak, berarti kita tidak bisa
+[163.68 --> 164.22] menghitung
+[164.22 --> 167.44] jaraknya, similarity distance
+[167.44 --> 169.30] atau jarak kemeripanya
+[169.30 --> 170.34] tidak bisa dihitung
+[170.34 --> 173.34] disini bagaimana caranya
+[173.34 --> 175.54] caranya yang bisa
+[175.54 --> 176.18] dilakukan
+[176.18 --> 179.56] yang pertama yaitu dengan menghitung
+[179.56 --> 180.18] nilai
+[180.34 --> 182.42] rata rata
+[182.42 --> 183.66] dari
+[183.66 --> 186.16] atribut terkait
+[186.16 --> 189.20] kita gunakan nilai rata rata tersebut
+[189.20 --> 190.72] untuk mengisikan
+[190.72 --> 193.16] missing value tersebut
+[193.16 --> 194.54] jadi itu salah satu
+[194.54 --> 197.10] solusi yang bisa digunakan
+[197.10 --> 199.06] dan juga ada solusi-solusi
+[199.06 --> 200.86] lain yang
+[200.86 --> 202.40] bisa Anda tempuh
+[202.40 --> 204.08] kalau Anda ingin tahu, coba
+[204.08 --> 207.58] mencari di artikel-artikel
+[207.58 --> 209.48] biasanya akan ada yang membahas
+[209.48 --> 210.26] bagaimana
+[210.34 --> 218.22] mengatasi missing value. Sebenarnya missing value ini tidak hanya terjadi di kasus kayak nearest neighbor gitu ya,
+[218.28 --> 223.58] jadi di kasus-kasus yang lain pun ketika menemukan missing value, strategi ini juga bisa diterapkan.
+[225.13 --> 252.63] Lalu yang berikutnya ini yang tadi permasalahan ketika kita menggunakan similarity distance gitu ya jadi pada saat kita menggunakan similarity distance maka ketika rentang atau penskalaan antara satu fitur dengan fitur yang lainnya berbeda sangat jauh kan berarti akan menjadi tidak bermakna gitu ya.
+[252.63 --> 277.31] Untuk fitur yang memiliki rentang sangat kecil oleh karena itu kita harus mengubahnya menjadi data atau fitur dengan skala yang sama nah salah satu teknik yang bisa digunakan adalah dengan melakukan normalisasi gitu ya biasanya disebut sebagai normalisasi tapi normalisasi disini berbeda dengan normalisasi di database atau basis data gitu.
+[277.31 --> 281.51] Ada dua strategi yang pertama yaitu menggunakan.
+[282.63 --> 312.61] Zero mean unit variance jadi kita menghitungnya dengan mengganti setiap nilai X gitu ya setiap data data data sampel data ke I untuk fitur M diperoleh dengan pertama kita ganti dengan menghitung nilai tadi zero mean unit variance.
+[312.61 --> 338.15] Zero mean unit variannya gitu dimana sama dengan nilai X awalnya XIM dikurangi nilai rata-rata dari XM berarti nilai rata-rata untuk fitur ke M lalu dibagi dengan varian dari fitur ke M untuk nilai rata-rata dan nilai variannya disini.
+[340.65 --> 345.09] Jadi kalau bisa dilihat di rumus di bawah gitu ya.
+[346.15 --> 350.25] Nah, terus lalu yang teknik yang kedua tidak menggunakan zero min unit varian,
+[350.51 --> 354.15] tapi kita menggunakan min-max normalization.
+[354.61 --> 362.47] Kalau min-max normalization ini nanti akan semua data akan diubah menjadi rentang 0 sampai dengan 1.
+[362.91 --> 365.85] Rumusnya berarti x dikurangi.
+[369.27 --> 370.27] X
+[371.03 --> 374.01] Min dibagi x max dikurangi x min.
+[375.48 --> 379.94] Nah nanti namanya mainmax normalization
+[381.40 --> 387.02] Lalu, ya, permasalahan yang berikutnya, isu yang berikutnya adalah bagaimana caranya kita memilih nilai K.
+[387.02 --> 398.18] Nah, kalau sebelumnya saya sudah menyebutkan bahwa satu parameter yang bisa digunakan adalah pemilihan dari similarity distance,
+[398.76 --> 405.12] lalu parameter yang kedua yang bisa digunakan adalah memilih nilai K, gitu ya.
+[405.12 --> 415.50] Jadi, kita perlu mencobakan untuk sekumpulan nilai K, nanti akan dicari yang paling optimal yang mana, gitu.
+[415.50 --> 428.36] Nah, tetapi meskipun tadi sudah saya sebutkan bahwa idealnya nilai K-nya adalah ganjil, tetapi kita juga kan nilai ganjil kan berarti dimulai dari 1 sampai dengan ganjil yang tak terhingga, gitu.
+[428.52 --> 434.50] Nah, maka kita sebenarnya perlu juga mencoba.
+[435.12 --> 441.28] Mencari tahu berapa sih sebenarnya nilai K ganjil yang paling ideal untuk kasus yang kita selesaikan.
+[442.10 --> 449.80] Nah, kenapa? Karena pada saat kita memilih nilai K akan sangat berpengaruh terhadap kinerja dari kinerja neighbor.
+[450.36 --> 452.12] Jadi, kalau misalnya nilainya sangat...
+[453.51 --> 454.27] Besar?
+[455.65 --> 470.49] Maka menimbulkan kemungkinan berarti kelas prediksinya akan sangat dekat dengan sampel data yang dominan di dalam training data.
+[470.49 --> 483.73] Tetapi kalau misalnya kita menggunakan nilai k yang kecil, maka bisa jadi decision boundary-nya akan menjadi tidak stabil.
+[483.73 --> 500.97] Jadi kalau ada tadi yang sudah pernah dibahas di awal tentang kekurangan, jadi kalau misalnya nilai k-nya kecil, kalau misalnya ada data outlier, maka classification boundary-nya atau decision boundary-nya akan jadi berubah sangat.
+[502.52 --> 504.30] drastis gitu ya
+[505.43 --> 517.57] Nah, lalu bisa juga berpengaruh terhadap smoothness dari boundary-nya, gitu, pada saat kita memilih nilai K.
+[517.57 --> 529.03] Nah, maka bagaimana caranya? Ya, caranya mau tidak mau kita menerapkan, apa namanya, trial and error, gitu ya, uji coba.
+[529.03 --> 542.59] Jadi, kita punya validation dataset, yang mana validation dataset ini kita gunakan untuk menguji berapa nilai K yang paling optimal.
+[542.75 --> 556.41] Jadi, kita pilih sekelompok nilai K, misalnya dimulai dari K sama dengan 1, nanti kita punya sekumpulan validation dataset, kita jalankan, kita prediksi, lalu kita nilai kinerjanya bagaimana.
+[556.41 --> 558.49] Nah, lalu yang berikutnya.
+[559.67 --> 562.29] kita gunakan k sama dengan 3
+[562.29 --> 564.59] lalu kita hitung lagi
+[564.59 --> 566.55] berapa kinerjanya dan seterusnya
+[566.55 --> 568.29] sampai kita beri batasan
+[568.29 --> 570.45] karena kan nanti biasanya kita akan
+[570.45 --> 571.55] bisa membentuk pola
+[571.55 --> 573.43] kalau misalnya polanya
+[573.43 --> 576.47] cenderung naik, berarti kita bisa
+[576.47 --> 578.57] menambah terus, tapi kalau misalnya
+[578.57 --> 580.29] dia sudah pada titik optimum
+[580.29 --> 582.67] lalu akhirnya turun, ya kita bisa menghentikan
+[582.67 --> 583.67] pemilihan nilai k
+[585.80 --> 601.34] Lalu, permasalahan yang berikutnya, di mana karena KNN ini konsepnya menghitung kemiripan antara data uji dengan keseluruhan sampel data training,
+[601.34 --> 609.04] maka biasanya prosesnya akan menjadi sangat lama, belum lagi kalau dipengaruhi oleh ukuran dari dimensinya.
+[609.56 --> 614.42] Nah, ini hanya ilustrasi saja.
+[615.88 --> 631.36] Maka, pada saat training, kita berarti, ya prosesnya untuk nilai PIKU-nya pada saat training, ya karena kita hanya menghitung fiturnya saja,
+[631.60 --> 634.92] berarti nilainya adalah PIKU-nya U dari dimensi D,
+[635.26 --> 645.26] ladangkan untuk testingnya berarti, maaf, jadi misalnya data trainingnya di D, berarti nilainya U di D,
+[645.26 --> 653.70] Tapi pada saat kita melakukan testing, berarti peak O-nya sama dengan N dikalikan D.
+[653.70 --> 665.06] Nah, maka caranya yang bisa dilakukan untuk membuat lebih cepat, kita bisa melakukan mengurangi nilai D-nya.
+[665.26 --> 669.46] Jadi, yang kita kurangi adalah kolomnya.
+[669.46 --> 683.58] Jadi, kita kurangi kolomnya, berarti yang kita terapkan adalah dimensionality reduction atau kita bisa menerapkan pemilihan fitur.
+[683.58 --> 698.94] Nah, lalu yang berikutnya, kalau misalnya kita kurangi nilai barisnya, berarti kita mengurangi N-nya atau jumlah sampel training data yang kita bandingkan.
+[699.46 --> 702.30] Nah, caranya bagaimana ya?
+[702.36 --> 712.34] Caranya yang paling sederhana kita mengurangi sejumlah M, yang penting lebih kecil dari N, yang paling potensial.
+[712.34 --> 714.34] Nah, tapi kan juga...
+[715.11 --> 717.95] bagaimana strateginya kita memilih yang paling kecil
+[717.95 --> 718.89] ya itu juga jadi
+[721.30 --> 722.60] masalah gitu ya
+[722.60 --> 725.80] lalu yang berikutnya
+[725.80 --> 727.50] untuk
+[727.50 --> 729.10] mengurangi nilai n kita bisa
+[729.10 --> 731.08] menggunakan kd3
+[731.08 --> 733.30] jadi dia akan
+[733.30 --> 735.26] pico nya menjadi
+[735.26 --> 737.14] berkurang di log 2 dari n
+[738.42 --> 744.10] Hai nah kelemahannya ya berada bisa jadi ternyata nanti ada eh
+[746.65 --> 748.99] Tetangga yang paling mirip malah tidak
+[750.21 --> 758.91] termasuk di dalam data yang kita ujikan gitu atau bisa juga menggunakan inverted list gitu ya jadi
+[761.99 --> 765.03] ini biasanya dipakai untuk data teks
+[765.03 --> 767.39] mungkin kalau tertarik ya
+[767.39 --> 769.71] bisa baca-baca artikel
+[769.71 --> 771.51] untuk teks prosesi
+[773.16 --> 775.54] Lalu ada juga
+[777.89 --> 789.79] Local sensitive facing ini juga diterapkan di kasus penggunaan nilai pitch untuk fingerprinting.
+[789.91 --> 796.49] Jadi untuk ketiga ini saya tidak akan menjelaskan secara detail.
+[796.49 --> 805.01] Anda bisa mencari sendiri artikel-artikel ilmiah yang berhubungan dengan kasus tersebut.
+[805.01 --> 810.13] Karena memang biasanya ini diterapkan untuk domain-domain data tertentu.
+[810.35 --> 816.25] Sedangkan di machine learning ini saya tidak akan menjelaskan terkait dengan domain data,
+[816.37 --> 820.43] spesifik domain data, karena itu biasanya dibahas di mata kuliah pilihan.
+[820.43 --> 827.75] Baik, terima kasih. Saya cukupkan untuk materi Kineris Neighbor. Semoga bermanfaat.

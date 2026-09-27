@@ -1,0 +1,29 @@
+[0.82 --> 26.52] Pada bagian keempat ini kita akan membahas mengenai bagaimana caranya kita ketika sudah memiliki tri atau sutri dari kasus sudah terbentuk maka bagaimana kita menerapkannya menjadi sekumpulan rules atau aturan gitu ya.
+[26.52 --> 42.46] Nah disini jadi ini hanya sampel saja gitu ya jadi tidak dituliskan untuk semuanya gitu jadi ada dua rules yang bisa.
+[43.91 --> 47.25] diterapkan
+[48.71 --> 58.55] Hai yang pertama adalah conjunction jadi disini conjunction ini yang saya contohkan adalah
+[59.83 --> 68.59] untuk proses pengambilan keputusan mengikuti panah ini ya
+[76.09 --> 87.31] kenapa menggunakannya adalah conjunction karena pada saat kita akan memutuskan bermain tenisnya
+[87.31 --> 97.03] adalah no kita harus memenuhi dua syarat yang muncul pada root node dan internal node ini
+[97.03 --> 107.39] jadi yang pertama jika outlooknya adalah sunny dan humidity nya adalah high maka keputusan bermain tenisnya adalah no
+[107.39 --> 110.13] lalu kalau misalnya yang ini
+[111.43 --> 119.23] Yes yang ini berarti jika outlook-nya adalah Sunny dan humidity-nya adalah normal maka
+[119.23 --> 127.27] permain tennis-nya adalah no dan seterusnya kalau untuk bagian yang Yes yang ada di overcast
+[127.27 --> 132.55] ini berarti cukup tidak perlu menerapkan conjunction gitu ya karena hanya satu kriteria
+[132.55 --> 140.23] saja jadi if outlook sama dengan if outlook adalah overcast maka play tennis adalah Yes
+[141.49 --> 155.55] Nah, selain kalau yang tadi ini berarti semuanya kita menggunakan conjunction ya untuk yang keputusan no disini dan keputusan yes yang di paling kanan ini juga menggunakan conjunction.
+[155.55 --> 158.89] Nah, sekarang kalau kondisinya ternyata yang terbentuk.
+[161.57 --> 173.39] tri yang beda gitu ya Nah maka untuk kondisi seperti ini maka di bagian ini ya keputusan yang
+[176.52 --> 184.20] Hai outlooknya overcast sama outlooknya rain jadi ketika outlooknya overcast keputusan kita
+[184.20 --> 191.14] juga yes ketika outputnya outlooknya rain maka keputusan adalah yes tapi tidak harus dipenuhi
+[191.14 --> 198.36] dua-duanya kan kita bisa memilih salah satu maka yang digunakan adalah disjunction atau menggunakan
+[198.36 --> 204.96] fungsi oranye di if outlook sama dengan overcast or outlook sama dengan rain then play tennis sama
+[204.96 --> 217.68] dengan yes nah jadi bentuk apapun trinya kita pada saat ingin menerapkan maka kita perlu mengubahnya
+[217.68 --> 230.04] menjadi set of rules jadi sekumpulan dari rules-rules yang terbentuk untuk setiap leaf note
+[230.04 --> 234.72] yang terbentuk jadi kita membangunnya kan per leaf note ya kalau ini berarti
+[234.96 --> 239.88] akan ada rule-nya ada satu yang
+[240.73 --> 242.13] Bergerak kesini ya
+[242.13 --> 242.93] Ini satu
+[246.84 --> 248.40] Lalu yang kedua.
+[249.81 --> 250.37] Sini
+[251.67 --> 263.67] dan yang ketiga ini, berarti untuk sampel data tree ini kita punya set of rules yang terdiri dari tiga buah rules

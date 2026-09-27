@@ -1,0 +1,123 @@
+[0.76 --> 12.06] Pada bagian ke-7 dan ke-8 ini kita akan membahas mengenai isu-isu yang terkait di pembahasan decision tree.
+[12.06 --> 21.58] Jadi untuk yang pertama yaitu bagaimana kalau tadi yang kita contohkan kan menggunakan data kategorikal gitu ya,
+[22.22 --> 29.82] atau data diskret jadi kelasnya tadi contohnya kalau angin ada dua kemungkinan, kencang atau tidak kencang, strong atau weak.
+[30.76 --> 38.42] Nah disini kalau kita mendapati atribut yang nilainya tidak.
+[39.69 --> 42.53] berupa data kategorikal atau data diskret
+[42.53 --> 44.03] tapi berupa data kontinus
+[44.03 --> 45.39] misalnya usia
+[45.39 --> 48.81] dan usianya kita tuliskan
+[48.81 --> 54.29] mulai dari 0, 1, 2, 3, 4, 5, dan seterusnya
+[54.29 --> 57.97] sampai misalnya kemungkinan yang paling tua adalah 100
+[57.97 --> 68.81] maka atributnya tidak lagi berupa atribut kategorikal atau diskret
+[68.81 --> 73.39] tapi atributnya bernilai kontinus
+[74.93 --> 87.99] Contohnya yang lain, ini untuk contoh kasus yang tadi gitu ya, itu ketika humidity-nya kita buat menjadi besaran angka gitu ya.
+[91.75 --> 98.67] Disini kita bisa urutkan terlebih dahulu nilai-nilai humidity yang mungkin ada.
+[99.27 --> 100.89] Dari yang paling kecil sampai yang paling besar.
+[101.05 --> 106.95] Jadi yang paling kecil disini contohnya adalah 65 untuk sampel data D7.
+[107.97 --> 111.25] Dan seterusnya 65, 70, 70, 70, dan seterusnya.
+[111.95 --> 115.67] Lalu yang berikutnya kita ambil distinct value.
+[115.67 --> 118.33] Jadi nilai yang unik saja.
+[118.33 --> 122.95] Atau ketika 70-nya ada 3 cukup dituliskan 1 kali saja.
+[123.15 --> 126.55] Jadi 65, 70, 75, 78, 80, dan seterusnya.
+[127.57 --> 131.73] Lalu bagaimana menerapkannya?
+[132.03 --> 135.59] Kita sebenarnya sama seperti teknik yang sebelumnya.
+[137.05 --> 144.95] Kita membuat proses splitting-nya berdasarkan interval.
+[144.95 --> 147.27] Jadi interval-nya ini diambil dari
+[147.27 --> 151.83] tadi distinct value-nya yang pertama kan 65 gitu ya.
+[151.93 --> 157.07] Berarti kita ambil kurang dari sama dengan 65 dan lebih dari 65.
+[157.43 --> 159.91] Lalu kita lakukan proses perhitungan yang sama.
+[160.13 --> 165.65] Nanti berikutnya kita masuk ke interval atau nilai yang berikutnya.
+[165.83 --> 167.41] Setelah 65 kalau nggak salah 70 ya.
+[167.55 --> 173.27] Berarti kita akan membuat interval kurang dari sama dengan 70 dan lebih dari 70.
+[173.27 --> 177.17] Dan seterusnya sampai keseluruhan distinct value ini.
+[177.27 --> 182.03] Sudah kita lakukan proses perhitungan.
+[185.24 --> 190.86] Lalu yang berikutnya, isu yang berikutnya adalah representasi data.
+[191.82 --> 206.78] Jadi misalnya di sini dari data menjadi fitur karena sebagian besar algoritma pembelajaran biasanya memerlukan data dalam representasi numerik.
+[212.33 --> 213.33] Terima kasih.
+[214.05 --> 225.49] di sini misalnya jika data memiliki fitur yang numerik dengan nilai real
+[225.49 --> 235.69] maka ya kita cara satunya cukup merepresentasikan fitur tersebut sebagai faktor dari real number gitu ya
+[235.69 --> 249.47] jadi kalau misalnya di image ukuran 28x28 maka dimana masing-masing pikselnya menunjukkan intensitas
+[249.47 --> 263.75] maka kita cukup merubahnya menjadi faktor misalnya 78x1 atau 1x784x1 atau 1x784
+[263.75 --> 265.67] 784 ini
+[265.69 --> 268.29] yang diperoleh dari 28x28
+[268.29 --> 276.03] nah lalu bagaimana kalau misalnya datanya ini bukan berupa data yang numerik gitu ya
+[276.03 --> 279.45] contohnya data email atau teks dokumen
+[279.45 --> 292.07] nah yang paling mudah ya ini bisa direpresentasikan menggunakan berapa frekuensi kemunculan kata tersebut dalam dokumen
+[292.07 --> 294.67] dan lain sebagainya lah ada bermacam-macam cara
+[295.78 --> 307.48] Nah, lalu bagaimana di sini yang berikutnya ketika fiturnya berupa kategorikal gitu ya tadi yang sering saya sebutkan.
+[307.48 --> 316.48] Nah, untuk contoh di sini yang tadi misalnya outlook gitu ya.
+[316.48 --> 327.48] Outlook ini di sini ada tiga kemungkinan yaitu Sunny Overcast dan Rainy.
+[327.48 --> 330.48] Sedangkan untuk dua fitur yang lain.
+[330.73 --> 333.21] hanya dua kemungkinan
+[333.21 --> 334.95] yaitu yang pertama
+[334.95 --> 336.95] untuk temperatur low dan high
+[336.95 --> 338.69] terus R ini apa ya
+[338.69 --> 342.63] ya untuk fitur R
+[342.63 --> 343.23] di sini juga
+[343.23 --> 346.53] dia hanya dua kemungkinan yaitu
+[346.53 --> 347.59] yes atau no
+[347.59 --> 349.27] maka ketika
+[349.27 --> 351.11] kategorical
+[351.11 --> 353.75] fiturnya ini
+[353.75 --> 355.79] berisi
+[355.79 --> 358.41] dua kemungkinan nilai saja
+[358.41 --> 360.15] maka kita bisa dengan mudah
+[360.15 --> 362.51] merepresentasikan sebagai 0 dengan 1
+[362.51 --> 364.15] nah tetapi bagaimana
+[364.15 --> 366.13] kalau kita mendapati fitur
+[366.13 --> 367.91] yang kemungkinan nilainya
+[367.91 --> 369.65] lebih dari dua
+[369.65 --> 371.27] apakah kita cukup
+[371.27 --> 373.67] memetakan misalnya sunny
+[373.67 --> 375.93] itu 0, overcast itu 1
+[375.93 --> 377.23] dan rainy itu 2
+[377.23 --> 378.81] atau justru
+[378.81 --> 381.23] hal lain yang perlu kita terapkan
+[381.23 --> 383.55] karena pada saat misalnya
+[383.55 --> 386.21] sunny nya kita tuliskan
+[386.21 --> 388.59] 0 dan rainy nya kita tuliskan
+[388.59 --> 390.13] 2, berarti seolah-olah
+[390.13 --> 391.43] kita mengatakan bahwa misalnya
+[391.43 --> 393.87] sunny dengan rainy itu
+[393.87 --> 395.05] sangat jauh gitu ya
+[395.05 --> 398.13] dan sunny dengan
+[398.13 --> 399.09] overcast ini
+[399.09 --> 402.09] lebih memiliki
+[402.09 --> 403.49] kemiripan yang sama dengan
+[403.49 --> 405.27] overcast ke rainy
+[405.27 --> 406.43] itu kan sebenarnya
+[406.43 --> 409.55] tidak bisa seperti itu
+[409.55 --> 410.83] maka
+[410.83 --> 413.15] kalau pun
+[413.15 --> 415.75] misalnya sekarang anda bayangkan
+[415.75 --> 417.67] kalau kasusnya adalah
+[417.67 --> 419.67] tiga warna gitu ya red, blue
+[420.13 --> 421.87] dengan green gitu ya
+[421.87 --> 424.07] kita beri nilai red 0, blue 1
+[424.07 --> 425.13] green 2 gitu
+[425.13 --> 427.89] maka artinya
+[427.89 --> 430.41] kalau red dengan blue berjarak 1
+[430.41 --> 432.15] blue dengan green berjarak 1
+[432.15 --> 433.25] berarti
+[435.93 --> 442.17] Artinya, kemiripan antara red dengan blue dan kemiripan antara blue dengan green ini sama, gitu.
+[442.95 --> 446.39] Atau yang lebih ekstrim lagi berarti antara
+[447.51 --> 454.47] red merah dengan blue ini lebih mirip daripada merah dengan hijau
+[454.47 --> 456.47] nah padahal kan kondisinya tidak seperti itu
+[457.41 --> 472.31] maka ketika kita memiliki fitur dengan kemungkinan nilai lebih dari 2 maka kita bisa merubah masing-masing nilai fitur tersebut sebagai fitur baru
+[472.31 --> 482.27] dan nantinya hanya ada 2 kemungkinan nilai yang diterapkan itu apakah terjadi atau muncul fitur tersebut atau tidak
+[482.27 --> 491.97] jadi yang awalnya outlook disini ada sunny, overcast, dan rain maka kita bentuk sebagai 3 buah fitur baru
+[491.97 --> 498.55] yaitu fitur untuk sunny, fitur untuk overcast, dan fitur untuk rainy
+[498.55 --> 509.19] nah disini di sunny disini untuk sampel data ke 1, 2, 3 berarti di bagian fitur sunny nilainya adalah 1 sedangkan untuk yang lain dia bernilai 0
+[509.19 --> 512.25] jadi ini sama gitu ya
+[512.25 --> 516.45] 1 karena dia fitur tersebut muncul
+[516.45 --> 524.09] nah sebaliknya untuk pada saat overcast dan rainy dia nilainya di bagian fitur sunny 0
+[524.09 --> 526.61] lalu yang disini
+[527.91 --> 535.67] Pada saat overcase terjadi maka yang bernilai 1 untuk fitur yang overcase
+[535.67 --> 537.69] Yang lainnya 0
+[537.69 --> 543.49] Dan untuk sampel datar ini berarti yang bernilai 1 di fitur R
+[543.49 --> 546.63] Sedangkan yang lainnya adalah 0
+[546.63 --> 556.89] Itu salah satu teknik yang bisa digunakan untuk mengatasi ketika sebuah fitur ini tidak bernilai binar
+[556.89 --> 561.57] Jadi ada lebih dari 2 kemungkinan nilai yang muncul
+[561.57 --> 563.95] Jadi sebenarnya ini tidak hanya diterapkan di decision tree
+[563.95 --> 570.19] Diterapkan untuk metode-metode superfast running yang lain juga bisa diterapkan
+[570.19 --> 576.81] Baik, jadi itu saja berbagai macam penjelasan yang berhubungan dengan decision tree

@@ -1,0 +1,37 @@
+[1.43 --> 8.57] Selanjutnya, masuk ke seksian kedua mengenai intuisi yang mendasari pengembangan algoritma dan NIRS Neckburn.
+[9.25 --> 19.09] Misalkan, di sini kita memiliki sebuah koleksi data training atau data pelatihan yang terdiri dari dua kelas,
+[19.09 --> 30.15] yakni kelas biru atau bisa disebut juga kelas G3, di mana kelas tersebut terdiri dari sembilan buah sampel data.
+[30.15 --> 40.13] Lalu, kelas yang kedua adalah kelas merah atau kelas lingkaran yang terdiri dari delapan sampel data,
+[40.13 --> 54.39] di mana untuk keseluruhan data training tersebut terdapat dua fitur yang diekstraksi untuk masing-masing sampel data,
+[54.69 --> 60.13] yaitu fitur X1 dan X2, di mana selanjutnya,
+[60.15 --> 66.03] fitur X1 dalam gambar ini direpresentasikan sebagai sumbu mendatar atau sumbu X,
+[66.55 --> 73.67] sedangkan fitur X2 direpresentasikan sebagai sumbu vertikal atau sumbu Y.
+[73.67 --> 79.73] Jadi, misalkan saya akan menunjuk sampel data ini,
+[80.45 --> 89.67] maka kita bisa melihat bahwasannya sampel data tersebut memiliki nilai fitur X1,
+[90.15 --> 92.65] misalkan yaitu 1,3.
+[95.49 --> 96.97] Sedangkan untuk
+[99.78 --> 111.18] Hai fitur x2 nya misalnya disini minus 3,3 atau berarti saya bisa merepresentasikan data
+[111.18 --> 120.78] ini saya tuliskan sebagai 13 rumah sering minus 1,3 dan minus 3,5 tiga
+[120.78 --> 132.34] hai hai
+[122.13 --> 123.47] Lain ada minusnya ya.
+[124.89 --> 125.43] Oke.
+[128.28 --> 140.08] Nah, selanjutnya, misalkan saya memiliki sebuah data baru dalam hal ini direpresentasikan sebagai gambar kotak di sini.
+[141.21 --> 151.43] di mana data baru ini yang selanjutnya bisa dikenal juga sebagai sampel dari data uji.
+[151.43 --> 155.13] Dalam kasus ini kita hanya memiliki satu buah sampel data uji,
+[155.27 --> 160.69] tetapi pada saat kita melakukan penelitian biasanya sampel data uji ini tidak hanya berjumlah satu,
+[160.87 --> 163.35] tapi dalam jumlah yang cukup banyak.
+[164.03 --> 170.87] Nah, selanjutnya dalam kasus ini lagi kita diminta untuk memprediksi atau mengklasifikasikan
+[170.87 --> 172.79] apakah sampel data baru ini.
+[174.82 --> 180.88] termasuk ke dalam kelas biru atau kelas segitiga
+[180.88 --> 187.40] atau termasuk ke dalam kelas merah atau kelas lingkaran
+[187.40 --> 192.64] sekarang kalau Anda diminta untuk menebak
+[192.64 --> 197.88] saya pikir semuanya akan menebak data uji tersebut
+[197.88 --> 202.20] bisa diprediksi atau diklasifikasikan sebagai kelas
+[204.34 --> 212.68] merah atau kelas lingkaran kenapa yaitu karena bisa kita lihat bahwasanya sampel data uji
+[212.68 --> 224.20] tersebut sangat dekat dengan sampel-sampel data dari kelas merah itu dan dibandingkan dengan
+[224.20 --> 232.12] sampel data dari kelas biru semuanya letaknya sangat jauh gitu ya jadi kita bisa menarik
+[232.12 --> 238.66] kesimpulan bahwasanya kelas dari sampel data uji tersebut adalah kelas merah atau dengan kata
+[238.66 --> 247.06] lain kita memiliki intuisi bahwasanya untuk memprediksi kita bisa melihat tetangga terdekatnya
+[247.06 --> 256.72] itu apakah kelas merah atau kelas biru Nah kalau kita lihat lebih jauh maka kita pasti akan
+[256.72 --> 261.64] mendapatkan nilai fitur dari sampel data uji pasti sangat
+[262.12 --> 269.56] mirip atau lebih mirip dengan sampel-sampel data training dari kelas merah

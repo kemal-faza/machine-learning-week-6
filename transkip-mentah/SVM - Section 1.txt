@@ -1,0 +1,224 @@
+[1.59 --> 20.59] Pembahasan pada pertemuan ke-6 ini kita akan masih membahas mengenai salah satu metode supervisor learning yang sempat sangat terkenal di era...
+[22.39 --> 31.33] versikal machine learning yaitu yang bernama support vector machine atau SVM
+[33.19 --> 45.95] Dan disini yang akan kita pelajari ada lima bagian yang pertama yaitu intuisi dasar dari
+[48.55 --> 62.89] bagaimana metode Linear SVM ini dikembangkan lalu yang berikutnya penjelasan mengenai konsep
+[62.89 --> 76.27] secara matematis dari Linear SVM lalu yang ketiga yaitu contoh dari Linear kasus tentang
+[77.37 --> 79.13] linier SVM
+[79.13 --> 81.15] dan yang keempat
+[83.61 --> 86.33] pengembangan dari SVM yaitu
+[86.33 --> 88.21] non-linear SVM
+[89.40 --> 98.82] Hai Oke langsung aja kita mulai mengenai induisi dasar yang melatar belakangi
+[98.82 --> 102.84] munculnya atau dikembangkannya linear SVM
+[103.59 --> 111.25] Jadi yang pertama yaitu kita membahas mengenai pengklasifikasi linier
+[111.25 --> 121.09] dimana kita memiliki inputan berupa variable x
+[121.09 --> 128.17] dimana kita memiliki output yang dinotasikan sebagai
+[128.17 --> 135.29] y estimate dan linier classifier atau pengklasifikasi linier ini
+[135.29 --> 137.71] dinotasikan sebagai fungsi f
+[137.71 --> 144.95] jadi kita akan mencari fungsi f yang bisa digunakan untuk memetakan x menjadi
+[147.41 --> 148.53] iestimate
+[148.53 --> 150.81] dimana fungsi f ini
+[150.81 --> 152.21] berarti otomatis
+[152.21 --> 154.61] karena pengklasifikasi linier
+[154.61 --> 157.25] maka memiliki
+[157.25 --> 159.17] tiga parameter
+[159.17 --> 160.87] yaitu x
+[160.87 --> 162.83] y dan b
+[162.83 --> 164.07] lalu
+[164.07 --> 166.97] dinyatakan sebagai fungsi
+[166.97 --> 169.69] x y dan b
+[169.69 --> 170.53] sama dengan
+[170.53 --> 172.43] signum
+[172.43 --> 174.59] atau tuliskan sign
+[174.59 --> 175.83] ini dia romboknya
+[175.83 --> 177.35] y x minus b
+[179.08 --> 186.08] Fungsi signum ini artinya kalau misalnya fungsi F tersebut
+[187.13 --> 187.93] akan
+[187.93 --> 190.09] bernilai
+[190.09 --> 192.95] jadi fungsi f sama dengan signum x ini
+[192.95 --> 194.91] fungsi f akan bernilai
+[194.91 --> 196.51] plus 1
+[196.51 --> 198.23] jika
+[198.23 --> 200.61] x nya
+[200.61 --> 202.99] jadi sesuatu
+[202.99 --> 204.91] yang hasil dari
+[204.91 --> 208.55] yang diperoleh pada
+[209.89 --> 211.67] bagian dalam kurung ini itu ya
+[211.67 --> 213.99] yaitu bernilai positif
+[213.99 --> 214.65] maka
+[214.65 --> 218.33] fungsi f nya ini akan menghasilkan
+[218.33 --> 219.83] keluaran berupa plus 1
+[219.83 --> 222.29] tapi kalau misalnya x nya disini
+[222.29 --> 224.29] adalah negatif maka berarti
+[224.29 --> 226.43] f nya akan
+[226.43 --> 227.83] menghasilkan
+[227.83 --> 229.59] nilai minus 1 atau
+[229.59 --> 232.11] kalau di contoh kasus tadi
+[232.11 --> 234.19] f kurung buka x
+[234.19 --> 236.13] koma w koma b sama dengan
+[236.13 --> 237.97] signum dari kurung buka w x
+[237.97 --> 240.03] minus b itu artinya kalau
+[240.03 --> 242.19] disini nilainya
+[243.51 --> 244.63] Positif.
+[246.84 --> 248.26] maka berarti
+[248.26 --> 250.50] dia akan ke 1
+[250.50 --> 251.74] tapi kalau
+[252.98 --> 254.40] Minyak negatif
+[256.63 --> 258.63] Berarti disini adalah
+[259.93 --> 289.91] Terima kasih.
+[265.78 --> 277.40] Dan kalau misalnya pengklasifikasinya tidak binar, maka jika X sama dengan 0, maka F-nya akan berlilai 0.
+[277.64 --> 281.52] Itu definisi dari fungsi signum.
+[281.52 --> 299.58] Nah, sekarang misalnya kita memiliki sebuah data yang mana dia terdiri dari dua kelompok.
+[299.58 --> 311.28] Yang pertama yaitu yang memiliki lingkaran biru, ini menunjukkan kelas plus 1, sedangkan yang lingkaran putih menunjukkan kelas minus 1.
+[311.28 --> 324.56] Maka bagaimana kira-kira Anda ketika akan membangun sebuah pengklasifikasi linear yang akan digunakan untuk memisahkan dua kategori data ini.
+[326.58 --> 328.44] namanya pengklasifikasi linier
+[328.44 --> 328.98] berarti
+[331.27 --> 340.75] decision boundary nya berupa garis lurus gitu ya maka kemungkinannya yang pertama kita bisa
+[340.75 --> 347.35] membuat garis seperti yang ada di contoh itu ya jadi kita buat garis ini
+[347.35 --> 348.35] hai hai
+[348.52 --> 349.80] kita buat garis ini
+[349.80 --> 352.52] maka bisa saya tuliskan
+[357.99 --> 363.85] Fungsi yang menunjukkan decision boundary berupa garis ini adalah
+[363.85 --> 368.13] WX plus B sama dengan 0
+[368.13 --> 372.37] Dan berarti untuk yang ada di sini
+[373.59 --> 385.53] di sebelah atas kita bisa melihat bahwasanya hasil dari WX plus B nya akan lebih besar dari
+[385.53 --> 394.35] nol akan dinyatakan sebagai kelas positif sedangkan yang di bagian bawah ini berarti
+[394.35 --> 404.19] area yang menunjukkan nilai WX plus B nya kurang dari nol maka akan
+[404.19 --> 408.59] diklasifikasikan sebagai kelas minus satu atau negatif satu
+[409.45 --> 412.37] Nah, selain itu kita juga bisa membuat garis yang lain ya.
+[412.47 --> 415.85] Kita bisa membuat garis kalau tadi.
+[417.45 --> 418.45] seperti ini
+[418.45 --> 421.35] kita bisa membuat garis yang lain
+[423.38 --> 427.30] Dengan bentuk sama ya, bx plus b sama dengan 0.
+[428.08 --> 434.60] Dan berarti untuk area di atasnya juga sama, bx plus b lebih besar dari 0 atau menunjukkan kelas plus 1.
+[435.44 --> 442.78] Sebaliknya di bawah menunjukkan nilai bx plus b kurang dari 0 atau menunjukkan kelas minus 1.
+[443.99 --> 447.39] Dan seterusnya, kita juga bisa membuat garis dalam bentuk seperti ini.
+[448.50 --> 460.16] Atau kalau kita gambarkan semua, ada sangat banyak kemungkinan garis yang bisa kita bentuk, yang bisa kita gambarkan.
+[460.16 --> 467.16] Dan semuanya benar, jadi bisa dilakukan karena...
+[468.58 --> 481.12] garisnya berupa garis lurus atau mengklasifikasi linier yang jadi pertanyaan adalah mana persamaan
+[481.12 --> 490.42] garis yang paling baik gitu ya definisi paling baik itu Mbak apa ya berarti nanti ketika
+[491.61 --> 511.01] Kita memiliki titik-titik ini sebagai sampel dari training data, maka berarti harus semuanya berhasil diklasifikasikan dengan benar menggunakan persamaan garis tersebut.
+[511.01 --> 540.01] Dan selanjutnya ketika kita memiliki data uji atau testing data yang baru, itu juga akan bisa diklasifikasikan dengan baik ke dalam kelas 1 atau minus 1 tanpa adanya sampel data testing yang misclassified.
+[540.01 --> 541.01] Itu yang diklasifikasikan.
+[541.01 --> 547.77] Berarti kita memiliki atau berhasil menemukan
+[550.26 --> 552.64] garis, persamaan garis
+[552.64 --> 554.18] yang paling baik
+[561.62 --> 563.78] di dalam SVM
+[565.69 --> 568.39] Bersamaan garis
+[569.77 --> 572.91] atau decision boundary yang memisahkan
+[572.91 --> 576.33] dua kelas tersebut
+[576.33 --> 580.99] selanjutnya disebut sebagai
+[580.99 --> 582.59] hyperplane
+[583.59 --> 584.25] dan
+[584.25 --> 589.01] untuk kita bisa
+[591.33 --> 603.95] mendapatkan hyperplane atau mendapatkan persamaan garis yang paling baik
+[603.95 --> 609.89] maka kita perlu menentukan yang namanya margin
+[609.89 --> 618.49] dimana margin ini bisa dinatakan sebagai jarak antara hyperplane tersebut
+[618.49 --> 630.55] dengan pattern atau sampel data yang terdekat dari masing-masing kelas
+[630.55 --> 634.47] jadi kalau kita lihat untuk garis ini
+[634.47 --> 645.09] maka kita memiliki ini satu sebagai representasi dari kelas plus satu
+[645.09 --> 648.47] yang terdekat dengan hyperplane
+[648.47 --> 651.45] dan titik ini
+[653.00 --> 654.22] ya, titik ini
+[654.22 --> 655.50] sebagai
+[657.77 --> 659.45] Representasi dari
+[661.46 --> 663.02] kelas minus 1
+[663.02 --> 664.46] jadi pola yang
+[664.46 --> 666.92] atau sampel data yang paling
+[666.92 --> 669.20] dekat dengan hyperplane
+[669.20 --> 670.64] dari kelas minus 1
+[674.45 --> 676.45] ketika kita
+[679.93 --> 682.51] Tadi membuat ada begitu banyak
+[684.47 --> 696.25] Hai garis gede yang mungkin maka setiap garis itu akan memiliki nilai margin yang berbeda-beda jadi
+[696.25 --> 703.53] untuk contoh bentuk garis yang seperti ini gitu ya dia berarti untuk
+[704.26 --> 706.68] titik atau pola terdekatnya
+[706.68 --> 708.32] adalah minus 1 disini
+[708.32 --> 710.60] dan plus 1 disini
+[710.60 --> 712.98] atau berarti kita bisa menggambarkan
+[712.98 --> 715.28] marginnya
+[715.28 --> 716.48] disini bisa
+[716.48 --> 718.94] dilihat lebih luas
+[718.94 --> 719.82] lebih
+[719.82 --> 722.52] besar
+[722.52 --> 723.64] atau lebih lebar
+[723.64 --> 725.22] nah
+[725.22 --> 727.90] di
+[727.90 --> 730.68] linear SVM ini
+[730.68 --> 731.64] tujuannya
+[731.64 --> 734.14] tadi kan kita akan mencari
+[734.14 --> 735.76] garis yang paling baik
+[735.76 --> 737.50] nah garis yang paling baik itu yang bagaimana
+[737.50 --> 740.62] yaitu yang memiliki nilai
+[740.62 --> 742.32] margin
+[742.32 --> 744.12] yang paling
+[744.12 --> 745.72] maksimal
+[745.72 --> 747.24] atau yang paling
+[747.24 --> 749.84] nilai marginnya yang paling besar
+[751.30 --> 762.32] Dan ini selanjutnya dikenal sebagai konsep yang bernama Linear SVM atau disingkat LSVM.
+[764.39 --> 765.15] Terima kasih.
+[765.89 --> 778.89] Setelah kita tahu mengenai linear SVM, ada beberapa, jadi kita tahu ada yang namanya hyperplane, lalu ada yang namanya...
+[779.86 --> 790.78] margin lalu ada yang namanya maksimum margin lalu ada linear FEM yang berikutnya adalah istilah yang
+[790.78 --> 804.04] disebut sebagai support vector jadi tadi margin ini terbentuk dari pola yang paling dekat dengan
+[804.04 --> 806.92] hyperplane gitu ya
+[807.67 --> 811.61] pola atau sampel
+[811.61 --> 812.73] data tersebut
+[812.73 --> 815.43] itu selanjutnya disebut sebagai
+[815.43 --> 816.95] support vector
+[816.95 --> 819.01] jadi untuk di kasus ini
+[819.01 --> 819.61] misalnya
+[819.61 --> 823.05] representasi dari kelas minus 1
+[823.05 --> 824.41] yang paling dekat dengan harga perpuluhan
+[824.41 --> 825.57] titik ini
+[825.57 --> 827.57] dan titik ini
+[828.58 --> 842.18] Lalu representasi dari kelas plus 1 yang paling dekat dengan hyperplane adalah titik ini, maka ketiga titik ini diselanjutnya disebut sebagai support vector.
+[843.89 --> 873.87] Terima kasih.
+[845.56 --> 848.38] mungkin Anda akan bertanya
+[848.38 --> 849.60] kenapa
+[849.60 --> 852.14] maksimum margin
+[852.14 --> 854.38] karena secara
+[854.38 --> 855.66] induisi ini
+[855.66 --> 857.56] ketika kita
+[857.56 --> 860.22] menggunakan maksimum
+[860.22 --> 861.32] margin
+[861.32 --> 863.02] maka harapannya
+[863.02 --> 866.00] akan mengurangi
+[866.00 --> 867.90] kemungkinan
+[867.90 --> 870.08] adanya misclassified
+[870.08 --> 871.82] jadi kesalahan
+[871.82 --> 872.68] pengklasifikasi
+[872.68 --> 873.54] dia misclassified
+[876.36 --> 877.08] Lalu
+[878.69 --> 882.15] yang berikutnya
+[882.15 --> 883.77] ketika kita
+[883.77 --> 886.41] menggunakan
+[886.41 --> 888.65] hanya menggunakan
+[888.65 --> 890.87] support vector
+[890.87 --> 892.35] ternyata
+[895.72 --> 900.22] memang bisa dilakukan
+[900.22 --> 905.34] jadi kita mewakili semua tetik yang lain itu
+[905.34 --> 906.26] diwakili dengan
+[909.08 --> 910.68] support vector itu sendiri
+[910.68 --> 912.10] itu sangat
+[912.10 --> 914.40] memungkinkan gitu ya
+[914.40 --> 916.14] jadi kita tidak perlu
+[916.14 --> 918.64] melakukan pengecekan atau
+[918.64 --> 920.54] membangun
+[920.54 --> 921.84] hyperplane itu
+[921.84 --> 923.82] berdasarkan keseluruhan
+[923.82 --> 926.00] apa namanya
+[926.00 --> 927.88] sampel data gitu
+[927.88 --> 930.64] tidak perlu, jadi kita cukup hanya
+[930.64 --> 932.66] menggunakan
+[932.66 --> 934.50] support vector saja
+[934.50 --> 936.26] dan kita menghapikan
+[936.26 --> 937.38] titik-titik yang lain
+[937.38 --> 940.84] dan secara empiris
+[940.84 --> 942.68] itu ya berdasarkan proses uji coba
+[942.68 --> 944.26] dengan menggunakan
+[944.26 --> 946.14] maksimum margin
+[946.14 --> 948.78] dan support vector
+[948.78 --> 949.88] itu sendiri
+[949.88 --> 952.56] biasanya akan memberikan hasil
+[952.56 --> 954.12] yang sangat baik
+[954.12 --> 956.88] hasil yang sangat baik itu apa ya tadi
+[956.88 --> 957.56] berarti
+[962.52 --> 967.96] mengurangi adanya kemungkinan misclassified.

@@ -1,0 +1,153 @@
+[0.47 --> 12.93] Pembahasan selanjutnya berkaitan dengan kinerja dari decision tree yaitu berkaitan dengan kondisi overfitting yang muncul pada decision tree.
+[12.93 --> 15.59] Jadi untuk sampel
+[18.29 --> 20.81] decision tree yang tadi sudah kita bahas
+[20.81 --> 22.69] sebelumnya, misalnya
+[22.69 --> 24.79] kita menambahkan sebuah
+[24.79 --> 25.63] no isi data
+[25.63 --> 27.87] ke dalam data set
+[27.87 --> 30.61] disini contohnya misalnya outlooknya
+[30.61 --> 32.43] sunny, humidity nya normal
+[32.43 --> 35.03] dan strong wind
+[35.03 --> 36.69] gitu ya, maka
+[36.69 --> 38.45] ternyata keputusan
+[38.45 --> 40.19] bermain tenisnya adalah no
+[40.19 --> 41.53] padahal kalau berdasarkan
+[41.53 --> 43.95] tree yang sudah terbentuk
+[43.95 --> 46.35] tadi, maka harusnya
+[46.35 --> 48.11] dia diklasifikasikan sebagai
+[48.11 --> 50.07] plate tenisnya adalah yes
+[50.07 --> 52.01] karena humidity nya normal, tapi ternyata
+[52.01 --> 54.93] sampel data
+[54.93 --> 55.59] noise
+[55.59 --> 58.19] yang baru kita tambahkan
+[58.19 --> 60.45] disitu ternyata keputusan bermain
+[60.45 --> 61.65] tenisnya adalah no
+[62.58 --> 74.92] Maka dalam kondisi seperti itu sebenarnya maka kita harus node tersebut atau tree tersebut harus kita growing lagi.
+[75.42 --> 82.04] Jadi di node terkait kita perlu menambahkan pengujian untuk fitur yang lain.
+[82.04 --> 96.32] Nah tetapi maka nantinya akan diperoleh tree yang lebih kompleks gitu ya atau kedalamannya lebih dalam.
+[100.39 --> 101.73] kedalaman yang
+[101.73 --> 103.33] lebih dalam ini tujuannya
+[103.33 --> 105.71] supaya modelnya
+[105.71 --> 107.11] ini jadi
+[107.11 --> 109.53] fit atau pas
+[109.53 --> 111.03] atau cocok untuk
+[111.03 --> 112.89] mengklasifikasikan noisy data
+[112.89 --> 114.29] tapi kadang-kadang juga
+[114.29 --> 116.51] malah yang
+[116.51 --> 119.07] terjadi
+[119.07 --> 120.37] justru
+[120.37 --> 123.11] dia sangat cocok untuk
+[123.11 --> 124.67] noisy data
+[124.67 --> 127.01] sangat fit untuk noisy data
+[127.01 --> 128.39] tapi ketika
+[128.39 --> 130.57] kita memiliki
+[130.57 --> 131.63] apa namanya
+[131.63 --> 135.03] data uji yang lain ini justru malah
+[135.03 --> 136.65] akan menjadi
+[136.65 --> 139.31] data-data lain
+[139.31 --> 140.87] yang aslinya normal
+[140.87 --> 142.93] artinya bukan
+[142.93 --> 144.85] noisy data ini justru malah akan
+[144.85 --> 146.69] menjadi misclassified atau
+[146.69 --> 148.25] salah diklasifikasikan
+[148.25 --> 150.59] nah itu yang disebutnya overfitting
+[150.59 --> 153.15] overfitting ini masalah
+[153.15 --> 154.05] yang
+[154.05 --> 156.75] sebenarnya tidak hanya terjadi di desintri
+[156.75 --> 158.37] di berbagai macam
+[158.37 --> 159.63] kasus
+[159.63 --> 162.87] penerapan algoritma atau metode supervised learning
+[162.87 --> 163.17] juga
+[163.17 --> 166.55] masalah yang biasanya muncul adalah
+[166.55 --> 167.29] overfitting
+[167.29 --> 170.61] nah selain karena adanya noisy data
+[170.61 --> 172.61] tersebut sebenarnya overfitting juga bisa terjadi
+[172.61 --> 173.07] ketika
+[173.07 --> 176.11] training data yang kita latih ini
+[176.11 --> 177.39] tidak cukup gitu ya
+[177.39 --> 179.75] jadi belum merepresentasikan
+[179.75 --> 181.91] whole
+[181.91 --> 183.95] atau keseluruhan
+[183.95 --> 186.37] kemungkinan-kemungkinan
+[188.98 --> 191.24] sampel data yang ada
+[191.24 --> 191.84] gitu
+[191.84 --> 195.34] kalau kita misalnya
+[195.34 --> 196.98] buat gitu ya
+[196.98 --> 199.06] plotting antara
+[199.06 --> 201.10] ukuran dari tree atau dari
+[201.10 --> 202.82] jumlah node nya
+[202.82 --> 205.22] dengan akurasinya ini
+[205.22 --> 209.36] kalau di training data
+[209.36 --> 211.16] jadi berdasarkan
+[211.16 --> 213.42] sampel data latihnya
+[213.42 --> 215.18] semakin tinggi
+[215.18 --> 217.34] ukuran dari tree nya
+[217.34 --> 218.96] maka akurasinya
+[218.96 --> 219.48] semakin
+[219.48 --> 222.38] tinggi juga gitu ya
+[222.38 --> 224.56] tapi ternyata pada saat
+[224.56 --> 227.02] kita mengujinya
+[227.02 --> 228.30] untuk data testing
+[228.30 --> 230.66] ternyata pada saat
+[230.66 --> 230.98] kita
+[230.98 --> 233.32] sampai pada
+[233.32 --> 236.30] titik puncaknya itu ketika
+[237.04 --> 238.50] di bagian ini
+[238.50 --> 239.92] jumlah node
+[239.92 --> 241.16] nya dari
+[241.16 --> 243.66] 10 sampai 20 ini
+[243.66 --> 246.26] dia menghasilkan akurasi 0,75
+[246.26 --> 246.88] tapi
+[246.88 --> 248.58] setelahnya dia mulai
+[248.58 --> 251.52] performanya atau kinerjanya mulai turun
+[251.52 --> 252.14] turun turun
+[252.14 --> 254.26] padahal
+[254.26 --> 257.50] tujuan kita membuat
+[257.50 --> 259.80] membentuk model klasifikasi
+[259.80 --> 261.74] ini ya harapannya
+[261.74 --> 263.26] supaya pada saat kita
+[263.26 --> 265.04] memprediksi atau
+[265.04 --> 267.28] menguji data testing
+[267.28 --> 269.80] ini kinerjanya tetap
+[269.80 --> 271.58] baik atau tidak terjadi
+[271.58 --> 273.54] overfitting seperti
+[273.54 --> 275.96] sampel
+[275.96 --> 276.62] atau seperti
+[276.62 --> 279.00] contoh yang saya jelaskan
+[279.00 --> 280.44] di layar ini
+[283.91 --> 295.43] Hai Nah bagaimana caranya decision3 ini mencegah gitu ya terjadinya overfitting gitu ya
+[296.29 --> 326.27] Terima kasih telah menonton.
+[298.44 --> 300.12] apa namanya harapannya
+[300.12 --> 302.62] decision tree yang terbangun ini
+[302.62 --> 303.68] tidak terlalu
+[303.68 --> 306.32] besar atau tidak terlalu kompleks
+[306.32 --> 306.84] gitu ya
+[306.84 --> 309.26] tetapi
+[309.26 --> 312.64] cukup cocok
+[312.64 --> 313.96] untuk
+[313.96 --> 317.14] mengklasifikasikan
+[317.14 --> 318.46] data training
+[318.46 --> 319.84] gitu jadi
+[319.84 --> 322.98] ya
+[324.44 --> 329.50] tidak terlalu fit untuk semua data noise
+[329.50 --> 332.40] tapi sudah cukup representatif
+[332.40 --> 336.18] untuk mengklasifikasikan sampel-sampel data training
+[336.18 --> 338.92] terdapat dua pendekatan yaitu
+[341.25 --> 357.67] Stopping early, jadi proses growing the tree atau mengembangkan tree-nya, jadi melakukan splitting-splitting-nya itu bisa di-stop pada saat seawal mungkin pada saat kita menerapkan growing the tree.
+[357.67 --> 359.67] Atau justru...
+[362.20 --> 372.46] Kita biarkan terlebih dahulu proses growing the tree-nya, setelah selesai, baru kita potong atau kita buang.
+[375.86 --> 405.84] Sampai jumpa.
+[378.17 --> 388.67] jabang-jabang atau internal node yang sekiranya mengarah ke kondisi overfit atau hanya sangat
+[388.67 --> 394.91] cocok untuk sampel-sampel data noise gitu ya Nah nanti kalau misalnya anda ada yang tertarik
+[394.91 --> 404.33] tentang pruning ya karena keterbatasan waktu nanti anda bisa coba baca-baca gitu ya dari
+[404.33 --> 410.39] artikel-artikel yang membahas tentang pruning di dalam decision tree
+[414.53 --> 426.89] Hai nah salah satu eh pendekatan yang paling sederhana gitu ya untuk menentukan kapan perlu
+[426.89 --> 434.63] lakukan prune atau tidak gitu ya itu kita menambahkan Jadi kalau biasanya kita punya
+[434.63 --> 442.25] dua bagian data set yaitu training data dan testing data Nah di sini kita tambahkan satu
+[442.25 --> 450.35] bagian yang disebut sebagai validation data set jadi sebelum kita menguji data ansin data kita
+[450.35 --> 455.75] punya suku kumpulan data set yang biasa digunakan untuk melakukan uji coba gitu nah uji cobanya ini
+[455.75 --> 463.31] intinya hanya ke untuk setiap sampel-sampel data yang ada di dalam verifikasi dan data set ini kita
+[463.31 --> 471.47] gunakan sebagai acuan untuk proses stopping growing the tree atau tidak gitu Jadi kalau misalnya
+[471.47 --> 481.61] ternyata ketika kita terapkan untuk menguji atau yang menguji data yang ada di dalam validasi
+[481.61 --> 490.97] data set tapi ternyata akurasinya menjadi menurun ya berarti sudah kita di bagian internal tersebut
+[490.97 --> 497.27] kita stop saja jadi kita stop proses growing the terinya

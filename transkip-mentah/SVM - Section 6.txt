@@ -1,0 +1,263 @@
+[2.29 --> 12.59] Oke, pada pembahasan kali ini saya akan menjelaskan mengenai implementasi SOM Kernel pada salah satu bahasa pemprograman yaitu Python.
+[13.19 --> 27.59] Nah, saya membuat ini karena supaya Anda punya gambaran visualisasi yang lebih jelas daripada kalau misalnya tadi di gambar yang saya buatkan.
+[27.59 --> 29.59] Ini kurang lebih sebenarnya sama, cuma ini nanti...
+[30.73 --> 32.97] akan lebih sangat terlihat
+[32.97 --> 34.29] nah
+[34.29 --> 36.85] coba diperhatikan
+[36.85 --> 38.47] di cell yang pertama ini
+[38.47 --> 41.55] di cell yang pertama
+[41.55 --> 45.17] saya ada import
+[45.17 --> 46.63] import ini untuk mengimport
+[46.63 --> 49.33] library, lalu saya mendefinisikan
+[49.33 --> 49.99] dua buah
+[49.99 --> 52.53] variable
+[52.53 --> 55.57] x dengan y yang terdiri dari
+[55.57 --> 58.79] sekumpulan data
+[58.79 --> 60.27] dimana datanya ini
+[60.27 --> 62.21] bisa Anda
+[62.21 --> 64.67] lihat dari
+[64.67 --> 66.49] perintah lanspace dari
+[66.49 --> 69.25] library rampai, ini artinya saya akan
+[69.25 --> 69.75] membuat
+[69.75 --> 73.33] angka, sekumpulan angka
+[73.33 --> 75.25] dari minus 5 sampai dengan 5
+[75.25 --> 77.17] batasannya, tapi disini
+[77.17 --> 78.55] jumlahnya sebanyak
+[78.55 --> 79.61] 100
+[79.61 --> 82.15] maaf
+[83.03 --> 88.61] Nah, lalu yang berikutnya saya akan mendefinisikan variable yang kedua yaitu y,
+[89.09 --> 96.13] di mana y-nya ini fungsi kuadrat dari 100 dikurangi nilai x kuadratnya,
+[96.25 --> 99.61] jadi berapapun hasil yang diperoleh dari x ini saya kuadratkan.
+[99.61 --> 100.51] Lalu,
+[102.57 --> 104.85] dihitung berdasarkan
+[104.85 --> 107.29] 10 kuadrat
+[107.29 --> 109.27] atau 100, dikurangi nilai hasil
+[109.27 --> 110.77] X kuadratnya, lalu diakarkan
+[110.77 --> 112.45] nanti kita mendapatkan nilai Y
+[112.45 --> 115.07] nah, lalu
+[115.07 --> 117.35] yang berikutnya, perintah yang ketiga
+[117.35 --> 119.17] disini, saya ingin
+[122.07 --> 131.11] apa namanya, membuat datanya ini ada yang negatif dan ada data yang positif, gitu ya.
+[131.51 --> 136.81] Dari nilai baik X maupun Y-nya.
+[136.81 --> 141.57] Jadi, di sini saya akan menggunakan hashtag.
+[141.87 --> 147.65] Hashtag ini horizontal hashtag, jadi kalau misalnya ini awalnya saya punya sekumpulan nilai,
+[147.65 --> 152.13] lalu ini saya buat dalam bentuk array, gitu ya, menggunakan tanda kurung sikunya.
+[152.33 --> 159.87] Jadi, ada yang Y positif, berarti yang memang didapatkan dari ini, gitu ya, dari hasil di equation kedua.
+[160.23 --> 169.71] Lalu, minus Y-nya saya sambungkan, gitu ya, karena horizontal hashtag berarti sama seperti saya sambungkan dengan nilai minus Y-nya,
+[169.83 --> 171.09] yang saya negatifkan, gitu ya.
+[171.23 --> 174.85] Intinya saya terapkan negatif dari Y-nya.
+[175.07 --> 177.43] Lalu yang berikutnya sama untuk X juga.
+[177.65 --> 184.89] Saya menggunakan horizontal hashtag data X aslinya, lalu saya negatifkan nilai X-nya, lalu saya sambungkan.
+[186.93 --> 216.91] Terima kasih telah menonton!
+[189.11 --> 196.43] Lalu, ya, ini misalnya saya jalankan, harusnya oke, tidak ada masalah.
+[196.43 --> 209.37] Nah, di sini saya mengganti saja, gitu ya, yang di sini, lalu yang berikutnya ada X1, gitu ya, sama, gitu ya, menggunakan fungsi yang sama.
+[209.37 --> 227.03] Lalu ada Y1, gitu ya, dengan fungsi yang sama. Di sini tidak 100, gitu, 10 kuadrat dikurangi X kuadrat, tapi 5 kuadrat dikurangi X1 kuadrat.
+[228.01 --> 241.03] Nah, lalu ada Y1 sama saya gunakan horizontal stack dari nilai aslinya dan negatif dari Y1, X1-nya ini saya buat horizontal stack lagi dari X1 dengan negatif X1.
+[241.27 --> 242.07] Ini saya jalankan.
+[243.09 --> 248.27] Nah, selanjutnya saya akan mem-plotting, gitu ya.
+[248.27 --> 256.71] Saya akan mem-plotting dari Y dengan X, gitu ya.
+[257.45 --> 267.23] Jadi, dua variable Y dengan X, lalu plotting yang kedua hasil dari Y1, X1.
+[267.23 --> 278.15] Jadi, kalau kita perhatikan ini 100 dikurangi X2, berarti kan harusnya masih gede, gitu ya.
+[278.57 --> 283.67] Lalu kalau ini 25 dikurangi X2, biasanya lebih kecil, gitu ya.
+[283.73 --> 287.03] Jadi, kalau saya plotkan.
+[289.73 --> 295.53] Ini hasil plotting yang pertama, yaitu
+[300.28 --> 301.20] hasil
+[301.20 --> 304.22] plotting yang pertama
+[305.46 --> 308.02] hasil plotting
+[308.98 --> 310.86] sementara ini karena
+[310.86 --> 313.06] mungkin coba saya ini ya
+[314.17 --> 317.33] saya buat kode lagi saja
+[318.42 --> 319.22] Amin.
+[320.85 --> 322.53] saya bentuk disini supaya
+[327.61 --> 331.45] wlt.scatter
+[333.03 --> 363.01] Oke, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+[342.89 --> 344.95] Ini kalau saya jalankan.
+[345.86 --> 347.06] hasilnya seperti ini
+[347.06 --> 349.50] lalu
+[349.50 --> 350.70] disini
+[350.70 --> 353.34] kalau X
+[354.92 --> 356.04] Satunya.
+[358.15 --> 388.13] selamat menikmati
+[363.41 --> 369.75] Hasilnya yang di tengah berarti ya.
+[370.87 --> 400.85] 1, 2, 3, 4.
+[373.69 --> 381.11] X1 ini kan dari nilai ini ya nilainya kan lebih kecil gitu ya
+[381.11 --> 385.23] 25 dikurangin kan berarti harusnya ruangnya lebih kecil
+[385.23 --> 392.43] lalu ini baru akan saya tambahkan hasil penggabungannya gitu ya
+[392.43 --> 399.11] plt.scatter y, x
+[399.11 --> 403.99] lalu ini plt.scatter
+[405.09 --> 408.51] yaitu 1,11
+[409.73 --> 410.23] ya
+[411.30 --> 420.04] Jadi saya menggabungkan dari dua ini, ini tadi awalnya sendiri-sendiri, ini hasil.
+[421.78 --> 434.68] yang dua plot itu saya jadikan satu oke nah lalu coba saya ubah gitu ya dari bentuk ini
+[434.68 --> 443.26] saya bentuk ubah menjadi data frame disini saya perlu mengimport apa namanya library pandas gitu
+[443.26 --> 452.98] nah disini ini hasilnya jadi di data frame yang pertama ini saya akan melakukan vertical
+[452.98 --> 462.70] stack gitu ya dari y dengan x gitu ya jadi yang pertama y dengan x saya apa namanya
+[463.46 --> 465.28] saya stack
+[465.28 --> 466.66] gitu ya, saya
+[466.66 --> 468.88] vertical stack berarti saya
+[468.88 --> 471.58] kalau tadi disambungin
+[471.58 --> 473.04] ke kanan gitu ya, kalau ini
+[473.04 --> 474.94] dibuat atas bawah gitu ya
+[474.94 --> 476.26] Y dulu baru X
+[479.11 --> 480.93] nilai Y nya
+[480.93 --> 482.11] X nya ini
+[482.11 --> 484.33] yang sudah
+[484.33 --> 485.43] didefinisikan di atas
+[485.43 --> 486.79] lalu
+[486.79 --> 488.69] saya transpose
+[488.69 --> 491.73] lalu saya tuliskan
+[491.73 --> 493.49] kolomnya
+[493.49 --> 494.67] sebagai
+[494.67 --> 497.27] X1 dan
+[497.27 --> 498.57] X2
+[498.57 --> 501.45] lalu saya buat labelnya
+[501.45 --> 503.01] yaitu data frame untuk
+[503.01 --> 505.45] kolom Y
+[505.45 --> 507.85] ini saya tuliskan 0 karena ini dianggap sebagai
+[507.85 --> 509.89] kelas 0
+[509.89 --> 511.31] gitu ya
+[512.55 --> 517.95] Berarti yang di luar ya, sebagai kelas 0.
+[518.43 --> 521.75] Lalu yang berikutnya data frame yang kedua sama ya saya men-stack,
+[522.17 --> 527.39] vertikal stack antara Y1 dengan X1, lalu saya transpose gitu ya.
+[528.59 --> 532.61] Lalu yang berikutnya saya kasih nama kolom sama X1, X2.
+[533.11 --> 537.71] Lalu saya tambahkan kolom berikutnya, kolom Y untuk menunjukkan labelnya,
+[537.83 --> 540.43] dalam hal ini adalah label kelas 1.
+[540.43 --> 548.77] Lalu di sini saya gabungkan gitu ya, antara DF1 dengan DF2 gitu ya.
+[549.29 --> 557.19] DF1 saya append dengan DF2, lalu ya ini saya coba tampilkan 5 gitu ya.
+[560.18 --> 561.62] Kalau misalnya...
+[563.41 --> 565.41] saya lebih
+[565.41 --> 567.11] besarkan 10
+[567.11 --> 569.05] jadi pertanyaannya akan ditampilkan 10
+[570.09 --> 581.09] Tapi karena ini tadi saya meng-append-nya, kalau data frame itu tidak stack, kalau stack itu kan untuk array, kalau data frame ini pakai-nya append, jadi kita tambahkan di bawahnya.
+[581.09 --> 594.05] Nah, di sini karena awalnya yang 0, terdangkan baru ditambahkan dengan yang kelas 1, kita tahu sendiri untuk yang pertama ini kan.
+[595.05 --> 596.33] datanya ada
+[597.38 --> 599.00] 200 ya harusnya
+[599.00 --> 600.62] karena gabungan antara
+[600.62 --> 602.22] X dengan Y
+[602.22 --> 603.94] jadi masing-masing kelas ada
+[603.94 --> 607.00] 200, makanya kalau saya ambil
+[607.00 --> 609.52] 10 teratas ya tetap belum kelihatan
+[609.52 --> 611.30] untuk kelas Y sama dengan
+[611.30 --> 611.70] satunya
+[612.89 --> 618.05] hai eh lalu Oh ya ini saya hapus saja ya
+[618.61 --> 623.15] Nah, ini coba saya lihat independent dan dependent feature-nya.
+[625.17 --> 638.05] Lalu saya coba tampilkan ini, ini menunjukkan kelasnya, jadi total kan tadi ada 400, 200 yang kelas 0, dan 200 yang kelas 1.
+[638.05 --> 647.89] Nah lalu yang berikutnya saya tinggal menerapkan pembagian data, spread trend and test data, sangat sederhana.
+[647.89 --> 657.85] Saya panggil library sklearn, dot model selection, lalu saya import trend test splitnya.
+[657.85 --> 670.21] Lalu disini saya coba, tadi kan datanya ada X dengan Y, saya coba split untuk test size-nya 0,25%.
+[670.21 --> 671.85] Ini coba saya jalankan.
+[673.27 --> 686.53] Lalu ini contoh, saya ambil Y-trainnya, disini yang kepilih sebanyak 300, karena test size-nya 25%, jadi sisanya 75% dari 400 kan 300.
+[686.53 --> 690.53] Nah, lalu coba saya...
+[694.82 --> 697.10] Tarapkan disini
+[697.10 --> 699.24] Misalnya menggunakan
+[699.24 --> 700.78] Linear
+[700.78 --> 701.36] Gitu ya
+[702.53 --> 719.73] Saya coba terapkan yang linear, jadi saya panggil library.scln, saya import fungsinya untuk support vector mesin untuk proses klasifikasi,
+[719.73 --> 726.25] namanya support vector classification, kalau untuk regressi berarti yang dipanggil adalah support vector regression SVR.
+[726.25 --> 736.65] Di sini classifiernya ada SVC, kernelnya saya ambil linear, lalu saya pakai datanya adalah Xtrain dan Ytrain.
+[738.39 --> 740.35] saya fit, saya latih
+[740.35 --> 741.61] fit ini untuk melatih
+[741.61 --> 744.13] nah, lalu saya coba tampilkan
+[744.13 --> 745.93] akurasinya
+[745.93 --> 748.49] maka tadi yang saya sampaikan gitu ya, sangat kecil
+[748.49 --> 750.49] karena kalau misalnya saya ada data
+[750.49 --> 752.21] seperti ini, saya mau plot
+[752.21 --> 754.47] saya garis seperti ini, saya garis mana-mana
+[754.47 --> 756.31] yang paling optimal pasti tetap hanya
+[756.31 --> 758.01] misalnya disini
+[758.01 --> 759.77] garis ini, maka pasti
+[759.77 --> 762.19] 45% gitu ya
+[762.19 --> 764.65] atau 50%, mendekati 50%
+[764.65 --> 765.39] nah
+[768.17 --> 779.35] Ini kalau coba, tadi datanya, untuk menampilkan aja kalau ingin melihat sebagian data frame-nya.
+[779.47 --> 785.53] Nah, sekarang bagaimana kalau kita terapkan polinomial kernel seperti ini, ya.
+[785.59 --> 795.39] Tadi rumusnya sama, kan tadi saya pakai x1, x2, disini variabelnya jadi xy, kan, x transpose kali y, ditambah c konstantannya, tadi saya contohkan 1, pangkat d.
+[797.14 --> 800.04] disini ternyata kan
+[800.04 --> 801.88] tadi sudah saya jelaskan hasilnya adalah
+[801.88 --> 803.92] X1 kuadrat, X2 kuadrat
+[803.92 --> 806.28] dan ada X1 kali X2
+[806.28 --> 807.68] gitu ya, maka disini tinggal
+[807.68 --> 810.36] saja kita buat, kita beri nama
+[810.36 --> 812.32] data frame untuk X1 square
+[812.32 --> 814.08] jadi saya tambahkan gitu ya
+[814.08 --> 816.24] di data framenya ini, berupa hasil
+[816.24 --> 818.66] X1 saya kuadratkan
+[818.66 --> 820.62] lalu saya tambahkan
+[820.62 --> 822.56] lagi X2 square
+[822.56 --> 824.08] ini ya, lalu
+[824.08 --> 826.58] perintahnya ya tinggal saya kuadratkan
+[826.58 --> 828.16] angkatkan 2, lalu
+[828.16 --> 830.20] hasil X1 dan X2 variable
+[830.20 --> 832.28] berikutnya
+[832.28 --> 834.62] merupakan perkalian antara X1 dan X2
+[834.62 --> 836.42] ini coba saya jalankan
+[836.42 --> 837.36] saya ambil 5
+[837.36 --> 840.34] kalau seperti ini kan defaultnya
+[840.34 --> 841.88] 5 ya, saya ambil 5 yang teratas
+[841.88 --> 844.26] berarti saya sudah punya X1
+[844.26 --> 846.42] square-nya seperti ini, X2 square-nya
+[846.42 --> 848.32] seperti ini, X1, X2-nya
+[848.32 --> 849.72] seperti ini, gitu ya
+[851.19 --> 853.83] saya coba ambil
+[853.83 --> 855.17] independen sama independen
+[855.17 --> 856.93] fiturnya
+[856.93 --> 858.89] ada x dan ada
+[858.89 --> 860.57] y nya
+[860.57 --> 863.63] disini coba saya print
+[863.63 --> 865.53] sama ya masih ada
+[865.53 --> 867.67] 400 data tetep kan
+[867.67 --> 868.91] gak berubah jumlahnya
+[868.91 --> 870.09] lalu
+[872.42 --> 877.66] Lalu yang berikutnya, saya akan membagi menjadi training dan testing.
+[877.98 --> 880.84] Sama ya, menggunakan tesisnya 0,25.
+[881.38 --> 882.70] Ini saya jalankan.
+[884.77 --> 894.97] Oh ya ini pakai xy ini saya jalankan ya hasilnya ada 300
+[895.97 --> 925.95] Terima kasih telah menonton
+[899.11 --> 902.93] Sebagai data training, sekarang fiturnya tidak hanya X1 dan X2 saja,
+[903.07 --> 906.05] tapi ada X1 kuadrat, ada X2 kuadrat, dan ada X1 kali X2.
+[906.91 --> 909.59] Nah, sekarang saya coba akan memplotting terlebih dahulu.
+[910.79 --> 920.85] Sekarang kalau saya misalnya memplottingnya X1, X2, dan ruang dimensi ketiganya,
+[920.85 --> 927.81] saya terapkan ruang dimensi ketiga, hasil X1 sama X2.
+[927.81 --> 931.01] Maka hasilnya adalah seperti ini.
+[931.49 --> 936.21] Jadi kalau kita lihat, masih belum.
+[939.75 --> 950.91] Coba terapkan linear, gitu ya, masih akan banyak yang misclassified, mau dari arah manapun, gitu ya, seperti ini juga masih belum, gitu ya, belum bisa, eh, maaf.
+[953.29 --> 968.97] Sekarang coba kita lihat kalau misalnya saya menggunakannya tadi bukan X1, X2 dengan X1 kali X2, tapi saya pakai X1 square, X2 square, sama Z-nya adalah X1 kali X2.
+[970.13 --> 972.19] ini coba saya running
+[972.19 --> 974.23] nah, ternyata
+[974.23 --> 976.65] hasilnya
+[976.65 --> 978.11] nah, sekarang sudah bisa terlihat
+[978.11 --> 980.05] saya mau
+[980.05 --> 981.99] floating dimanapun disini
+[981.99 --> 983.65] maka hasilnya akan
+[983.65 --> 986.25] sudah terpisah
+[986.25 --> 987.67] gitu ya, antara
+[987.67 --> 990.25] kelas ini dengan kelas
+[991.81 --> 992.71] Sekarang kalau.
+[993.77 --> 999.95] Saya coba terapkan, datanya kan berarti sudah menggunakannya,
+[999.95 --> 1003.95] tadi ya x1 kuadrat, x1 square, x2 square, sama...
+[1006.31 --> 1007.65] X1 kali X2
+[1007.65 --> 1009.87] ini kalau
+[1009.87 --> 1011.73] saya terapkan langsung
+[1011.73 --> 1013.49] dengan kernelnya linier
+[1013.49 --> 1015.13] lalu
+[1017.09 --> 1024.13] Di sini untuk prediksinya, menggunakan X-test, kita hitung nilai akurasi skornya,
+[1024.87 --> 1028.87] nah, maka sudah akan menghasilkan nilai 1 atau 100%,
+[1028.87 --> 1032.47] karena kalau kita lihat secara visual di sini, ini juga sudah terpisahkan ya,
+[1032.89 --> 1035.03] antara data ini dengan data yang lain.
+[1035.03 --> 1041.89] Berarti dalam hal ini, data yang tadi, kalau saya terapkan, apa namanya,
+[1043.41 --> 1045.91] Kernelnya
+[1047.09 --> 1049.05] apa namanya, kernelnya
+[1049.05 --> 1050.73] polinomial, berarti
+[1050.73 --> 1053.23] bisa kita terapkan berikutnya
+[1053.23 --> 1055.35] kita ubah dahulu
+[1055.35 --> 1057.25] ke dalam ruang dimensi yang
+[1057.25 --> 1058.57] lebih tinggi gitu ya, menggunakan
+[1058.57 --> 1061.23] kernel tricks untuk polinomial
+[1061.23 --> 1063.39] maka hasilnya yang terbentuk data seperti ini
+[1063.39 --> 1065.61] maka berikutnya kita bisa menerapkan
+[1065.61 --> 1067.23] fungsi linear gitu ya
+[1067.23 --> 1069.21] atau datanya sudah berubah menjadi
+[1069.21 --> 1071.41] linearis variable seperti yang Anda lihat disini
+[1071.41 --> 1072.65] oke
+[1073.77 --> 1092.23] Ya, itu mungkin kurang lebih gambaran untuk implementasinya, semoga lebih memperjelas pemahaman Anda mengenai penerapan, apa namanya ya, kernel text, khususnya yaitu polinomial.
+[1092.63 --> 1094.29] Oke, terima kasih.

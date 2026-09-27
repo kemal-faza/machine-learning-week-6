@@ -1,0 +1,173 @@
+[0.79 --> 10.23] Selanjutnya memasuki bagian kedua kita akan membahas mengenai bagaimana cara kerja dari decision tree dalam hal ini adalah
+[15.99 --> 26.95] Hai intuisi atau dasar dari pengembangan metode desentris hingga bisa bekerja untuk
+[26.95 --> 28.95] menurut
+[30.89 --> 45.05] klasifikasikan atau memprediksi sebuah data uji jadi disini misalnya saya punya sampel
+[45.05 --> 54.51] training data yang terdiri dari 14 sampel data yang menunjukkan hari pertama sampai dengan hari
+[54.51 --> 72.61] ke-14 lalu yang berikutnya ke ada fit tiga buah fitur yaitu Outlook humidity dan wind lalu
+[72.61 --> 79.61] hai hai
+[76.37 --> 82.31] dan keputusan atau kelas bermain tenis atau tidak
+[82.31 --> 87.37] jadi kalau anda lihat disini ada 5 kolom
+[87.37 --> 90.37] tidak semuanya menunjukkan fitur gitu ya
+[90.37 --> 91.75] atau digunakan
+[91.75 --> 94.31] jadi untuk yang HA ini
+[94.31 --> 100.25] ini tidak akan kita gunakan pada proses
+[101.41 --> 103.59] training maupun testing
+[103.59 --> 105.39] karena ini hanya menunjukkan
+[105.39 --> 106.77] urutan sampel datanya
+[106.77 --> 109.41] lalu ini adalah fitur-fitur
+[110.63 --> 111.27] atau
+[111.27 --> 113.67] atribut atau karakteristik
+[113.67 --> 114.61] yang dianggap
+[114.61 --> 117.41] mempengaruhi keputusan
+[117.41 --> 118.55] seseorang apakah
+[118.55 --> 121.49] akan bermain tennis
+[121.49 --> 122.41] atau tidak
+[122.41 --> 124.87] nah ini adalah kelasnya
+[127.22 --> 148.32] Nah, lalu berdasarkan data training ini kita diminta untuk memprediksi atau memklasifikasikan sebuah data baru dengan nilai untuk masing-masing fitur adalah rain, hike, and wake.
+[148.32 --> 155.70] Lalu pertanyaannya adalah keputusan untuk bermain tenisnya apa? Apakah akan yes atau no?
+[155.70 --> 169.30] Nah, dari 14 sampel data ini ternyata ada 9 sampel data yang menunjukkan kelas yes dan 5 sampel data yang menunjukkan kelas no.
+[169.76 --> 173.42] Jadi untuk kelas no ini yang saya beri shading merah.
+[174.79 --> 204.77] Terima kasih.
+[176.33 --> 179.15] ya kalau misalnya
+[179.15 --> 180.87] kita hanya melihat seperti ini
+[180.87 --> 182.93] akan sulit kita ya untuk
+[182.93 --> 184.05] menebaknya gitu
+[184.05 --> 187.21] untuk menebak atau untuk berusaha memahami
+[187.21 --> 189.31] bagaimana
+[189.31 --> 191.07] kebetulan ini sampel data diambil dari
+[191.07 --> 192.83] seseorang yang bernama John gitu ya
+[192.83 --> 194.71] jadi sulit untuk memahami
+[194.71 --> 196.93] sebenarnya bagaimana
+[196.93 --> 198.53] si John ini memutuskan
+[198.53 --> 200.73] ketika kapan dia akan bermain dan kapan
+[200.73 --> 201.75] tidak akan bermain
+[201.75 --> 205.15] penekatan yang mudah
+[205.15 --> 206.49] ya kita perlu
+[206.49 --> 208.57] melakukannya secara
+[208.57 --> 209.79] bertahap gitu ya
+[209.79 --> 212.25] memperhatikan masing-masing fitur atau
+[212.25 --> 214.19] kerjaannya ini secara bertahap
+[214.19 --> 215.05] nah
+[215.05 --> 218.13] ketika misalnya
+[218.13 --> 219.95] apa namanya
+[219.95 --> 223.05] keputusan
+[223.05 --> 224.27] tersebut
+[224.27 --> 226.23] ternyata sudah
+[227.33 --> 239.75] Dikatakan sebagai keputusan yang pure atau murni dalam hal ini adalah semua sampel datanya iya atau semuanya tidak
+[239.75 --> 253.09] Maka berarti di fitur atau kriteria tersebut kita berhenti gitu ya tidak perlu untuk menerapkan suatu kriteria yang lainnya
+[253.09 --> 268.17] Tapi kalau misalnya hasil pengambilan keputusan berdasarkan kriteria tersebut ternyata menghasilkan sampel data yang masih bercampur antara keputusan yes dengan no
+[268.17 --> 275.67] Maka berarti dia akan memperhatikan fitur-fitur yang lainnya
+[275.67 --> 282.53] Nah contohnya sekarang kita coba lihat satu persatu gitu ya
+[282.53 --> 283.07] Yang pertama
+[283.09 --> 286.47] Dari fitur Outlook
+[286.47 --> 288.17] Disini
+[289.29 --> 298.11] Hai ada tiga cabang gitu ya yang pertama adalah ketika outlooknya adalah Sunny maka
+[298.11 --> 308.43] kita bisa melihat bahwasanya dari yang outlooknya Sunny sampel data satu dua enam
+[309.30 --> 339.28] Terima kasih telah menonton.
+[315.41 --> 316.77] sampel data
+[316.77 --> 318.75] yang sana adalah
+[318.75 --> 320.93] 1, 2
+[323.25 --> 324.17] 8
+[324.17 --> 325.87] 9
+[327.09 --> 328.57] dan 11
+[328.57 --> 331.01] jadi total
+[331.01 --> 332.91] ada 5 sampel
+[332.91 --> 333.57] data sani
+[333.57 --> 336.89] kalau kita perhatikan lagi
+[336.89 --> 339.19] ternyata nomor 1, 2, dan
+[339.19 --> 341.11] 8 ini keputusannya adalah
+[341.11 --> 342.85] 0, sedangkan
+[342.85 --> 344.41] nomor 9 dan 11
+[344.41 --> 346.59] keputusannya adalah
+[346.59 --> 347.19] yes
+[347.19 --> 350.97] lalu kemungkinan cabang yang berikutnya
+[350.97 --> 351.73] adalah ketika
+[351.73 --> 354.13] outputnya adalah overcast
+[355.37 --> 356.77] berkas ini berarti
+[356.77 --> 358.93] kita bisa tahu nomor 3
+[360.66 --> 362.16] Nomor tujuh
+[365.08 --> 369.34] Nomor 12 dan nomor 13
+[370.58 --> 375.38] di sini ternyata ketika outlooknya overcast
+[375.38 --> 380.40] maka semua keputusannya adalah bermain
+[380.40 --> 382.04] atau kelasnya adalah yes
+[382.04 --> 386.60] lalu yang ketiga ketika outlooknya rain
+[386.60 --> 390.12] maka di sini ada 4
+[391.37 --> 392.37] 5
+[393.54 --> 394.54] 1
+[396.58 --> 397.26] Sepuluh.
+[399.27 --> 400.97] And God bless
+[402.82 --> 409.96] Nah ini juga hasilnya masih sama ternyata ada tiga yang yes dan dua yang no
+[411.72 --> 424.42] Nah berdasarkan tadi intuisi yang sudah saya sebutkan bahwasannya pada saat kita melakukan proses splitting terus ternyata hasil yang diperoleh
+[424.42 --> 436.90] Jadi sampel-sampel data yang sudah di split berdasarkan satu kriteria tertentu tersebut ternyata menghasilkan subset atau sampel-sampel yang sudah
+[438.58 --> 440.72] terdiri dari
+[440.72 --> 442.58] satu kelas saja
+[442.58 --> 444.42] atau biasa disebut sebagai pure set
+[444.42 --> 446.44] dan ada juga
+[446.44 --> 448.60] subset-subset
+[448.60 --> 450.70] atau sampel-sampel data hasil splitting
+[450.70 --> 452.12] yang ternyata
+[452.12 --> 454.78] belum merupakan
+[454.78 --> 456.52] pure subset
+[456.52 --> 458.42] nah, dari
+[458.42 --> 460.34] ketiga
+[460.34 --> 462.76] cabang yang
+[462.76 --> 465.04] sudah terbentuk, sunny, overcast, dan
+[465.04 --> 467.38] rain, kita bisa tahu ada satu cabang
+[467.38 --> 467.80] yang
+[467.80 --> 470.12] dia
+[471.24 --> 472.36] merupakan
+[472.36 --> 474.40] pure subset
+[474.40 --> 477.20] untuk overcast
+[477.20 --> 479.62] maka ketika
+[479.62 --> 481.50] dia sudah pure subset
+[481.50 --> 483.30] kita tidak perlu melakukan
+[483.30 --> 485.74] splitting lagi berdasarkan kriteria
+[485.74 --> 487.64] yang lain karena keputusannya
+[487.64 --> 489.70] sudah satu yaitu akan bermain
+[489.70 --> 491.46] ketika kita hanya melihat outlooknya
+[491.46 --> 491.84] overcast
+[493.01 --> 504.23] pasti kita akan bermain atau kelasnya adalah play yes nah sebaliknya di Sunny dan Ren ternyata
+[504.23 --> 512.45] disini masih belum pure subset maka kita akan melakukan proses splitting lagi nah
+[513.70 --> 519.14] Berarti kita sudah mengambil misalnya untuk yang outlook-nya sunny.
+[520.20 --> 525.98] Nah, yang berikutnya kita misalnya melihat berdasarkan kriteria yang berikutnya yaitu humidity.
+[526.98 --> 533.04] Nah, kita lihat ada dua kemungkinan, high dan normal gitu ya.
+[533.04 --> 542.64] Pada saat kita lihat humidity-nya high, ternyata di sini semuanya keputusannya adalah no.
+[542.64 --> 547.22] Sedangkan untuk normal, semua keputusannya adalah yes.
+[548.34 --> 556.00] berarti baik untuk humidity yang high maupun humidity yang high maupun yang normal
+[556.00 --> 562.94] kita tidak perlu melakukan splitting lagi karena dia sudah merupakan pure sunset
+[562.94 --> 568.20] nah lalu yang berikutnya untuk outlook yang rain
+[568.20 --> 574.64] untuk outlook yang rain ini adalah sampel data tadi yang termasuk ke dalam kategori output
+[574.64 --> 580.48] output rain
+[580.48 --> 585.68] dan disini kita bisa melihat
+[585.68 --> 587.46] kalau kita
+[589.93 --> 598.03] Hai maaf Nah kalau kita melihatnya berdasarkan humidity maka dia masih belum pure subset kan ya
+[598.03 --> 603.91] kalau-kalau humidity normal sama high nanti yang normal masih ada yang yes dan masih ada yang no
+[603.91 --> 608.77] high juga masih ada yang yes dan masih ada yang no tapi sebaliknya ketika kita melihat ke wind
+[608.77 --> 617.83] atau anginnya yaitu lemah atau kuat maka kita sudah menghasilkan pure subset di sini di kalau
+[617.83 --> 629.11] strong maka no kalau weak itu maka yes maka kita membaginya menggunakan fitur
+[630.41 --> 641.87] fitur yang atau kriteria win jadi hasilnya ini juga sudah merupakan pure subset atau kalau saya
+[641.87 --> 650.45] gambarkan secara utuh untuk semuanya saya bisa menghasilkan desain seperti ini jadi untuk di
+[650.45 --> 658.01] root notenya kita melihat Outlook saja dengan tiga kemungkinan Sunny overcast dan rain lalu
+[658.01 --> 665.93] di internal root pertama untuk overcast karena sudah pure subset kita tidak melakukan splitting
+[665.93 --> 672.17] lagi sedangkan untuk Outlook yang Sunny ataupun Outlook yang rain kita perlu melakukan splitting
+[672.17 --> 677.69] lagi untuk Outlook ketika Outlooknya Sunny maka proses splitting berikutnya didasarkan pada fitur
+[677.69 --> 684.23] humidity dan akan menghasilkan pure subset yaitu ketika humidity nya high maka keputusan bermainnya
+[684.23 --> 687.99] adalah no ketika humidity nya normal maka keputusan bermainnya
+[687.99 --> 695.27] adalah yes lalu ketika Outlooknya rain kita perlu melihat lagi
+[697.54 --> 708.28] Hai apa namanya kriteria yang selanjutnya yaitu wind atau angin nah disini eh ada
+[708.28 --> 717.46] dua kemungkinan jadi ketika windnya strong maka keputusan pemainnya adalah no dan ketika anginnya
+[717.46 --> 725.68] lemah gitu ya maka keputusan pemainnya adalah yes
+[726.77 --> 729.15] nah dari situ maka kita sudah bisa
+[729.15 --> 731.19] melepak sekarang bagaimana ketika
+[731.19 --> 733.23] ada data baru yaitu
+[733.23 --> 734.25] outlooknya rain
+[734.25 --> 736.73] humidity nya high dan airnya
+[736.73 --> 739.11] tidak terlalu kencang gitu ya
+[739.11 --> 741.07] maka
+[741.07 --> 742.79] kita bisa tinggal mengikuti saja
+[742.79 --> 745.05] pertama kita cek outlooknya
+[745.05 --> 746.97] berarti bisa anda ikuti
+[746.97 --> 748.43] dari panah merah gitu ya
+[748.43 --> 751.33] outlooknya adalah rain maka dia akan ke kanan
+[752.39 --> 763.05] Lalu yang berikutnya ketika rain, ternyata kita tidak perlu melihat humidity, kita langsung melihat bagaimana anginnya kencang atau tidak, strong atau weak, kuat atau lemah.
+[763.05 --> 778.65] Ternyata sampel data testing tersebut anginnya adalah tidak kencang atau lemah, maka keputusan bermainnya adalah yes, atau prediksinya adalah bermain tennis.

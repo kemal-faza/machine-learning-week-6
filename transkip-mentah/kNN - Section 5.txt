@@ -1,0 +1,378 @@
+[0.66 --> 2.90] pembahasan berikutnya adalah
+[2.90 --> 4.66] pembahasan mengenai
+[4.66 --> 7.14] detail dari
+[7.14 --> 8.58] algoritma gene
+[8.58 --> 10.80] resnibor atau KNN ini
+[10.80 --> 13.10] jadi seperti yang kita katakan
+[13.10 --> 15.40] misalkan kita memiliki
+[15.40 --> 17.24] sekumpulan sampel
+[17.24 --> 17.74] data
+[17.74 --> 21.20] sekumpulan sampel data
+[21.20 --> 22.52] dalam nilai data training
+[22.52 --> 24.72] yaitu pasangan
+[24.72 --> 25.50] dari
+[25.50 --> 28.12] feature factor
+[28.12 --> 29.16] X
+[29.16 --> 32.06] jadi artinya
+[32.06 --> 34.28] sampel
+[34.28 --> 36.68] data training ke
+[36.68 --> 39.06] I dan juga
+[39.06 --> 41.42] kelas labelnya
+[41.42 --> 43.26] atau diketuliskan sebagai
+[43.26 --> 44.34] YI
+[44.34 --> 47.28] jadi kelas label
+[47.28 --> 48.68] dari sampel data pertama
+[48.68 --> 50.82] nah lalu yang berikutnya
+[50.82 --> 52.38] kita memiliki
+[52.38 --> 53.82] satu buah
+[53.82 --> 56.44] sampel data uji
+[56.44 --> 58.34] yang dinyatakan
+[58.34 --> 59.14] sebagai
+[59.14 --> 61.70] feature factor
+[61.70 --> 63.58] X
+[63.58 --> 65.36] dan kita ingin
+[65.36 --> 67.40] memprediksi atau
+[67.40 --> 69.98] mengklasifikasikan
+[69.98 --> 71.60] X tersebut
+[71.60 --> 72.74] termasuk
+[72.74 --> 74.54] kelas apa
+[74.54 --> 75.12] dia
+[77.59 --> 80.87] Nah, algoritmanya bagaimana?
+[81.51 --> 84.55] Jadi, langkah yang pertama kita harus menghitung
+[84.55 --> 89.17] dalam hal ini adalah jarak kemiripan
+[89.17 --> 91.91] antara sampel data uji X
+[91.91 --> 101.61] dengan setiap sampel data training XI
+[101.61 --> 106.07] dan kita bisa menuliskan secara formal
+[106.07 --> 114.53] sebagai D dari atau distance dari X, XI
+[114.53 --> 118.55] lalu yang berikutnya kita akan mencari
+[118.55 --> 123.99] apa namanya, jarak terdekat gitu ya
+[123.99 --> 127.39] mencari nilai-nilai
+[128.41 --> 137.09] mencari sampel-sampel data x i yang terdekat
+[137.09 --> 140.27] jadi kalau misalnya disini k nya yang kita gunakan 5
+[140.27 --> 149.39] berarti kita akan mencari nilai 5 x i yang memiliki nilai d terdekat
+[149.39 --> 160.81] kalau mengatakan nilai d terdekat berarti nilai d yang paling kecil
+[160.81 --> 163.49] nah otomatis karena bentuknya
+[166.05 --> 167.67] kategori supervised learning
+[167.67 --> 168.53] maka otomatis
+[168.53 --> 171.17] sampel data XI tersebut
+[171.17 --> 173.47] memiliki label yaitu YI
+[173.47 --> 175.55] kita tinggal pada saat
+[175.55 --> 176.73] ingin mengambil keputusan
+[176.73 --> 177.83] output dari kelas
+[177.83 --> 180.05] Y
+[180.05 --> 182.41] sampel data uji Y
+[182.41 --> 184.23] maka kita bisa melihat
+[184.23 --> 187.55] jumlah kelas yang
+[187.55 --> 188.87] dominan dari
+[188.87 --> 191.67] ke sampel data terdekat tadi
+[193.17 --> 206.29] kita bisa kesimpulkan bahwasanya komponen utama dari jenis neighbor ini adalah kita perlu
+[206.29 --> 214.69] mendefinisikan seberapa mirip itu ya seberapa mirip antara sampel data uji dengan
+[214.69 --> 215.69] hai hai
+[216.68 --> 219.20] masing-masing sampel data latih
+[219.20 --> 226.98] untuk bagaimana caranya kita menghitung kemiripan
+[226.98 --> 228.76] maka kita menggunakan
+[228.76 --> 235.90] sebenarnya kita bisa menerapkan berbagai macam ukuran kemiripan
+[235.90 --> 244.90] karena untuk setiap kasus bisa saja kita menerapkan
+[244.90 --> 274.88] terima kasih
+[245.91 --> 248.51] ukuran kemiripan yang berbeda-beda
+[248.51 --> 251.37] meskipun yang paling umum digunakan adalah
+[251.37 --> 252.57] Euclidean Distance
+[252.57 --> 257.83] jadi pilihan ukuran kemiripan
+[257.83 --> 260.21] ini bisa digunakan
+[260.21 --> 264.29] sebagai salah satu
+[264.29 --> 267.11] hyperparameter uji
+[267.11 --> 269.29] pada saat kita menerapkan
+[269.29 --> 271.31] algoritma Generous Neighbor
+[271.31 --> 274.37] jadi ingat waktu saya membahas mengenai
+[274.37 --> 276.53] solusi dan komponen dari machine learning
+[276.53 --> 280.29] kan kita sebenarnya
+[280.29 --> 281.97] mencari target function F
+[281.97 --> 283.55] target function F ini kan
+[283.55 --> 285.81] yang selanjutnya sebagai classification model
+[285.81 --> 288.35] atau kalau di kasus
+[288.35 --> 289.93] Generous Neighbor ini kita sebenarnya mencari
+[289.93 --> 291.33] classification boundary-nya
+[291.33 --> 294.23] seperti yang digambarkan pada Forerunner Tessellation
+[294.23 --> 295.37] nah disini
+[295.37 --> 297.81] kita
+[299.80 --> 300.80] Uh...
+[302.10 --> 308.66] Hai bisa menerapkan berbagai macam e-play dan
+[308.66 --> 314.16] distan gitu nasi atau dengan kata lain kita bisa memiliki beberapa
+[314.16 --> 344.14] e-play
+[317.85 --> 327.09] nilai fungsi G gitu ya nanti selanjutnya kita akan menetapkan akan mencari G yang paling optimal yang
+[327.09 --> 335.49] selanjutnya sebagai target function fungsi-fungsi G ini dibentuk dari mana Nah dari perbedaan eh
+[335.49 --> 336.49] hai hai
+[336.36 --> 344.16] apa namanya ukuran-ukuran kemiripan nah tadi yang pertama yang paling umum sebenarnya
+[344.16 --> 349.20] digunakan yang namanya ukuran distance lalu yang kedua adalah Minkowski distance lalu ada
+[349.20 --> 356.10] Heming distance Manhattan distance Mahalanobis distance dan lain sebagainya gitu jadi selain
+[356.10 --> 362.94] ini juga kadang-kadang ada artikel-artikel yang mempropos atau mengusulkan apa namanya
+[362.94 --> 365.22] ukuran kemiripan ukuran kemiripan yang lain
+[366.07 --> 368.01] Nah, saya akan bahas
+[368.01 --> 369.93] seperti yang pertama yaitu
+[369.93 --> 371.59] Euclidean Distance
+[371.59 --> 373.37] Euclidean Distance ini
+[373.37 --> 376.33] tadi kan kita pasti memiliki
+[376.33 --> 378.25] sekumpulan sampel
+[378.25 --> 379.71] data latih
+[379.71 --> 382.09] yang dinotasikan sebagai feature vector
+[382.09 --> 384.13] ke I dengan labelnya
+[384.13 --> 385.33] adalah YI
+[385.33 --> 387.45] lalu kita ingin menghitung
+[390.21 --> 392.01] kemiripan antara
+[392.01 --> 393.97] XI dengan
+[393.97 --> 396.15] sampel data uji
+[396.15 --> 398.15] yang direpresentasikan
+[398.15 --> 399.27] sebagai fitur X
+[399.27 --> 402.01] kita bisa menuliskan
+[403.27 --> 404.83] definisi formal
+[404.83 --> 406.39] dari distance
+[406.39 --> 408.43] atau ukuran kemiripan tersebut
+[408.43 --> 409.77] sebagai D
+[409.77 --> 412.39] dari X, XI
+[412.39 --> 414.43] nah, permasalahannya adalah
+[414.43 --> 416.03] tadi, baik
+[416.03 --> 418.59] XI maupun
+[418.59 --> 420.39] X ini merupakan fitur faktor
+[420.39 --> 421.91] fitur faktor
+[421.91 --> 423.63] berarti otomatis
+[423.63 --> 426.21] akan terdapat
+[426.21 --> 428.21] sekumpulan features
+[428.21 --> 430.85] atau sekumpulan
+[430.85 --> 431.91] fitur, nah disini
+[431.91 --> 434.41] kita bisa
+[434.41 --> 436.19] mendefinisikan jumlah
+[436.19 --> 438.09] fiturnya ini sebagai
+[438.09 --> 439.95] D buah fitur
+[439.95 --> 442.11] maka nilai Euclidean distance
+[442.11 --> 444.45] bisa dirumuskan sebagai akar kuadrat
+[444.45 --> 445.91] dari sigma
+[447.80 --> 452.56] D, dalam hal ini ada D dari 1 sampai dengan kejumlah fiturnya,
+[452.78 --> 458.18] dari X D min X I, D dikuadratkan.
+[462.73 --> 481.69] Berdasarkan rumus tadi maka ada dua karakteristik dari Euclidean distance yaitu yang pertama sifatnya simetrik atau spherical dan akan menganggap semua dimensi ini sama gitu ya.
+[481.69 --> 505.39] Jadi simetrik ini artinya kalau kita mau menghitung tadi xD dikurangi xI,D maupun kita tuliskan xI,D dikurangi x lalu dikwadratkan hasilnya akan sama gitu ya.
+[505.39 --> 511.39] Jadi kalau kita mau menghitung jarak kemiripan antara data testing dengan data uji atau menurutnya.
+[511.69 --> 526.81] Mengukur jarak kemiripan antara data SMAP, menguji kemiripan antara data testing dengan data latih atau menguji kemiripan data latih dengan data uji maka hasilnya akan sama gitu ya.
+[527.75 --> 535.39] Jadi mau dibolak-balik tetap hasilnya akan memberikan nilai Euclidean distance yang sama.
+[535.93 --> 539.35] Kenapa? Karena disitu ada operasi kwadrat gitu ya.
+[539.39 --> 541.31] Jadi kalau mau dibolak-balik tetap hasilnya.
+[541.69 --> 543.77] Akan menjadi positif.
+[544.45 --> 552.99] Nah lalu sifat yang kedua yaitu sensitif terhadap perbedaan yang sangat ekstrim gitu ya.
+[553.59 --> 555.75] Pada sebuah atribut.
+[555.75 --> 564.81] Nah ini misalnya ada satu buah atribut tentang usia gitu ya.
+[564.93 --> 569.75] Kalau usia ini kan otomatis pada saat kita menghitung selisihnya.
+[570.33 --> 571.05] Maka.
+[571.69 --> 575.53] Rentangnya pasti dari kesatuan sampai puluhan.
+[575.83 --> 581.49] Nah di sisi lain misalnya kita punya fitur berupa gaji.
+[581.71 --> 583.31] Nah gajinya ini sudah jutaan.
+[583.31 --> 584.63] Otomatis.
+[585.67 --> 597.49] kalau kita menghitung selisih dari gaji bisa saja dari ratusan ribu sampai jutaan pula gitu nah
+[597.49 --> 606.31] maka otomatis karena dirumus di Oke jenisnya itu menggunakan Sigma dari D artinya kita menghitung
+[606.31 --> 616.51] menjumlahkan selisih dari seluruh fitur maka yang tadi untuk usia menjadi tidak ngaruh
+[616.51 --> 627.79] gitu jadi tidak berpengaruh yang akan berpengaruh hanya data dengan rentang yang sangat besar jadi
+[627.79 --> 635.93] misalnya perbedaan usianya hanya lima itu sedangkan perbedaan gajinya misalnya 500
+[635.93 --> 636.29] ribu
+[636.31 --> 651.25] juga itu kan Nah berarti otomatis meskipun misalnya di sisi lain ada perubahan ada perbedaan
+[651.25 --> 665.29] usia misalnya 20 gitu tapi untuk di selisih gajinya ternyata 1 juta gitu berhitung nilai
+[665.29 --> 665.93] Indonesia
+[665.93 --> 676.85] Jadi 1.020.000 berarti yang akan tetap lebih dikatakan mirip adalah yang tadi 500.005 gitu.
+[676.85 --> 687.29] Sedangkan ternyata sebenarnya harusnya yang berpengaruh itu usia berarti kan jadi menjadikan misclassified atau salah prediksi.
+[692.49 --> 697.73] selanjutnya misalnya kita memiliki 4 buah titik disini ya
+[697.73 --> 700.43] jadi P1, P2, P3, dan P4
+[700.43 --> 710.31] dan kita bisa menuliskan sample data P1 disini
+[710.31 --> 714.49] berarti nilai X nya adalah 0 dan Y nya adalah 2
+[714.49 --> 719.73] lalu P2 disini berarti 2,0
+[719.73 --> 724.69] jadi X nya adalah 2 dan Y nya adalah 0
+[724.69 --> 730.77] lalu P3 adalah 3,1 dan P4 adalah 5,1
+[730.77 --> 735.99] nah sekarang kita akan menghitung kemi adepan antar titik
+[735.99 --> 738.69] maka kita bisa menuliskan misalnya disini
+[738.69 --> 740.85] P1
+[741.91 --> 742.91] Berarti
+[742.91 --> 744.89] Disini aja di atas
+[747.61 --> 750.23] jarak antara
+[751.65 --> 755.59] P1, P2
+[755.59 --> 757.63] Ini sama dengan
+[760.26 --> 770.70] Hai akar kuat terdiri P1 nya adalah 0,2 dan P2 nya adalah 2,0
+[771.59 --> 773.65] maka disini
+[773.65 --> 776.13] menggunakan rumus kan ya
+[776.13 --> 778.37] sigma dari D
+[778.37 --> 780.21] D nya adalah
+[780.92 --> 793.70] indeks untuk fitur keberapa itu ya dari xd dikurangi xid jadi pertama di sini adalah
+[793.70 --> 807.50] p1 p2 ini nilai P satunya adalah nol untuk fitur X dan menilai P2 untuk fitur X adalah
+[807.50 --> 813.98] 2 berarti 0 minus 2 kuadrat ditambah
+[815.27 --> 817.43] Y nya adalah 2
+[817.43 --> 819.35] Dikurangi
+[819.35 --> 823.71] Nilai Y dari B2 adalah
+[823.71 --> 824.73] 0
+[824.73 --> 826.19] Kewadrat
+[827.40 --> 829.52] maka sama dengan
+[830.44 --> 832.60] akar kuatir dari 4
+[832.60 --> 834.48] plus 4
+[835.78 --> 838.36] dengan agar water dari
+[838.36 --> 839.82] 8
+[839.82 --> 842.12] atau hasilnya adalah
+[844.21 --> 846.05] 2 akar 2
+[846.05 --> 848.63] kalau kita hitung
+[848.63 --> 849.43] lebih lanjut
+[849.43 --> 850.73] 2 akar 2 adalah
+[858.84 --> 868.92] Lalu yang berikutnya ya, misalnya antara P4 dan P3 gitu ya, jadi kita akan menghitung
+[870.69 --> 872.41] D dari
+[872.41 --> 876.41] B4
+[878.02 --> 880.08] Hai rumah ketiga
+[880.93 --> 882.93] di sini aku buat terdiri
+[884.20 --> 889.40] Nilai X-nya adalah 5 minus 3.
+[890.50 --> 891.72] kuatkan
+[892.36 --> 894.36] ditambah
+[894.69 --> 897.07] 1 minus 1
+[897.07 --> 899.53] kuadrat sama dengan
+[899.53 --> 901.73] per kuadrat dari
+[903.03 --> 905.03] 4
+[905.03 --> 906.31] 2 kuadrat
+[906.31 --> 908.51] ditambah 0
+[908.51 --> 911.11] jadi akar dari 4
+[911.11 --> 912.47] sama dengan 2
+[912.47 --> 914.77] nah ini yang
+[914.77 --> 916.23] tadi dicontohkan
+[916.23 --> 918.93] sifatnya adalah simetris gitu ya
+[918.93 --> 920.91] jadi pada saat kita menghitung
+[920.91 --> 923.27] jarak antara P4, P3
+[923.27 --> 924.69] dengan P
+[924.69 --> 926.81] jarak antara P3, P4
+[926.81 --> 927.83] hasilnya akan sama-sama
+[927.83 --> 930.47] kenapa ya? karena ini kan hanya pengurangan
+[930.47 --> 932.53] dan ada operasi kuadrat
+[932.53 --> 933.57] maka hasilnya akan
+[933.57 --> 936.43] misalnya 3 minus 5 kan hasilnya minus 2
+[936.43 --> 939.01] tapi kan kita kuadratkan
+[939.01 --> 940.77] jadi hasilnya tetap 4
+[946.05 --> 948.45] ukuran jarak kemiripan
+[948.45 --> 949.65] yang lain yaitu
+[949.65 --> 951.35] yang kedua adalah hemming distance
+[951.35 --> 953.53] hemming distance ini biasa digunakan
+[953.53 --> 956.45] untuk fitur-fitur yang kategorikal
+[956.45 --> 957.67] jadi kalau tadi itu kan
+[957.67 --> 959.63] nilai dari fitur X1
+[959.63 --> 960.97] berupa numerik gitu ya
+[960.97 --> 963.71] nilai dari X
+[965.17 --> 967.77] 2 atau P1 dan P2
+[967.77 --> 968.93] adalah nilainya numerik
+[968.93 --> 970.29] nah disini kalau misalnya
+[970.29 --> 973.35] nilai dari fitur tersebut
+[973.35 --> 975.45] bukan numerik tapi berupa kategorikal
+[975.45 --> 977.53] jadi contohnya
+[977.53 --> 979.15] suhu
+[979.15 --> 980.79] badan misalnya
+[980.79 --> 983.23] tinggi, rendah, normal
+[983.23 --> 985.01] itu masuk kategorikal fitur
+[985.01 --> 987.29] nah pada saat kita bertemu
+[987.29 --> 989.03] fitur seperti itu, meskipun
+[989.03 --> 990.87] sebenarnya kita bisa mengkonversi
+[990.87 --> 993.07] melakukan perubahan dari kategorikal
+[993.07 --> 994.63] fitur menjadi
+[994.63 --> 995.91] numerikal fitur
+[995.91 --> 998.65] nah tetapi tidak menutup
+[998.65 --> 1000.77] kemungkinan ketika kita tetap menginginkan
+[1000.77 --> 1002.45] menggunakan kategorikal fitur
+[1002.45 --> 1004.91] nah caranya mengukur kemiripannya
+[1004.91 --> 1005.73] menggunakan
+[1005.73 --> 1008.55] jarak yang namanya
+[1008.55 --> 1010.91] hemming distance, nah hemming distance
+[1010.91 --> 1012.73] ini sebenarnya merupakan
+[1012.73 --> 1014.79] jumlah
+[1014.79 --> 1015.31] dari
+[1020.95 --> 1029.11] Hai apa namanya jumlah dari keseluruhan fitur yang tidak sama gitu ya
+[1029.91 --> 1033.03] Hai jadi kalau misalnya
+[1034.04 --> 1036.10] sampel data ujinya
+[1036.10 --> 1037.86] suhu badan tinggi
+[1037.86 --> 1039.12] lalu
+[1039.12 --> 1041.94] sampel untuk
+[1041.94 --> 1043.46] data trainingnya
+[1043.46 --> 1045.44] suhu badan rendah
+[1045.44 --> 1046.88] maka berarti
+[1046.88 --> 1049.24] tidak ada kemiripan
+[1049.24 --> 1051.72] maka kita akan menghitungnya
+[1051.72 --> 1052.76] sebagai satu
+[1052.76 --> 1055.46] nanti kalau ada fitur lain yang
+[1055.46 --> 1056.96] kategorikal
+[1059.69 --> 1068.21] Hai Om misal contohnya tadi suhu badan gitu ya terus lalu yang berikutnya muncul gejala atau
+[1068.21 --> 1076.07] tidak gitu ya ini nilainya ya atau tidak terus disini kita ternyata dari sampel data latihnya
+[1076.07 --> 1082.41] ya sampel data ujinya adalah tidak berarti kita akan menambah satu lagi jadi nilai mindesnya tadi
+[1082.41 --> 1086.13] satu persen atau sama dengan dua percaya
+[1086.13 --> 1091.33] hai hai
+[1091.33 --> 1093.55] hai hai
+[1093.55 --> 1096.53] hai hai
+[1096.53 --> 1098.87] hai hai
+[1098.87 --> 1102.09] hai hai
+[1102.09 --> 1105.73] hai hai
+[1105.73 --> 1108.73] hai hai
+[1108.73 --> 1111.63] hai hai
+[1111.63 --> 1112.33] hai hai
+[1086.84 --> 1096.44] lalu yang ketiga yang disebut sebagai manhattan atau city block distance jadi perbedaannya dengan
+[1096.44 --> 1105.92] Euclidean distance adalah kita tidak menggunakan akar kuadrat dan selisih antara data training
+[1105.92 --> 1135.90] terima kasih
+[1107.54 --> 1111.78] maaf, selisih antara data uji dengan data training ini
+[1111.78 --> 1114.82] kita juga tidak menguatratkan
+[1114.82 --> 1119.50] tapi hanya menggunakan selisihnya saja
+[1119.50 --> 1122.58] dan diterapkan fungsi absolut
+[1122.58 --> 1127.68] nah, lalu yang berikutnya ada max distance
+[1127.68 --> 1131.52] atau bisa disebut sebagai sub distance atau semi-sub distance
+[1131.52 --> 1136.78] jadi sama dengan manhattan distance
+[1136.78 --> 1139.92] untuk perhitungannya, tetapi kita tidak menjumlahkan
+[1139.92 --> 1143.44] keseluruhan nilai absolut dari selisih
+[1143.44 --> 1148.00] masing-masing fitur
+[1148.00 --> 1155.50] tetapi kita mencari nilai selisih yang terbesar
+[1156.41 --> 1161.17] Lalu yang berikutnya ada yang namanya Minkowski Distance.
+[1161.37 --> 1167.09] Minkowski Distance ini menggunakan rumus akar DIP.
+[1167.09 --> 1170.55] Ini kurang ya.
+[1172.49 --> 1184.67] Hai umum harusnya Sigma D dari nilai absolut X diminisi x i,d pangkat P
+[1186.34 --> 1199.22] Kira-kira Anda bisa menempatkan bagaimana jika P sama dengan 1, berarti kita memiliki distance apa, P sama dengan 2, distance-nya apa, dan P sama dengan tak hingga, distance-nya apa.
+[1199.88 --> 1205.10] Jadi Minkowski distance ini sebenarnya merupakan bentuk umum dari
+[1206.33 --> 1210.53] tiga ukuran kemiripan tadi ya, jadi ada
+[1210.53 --> 1212.13] Euclidean Distance
+[1215.00 --> 1218.80] setiap blok listen dan max listen
+[1221.81 --> 1226.09] Nah, ini adalah contoh perhitungannya.
+[1226.31 --> 1229.31] Nah, mungkin nanti Anda bisa mengecek sendiri.
+[1229.31 --> 1242.05] Jadi, ya berarti termasuk kategori tadi pada saat P sama dengan 1, P sama dengan 2, dan P sama dengan tahinga ini berarti sama dengan disenis mana yang tadi sudah saya sebutkan.
+[1242.82 --> 1244.54] berdasarkan perhitungan ini
+[1244.54 --> 1246.72] nah lalu yang terakhir
+[1246.72 --> 1248.08] adalah mahalanobis distance
+[1248.08 --> 1250.26] jadi mahalanobis distance ini
+[1250.26 --> 1251.82] merupakan distance
+[1251.82 --> 1253.04] yang
+[1253.04 --> 1255.62] dikembangkan
+[1255.62 --> 1258.82] cukup
+[1258.82 --> 1260.52] artinya lebih terkini
+[1260.52 --> 1261.12] daripada
+[1261.12 --> 1264.10] distance-distance tadi yang sudah saya sebutkan
+[1264.10 --> 1266.28] nah pada saat kita misalnya
+[1266.28 --> 1268.34] menghitung punya sampel data seperti ini
+[1268.34 --> 1270.66] dua buah titik merah
+[1270.66 --> 1272.02] lalu kita menghitung
+[1272.02 --> 1274.48] distance-distance-nya maka ukurannya akan menjadi
+[1274.48 --> 1277.18] di kisaran
+[1277.18 --> 1278.60] angka 14,7
+[1278.60 --> 1280.56] nah tapi kalau kita menggunakan
+[1280.56 --> 1281.58] mahalanobis distance
+[1281.58 --> 1284.50] kita bisa menunjukkan ternyata
+[1284.50 --> 1286.52] jaraknya adalah hanya
+[1286.52 --> 1288.72] 6, karena kalau kita lihat memang juga
+[1288.72 --> 1290.30] tidak terlalu
+[1290.30 --> 1291.64] ini ya tidak terlalu
+[1291.64 --> 1292.90] jauh
+[1292.90 --> 1296.52] cukup mirip
+[1296.52 --> 1298.50] untuk menghitungnya
+[1298.50 --> 1299.78] maka kita
+[1299.78 --> 1301.76] misalnya dua buah data
+[1301.76 --> 1303.26] tersebut adalah x dan y
+[1303.26 --> 1304.44] maka kita akan menghitung
+[1304.44 --> 1307.06] nilai x dikurangi
+[1307.06 --> 1307.66] y
+[1310.12 --> 1311.76] ditransposkan
+[1311.76 --> 1313.86] dikalikan dengan nilai
+[1313.86 --> 1315.18] kevarian matrix
+[1319.30 --> 1321.40] inverse dari nilai ke varian matriks
+[1321.40 --> 1323.42] dikalikan lagi dengan x-mini
+[1323.42 --> 1325.44] seperti itu nanti kita bisa
+[1325.44 --> 1327.30] mendapatkan nilai
+[1327.30 --> 1328.98] melanobis disini seperti apa
+[1328.98 --> 1330.98] nanti mungkin anda bisa
+[1330.98 --> 1332.08] mencoba-coba sendiri

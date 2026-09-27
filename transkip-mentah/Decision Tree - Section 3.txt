@@ -1,0 +1,354 @@
+[0.21 --> 1.51] kita akan mulai
+[1.51 --> 4.15] bagian yang ketiga
+[4.15 --> 6.45] yaitu bagaimana
+[6.45 --> 7.45] decision tree
+[7.45 --> 10.23] menentukan atribut
+[10.23 --> 11.95] mana yang akan kita
+[11.95 --> 12.67] split
+[12.67 --> 16.57] untuk proses selanjutnya
+[16.57 --> 17.03] gitu ya
+[17.03 --> 19.05] disini
+[19.05 --> 22.43] dari contoh tadi yang
+[22.43 --> 23.71] sudah
+[23.71 --> 25.47] kita bahas
+[25.47 --> 27.45] jadi kita bisa
+[27.45 --> 29.07] lihat
+[29.07 --> 31.37] misalnya dari dua buah
+[31.37 --> 33.21] fitur saja ya outlook dan win
+[33.21 --> 34.93] maka
+[34.93 --> 37.57] kita bisa melihat bahwasannya
+[37.57 --> 39.47] untuk outlook ada
+[39.47 --> 41.83] tiga cabang yaitu
+[41.83 --> 43.01] ketika bernilai
+[43.01 --> 45.67] outlooknya bernilai sunny, overcast maupun rain
+[45.67 --> 47.43] dimana untuk
+[47.43 --> 49.51] outlook overcast disini
+[49.51 --> 51.75] akan menghasilkan
+[51.75 --> 53.65] pure subset
+[53.65 --> 54.31] dimana
+[54.31 --> 57.85] terdiri dari 4 sample data yes
+[57.85 --> 58.59] dan 0
+[58.59 --> 59.93] sample data yang
+[59.93 --> 60.95] no
+[60.95 --> 62.59] sedangkan untuk win
+[62.59 --> 65.03] ada dua weak dan strong
+[65.03 --> 66.21] kedua-duanya
+[66.21 --> 69.15] tidak menghasilkan
+[69.15 --> 71.03] pure subset
+[72.57 --> 83.33] Nah, di sini sebenarnya yang ingin kita ukur pada saat kita ingin memutuskan bagaimana proses splittingnya
+[83.33 --> 90.65] Kita membutuhkan ukuran yang bisa digunakan untuk mengukur yang namanya purity
+[90.65 --> 100.79] Nah, purity di sini tujuannya supaya kita lebih tahu secara pasti
+[100.79 --> 111.41] Bagaimana kondisi persebaran sampel data yang yes maupun yang no setelah dilakukan proses splitting
+[111.41 --> 116.11] Nah, di sini ada yang dua bagian
+[116.11 --> 120.17] Yang pertama yang dikatakan sebagai pure set
+[121.17 --> 129.73] Jadi yang benar-benar dengan kepastian 100% gitu ya
+[129.73 --> 136.47] Jadi disini contohnya adalah 4 yes dan 0 no
+[136.47 --> 140.67] Sebenarnya untuk pure set ya ada yang lain gitu ya
+[140.67 --> 143.65] 0 yes 4 no juga termasuk pure set
+[143.65 --> 146.75] Atau 5 yes 0 no juga pure set
+[146.75 --> 150.77] 0 yes 5 no juga pure set
+[150.77 --> 159.57] Atau jadi n yes 0 no atau 0 yes n yes
+[159.57 --> 165.81] Eh sorry 0 yes n no itu juga termasuk sebagai pure set
+[165.81 --> 170.63] Dengan tingkat kepastian yaitu sebesar 100%
+[170.63 --> 174.17] Sebaliknya ada yang dikatakan sebagai impure
+[174.17 --> 178.87] Impure disini artinya sangat-sangat tidak pasti gitu ya
+[178.87 --> 179.91] Jadi
+[179.91 --> 180.07] Jadi
+[180.07 --> 183.25] , dengan kepastian hanya 50%
+[183.25 --> 190.41] Jadi, ini untuk semua subset yang memiliki komposisi antara
+[190.41 --> 193.21] Kelas yang satu dengan kelas yang lainnya
+[193.21 --> 195.21] 50-50 gitu ya
+[195.21 --> 197.69] Jadi kalau misalnya ada 8 sampel data ya
+[197.69 --> 199.23] 4 yes 4 no
+[199.23 --> 204.31] 6 sampel data ya berarti 3 yes 3 no dan seterusnya
+[204.31 --> 208.65] Nah, tetapi pada saat kita mengukur priority
+[208.65 --> 209.91] Kita tidak bisa hanya memiliki kelas yang satu dengan kelas yang lain
+[209.91 --> 213.09] Kita hanya menggunakan misalnya konsep probabilitas
+[213.09 --> 217.29] Misalnya konsep probabilitas kemunculan yes
+[217.29 --> 223.29] Jika diketahui sebuah sampel data set gitu ya
+[223.29 --> 224.29] Nah, kenapa?
+[224.29 --> 228.09] Karena tadi untuk pure set itu kan
+[228.09 --> 234.37] n yes 0 no ataupun 0 yes n no
+[234.37 --> 239.75] Jadi contohnya kalau misalnya 4 yes dengan 0 no
+[239.75 --> 239.89] Jadi contohnya kalau misalnya 4 yes dengan 0 no
+[239.91 --> 245.81] Maka probabilitas kemunculan yesnya jika diketahui subset terkait
+[245.81 --> 247.11] Berarti dia 100%
+[247.11 --> 248.41] Tapi kalau misalnya
+[248.41 --> 253.09] Untuk kondisi 0 yes 4 no
+[253.09 --> 257.39] Berarti probabilitas kemunculan yesnya adalah 0
+[257.39 --> 260.91] Nah, berarti kan ada suatu nilai probabilitas yang berbeda ya
+[260.91 --> 263.91] Yang 100% yang 1 0%
+[263.91 --> 268.91] Padahal 2 kondisi tersebut sama-sama menunjukkan
+[269.91 --> 271.45] Pure set
+[271.45 --> 276.33] Sehingga kita tidak bisa menggunakan ukuran probabilitas saja
+[276.33 --> 282.41] Untuk mengukur purity dari splitting data set yang terbentuk
+[282.41 --> 286.69] Nah, kenapa purity jadi penting?
+[286.89 --> 288.01] Ya, pada contoh tadi
+[288.01 --> 292.41] Pada saat kita di bagian root node
+[292.41 --> 298.97] Kita menerapkan fitur untuk bagian root node adalah outlook
+[298.97 --> 299.47] Kenapa?
+[299.47 --> 299.87] Karena
+[299.91 --> 304.25] Outlook dianggap sebagai fitur yang paling informatif
+[304.25 --> 307.91] Dimana untuk salah satu kemungkinan nilainya
+[307.91 --> 309.59] Atau untuk salah satu cabangnya
+[309.59 --> 312.49] Dia menghasilkan pure subset
+[312.49 --> 316.33] Yaitu pada saat outlooknya sama dengan overcase
+[316.33 --> 321.45] Nah, maka yang bisa digunakan untuk mengukur adalah
+[321.45 --> 324.63] Ukuran yang disebut sebagai entropy
+[324.63 --> 328.33] Entropy disini fungsinya untuk mengukur derajat ketidakpastian
+[328.33 --> 329.47] Di dalam sebuah data
+[329.47 --> 332.01] Jadi misalnya kita memiliki
+[332.01 --> 334.87] Sekumpulan sampel data
+[334.87 --> 336.99] Yang dinotasikan sebagai S besar
+[336.99 --> 342.33] Dan C adalah sekumpulan dari kelas
+[342.33 --> 345.89] Maka entropy dari S dinotasikan sebagai HS
+[345.89 --> 350.19] Sama dengan minus dari sigma C kecil elemen C besar
+[350.19 --> 353.77] Jadi C kecil ini berarti kelas-kelasnya
+[353.77 --> 358.97] Dari PC, probabilitas kemunculan kelas ke C
+[358.97 --> 361.65] Dikalikan log 2 PC
+[361.65 --> 364.07] Tadi sudah saya sebutkan
+[364.07 --> 368.43] PC adalah probabilitas kemunculan kelas ke C
+[370.71 --> 377.75] Contohnya ini tadi, kalau misalnya kita punya impure subset dengan 3 yes dan 3 no,
+[378.27 --> 382.21] karena kita memiliki 2 kelas yaitu yes dengan no,
+[382.37 --> 391.29] maka entropy dari S atau denotasikan sebagai HS sama dengan minus P probabilitas kemunculan yes dikalikan log 2 dari P yes,
+[391.79 --> 396.17] dikurangi probabilitas kemunculan no dikalikan log 2 dari P no,
+[396.17 --> 404.65] di mana untuk P yesnya adalah jumlah munculnya yes adalah 3 dan keseluruhan sampel subsetnya adalah 6,
+[404.75 --> 407.87] berarti 3 per 6, begitu pula untuk P no karena jumlah.
+[410.47 --> 412.15] sampel data no nya adalah 3
+[412.15 --> 413.99] dengan keseluruhan sampel data set nya
+[413.99 --> 416.41] keseluruhan sampel subset nya
+[416.41 --> 417.99] adalah 6, maka 3 per
+[417.99 --> 419.87] 6, nah sekarang
+[419.87 --> 421.89] dari
+[421.89 --> 423.17] 3
+[423.17 --> 425.35] ini ya, log
+[425.35 --> 428.43] 2 dari 3 per 6
+[428.43 --> 430.45] ini kan sama dengan
+[430.45 --> 432.37] log 2
+[432.37 --> 433.57] dari
+[433.57 --> 436.03] setengah gitu ya
+[437.21 --> 443.55] atau sama dengan log 2 dari 2 pangkat minus 1
+[443.55 --> 447.39] maka disini sama dengan minus 1
+[447.39 --> 450.89] jadi disini minus 3 per 6 adalah setengah
+[452.01 --> 464.01] Log 2 dari 3 per 6 adalah minus 1, ini berarti minus 3 per 6, ini adalah log 2 dari 3 per 6, maka hasilnya adalah setengah plus setengah.
+[464.85 --> 469.43] Nah, lalu yang berikutnya, setengah plus setengah sama dengan 1 gitu ya.
+[469.43 --> 475.47] Jadi, ketika kita memiliki impure subset, pasti nilainya adalah 1.
+[475.47 --> 488.19] Jadi, mau 3 yes 3 no, 4 yes 4 no, 5 yes 5 no, dan seterusnya, pasti akan ketika 50-50 maka akan menghasilkan nilai entropy sama dengan 1.
+[488.51 --> 498.13] Kenapa? Nilainya justru malah ketika impure malah 1 ya, karena entropy digunakan untuk mengukur derajat ketidakpastian.
+[498.13 --> 504.31] Jadi, pada saat sangat tidak pasti, 50-50 kan sesuatu yang sangat tidak pasti gitu ya,
+[504.73 --> 505.13] maka berarti...
+[505.47 --> 509.95] Jadi, nilainya akan menjadi nilai maksimal, yaitu sama dengan 1.
+[510.57 --> 522.59] Nah, sebaliknya pada pure set, pure subset, maka nilainya pasti akan menghasilkan nilai entropy yang 0 gitu.
+[523.01 --> 533.55] Jadi, kalau kita hitung juga, ini ya, minus 4 per 4 kali log 2 dari 4 per 4, dikurangi 0 per 4, kali log 2 dari 0 per 4.
+[534.59 --> 535.45] Ya, di sini...
+[535.45 --> 536.89] 0 per 4 kan 0 ya.
+[537.80 --> 540.40] berarti 0 yang ini 4 per 4
+[540.40 --> 541.98] kan sama dengan 1
+[541.98 --> 543.42] 1 itu kan sama dengan
+[543.42 --> 545.40] 2 pangkat 0
+[545.40 --> 547.02] berarti min 1 dikalikan 0
+[547.02 --> 549.84] ini hasilnya sama dengan 0
+[549.84 --> 551.92] jadi untuk sembarang
+[551.92 --> 553.88] kondisi pure subset
+[553.88 --> 555.44] 4 yes 0 no
+[555.44 --> 557.24] 0 yes 4 no
+[557.24 --> 560.34] n yes 0 no
+[560.34 --> 562.26] 0 yes n no
+[562.26 --> 563.58] itu pasti hasilnya akan
+[563.58 --> 565.14] sama dengan 0
+[565.14 --> 565.72] karena
+[565.72 --> 567.16] eee
+[568.50 --> 570.16] dia sangat pasti gitu ya
+[570.16 --> 572.76] kalau sangat pasti, berarti karena entropi
+[572.76 --> 574.68] mengukur derajat
+[574.68 --> 576.18] ketidakpastian, berarti dia akan
+[576.18 --> 577.40] nilai yang paling
+[577.40 --> 580.48] minimal, yaitu 0
+[580.48 --> 582.34] nah kalau untuk diantaranya bagaimana ya?
+[582.36 --> 583.54] diantaranya tinggal dihitung saja
+[583.54 --> 586.82] menggunakan romus yang sudah dijelaskan
+[586.82 --> 587.14] tadi
+[587.14 --> 590.76] lalu yang berikutnya, ukuran yang berikutnya
+[590.76 --> 592.12] disebut sebagai information gain
+[592.12 --> 594.36] misalnya
+[594.36 --> 596.20] untuk setiap
+[596.20 --> 598.54] elemen di dalam
+[598.54 --> 600.96] sampel data set
+[600.96 --> 602.04] terdiri dari
+[602.04 --> 604.54] sekumpulan fitur, maka kita perlu
+[604.54 --> 607.02] menghitung information gain
+[607.02 --> 608.38] dari fitur tersebut
+[608.38 --> 609.66] information gain
+[609.66 --> 612.92] untuk sampel data S dan fitur F
+[612.92 --> 613.84] maka sama dengan
+[613.84 --> 616.20] entropi dari S
+[616.20 --> 618.02] dikurangi minus sigma
+[618.02 --> 620.32] F kecil
+[620.32 --> 622.22] F disini adalah nilai
+[622.22 --> 624.54] dari fitur ke F, elemen dari F
+[624.54 --> 625.04] besar
+[625.04 --> 626.64] dari
+[626.64 --> 629.52] jumlah sampel data
+[629.52 --> 631.70] yang memiliki nilai fitur
+[631.70 --> 633.46] F kecil dibagi keseluruhan
+[633.46 --> 635.18] sampel data, dikalikan dengan
+[637.70 --> 645.20] entropi dari sampel data yang memiliki nilai fitur f kecil
+[645.20 --> 655.40] nah ini contohnya kita masih di root node dengan sampel datanya adalah 9 yes dan 5 no
+[655.40 --> 660.32] dan kita akan melihat fitur win disini ada dua kemungkinan nilai fitur
+[660.32 --> 667.28] jadi f kecilnya disini ini ada
+[669.24 --> 670.92] dua gitu ya
+[670.92 --> 671.44] jadi
+[671.44 --> 673.52] bisa
+[673.52 --> 675.44] klik
+[676.34 --> 678.48] atau bisa strong
+[680.15 --> 681.91] jadi ini F besar
+[681.91 --> 683.29] F besar
+[683.29 --> 685.45] dia ada 2 kemungkinan
+[685.45 --> 686.33] nah ini berarti
+[686.33 --> 689.53] F sama dengan W
+[691.30 --> 694.54] Yang ini F sama F kecil sama dengan strong.
+[696.39 --> 696.89] Ya.
+[697.96 --> 704.72] Lalu yang pertama kita menghitung nilai entropi dari sampel data S besar gitu ya
+[704.72 --> 711.16] Berarti PS nya 9 per 14 kali log 2 dari 9 per 14
+[711.16 --> 716.14] Dikurangi P0 nya adalah 5 per 14 dikalikan log 2 dari 5 per 14
+[716.14 --> 718.32] Sama dengan ini 0,94
+[718.32 --> 724.16] Lalu yang berikutnya kita akan menghitung information gain
+[724.16 --> 732.96] Information gain ini dihitung untuk masing-masing fitur
+[732.96 --> 735.30] Nah pada saat kita mengambil
+[735.30 --> 740.16] Berarti pertama kita akan menghitung information gain untuk fitur data win gitu ya
+[740.16 --> 746.04] Nah karena di win ini ada 2 kemungkinan nilai fiturnya yaitu strong atau weak
+[746.04 --> 751.96] Maka kita bisa mengambil terlebih dahulu untuk sampel data yang weak
+[751.96 --> 753.96] Sample data yang weak ini ada di 9
+[754.16 --> 759.26] Nomor 1, 3, 4, 5
+[760.61 --> 764.43] 8, 9, 10, 13
+[764.43 --> 768.99] berarti totalnya ada 1, 2, 3, 4, 5, 6, 7, 8
+[768.99 --> 772.57] total ada 8 sampel data yang weak
+[772.57 --> 778.71] dimana terdiri dari 2 no dan 6 yes
+[778.71 --> 779.89] betasnya seperti ini
+[779.89 --> 787.93] maka kita bisa menghitung entropi dari sampel data yang weak
+[787.93 --> 789.41] berarti sama dengan
+[792.15 --> 793.91] PS berarti 6 per
+[793.91 --> 797.31] totalnya adalah 8
+[797.31 --> 799.59] dikalikan log 2 dari 6 per 8
+[799.59 --> 800.75] minus
+[800.75 --> 803.03] P0 nya adalah minus 2 per 8
+[803.03 --> 804.51] dikalikan log 2 dari 2 per 8
+[804.51 --> 806.01] hasilnya seperti ini
+[806.01 --> 807.89] lalu yang berikutnya
+[807.89 --> 809.57] untuk yang strong
+[809.57 --> 811.27] disini ternyata ada
+[811.27 --> 814.41] 1, 2, 3, 4, 5
+[814.41 --> 816.73] 6 ya
+[816.73 --> 818.77] ada 6 sampel data
+[818.77 --> 821.75] dimana 3 yes dan 3 no
+[821.75 --> 824.25] maka berarti kita sudah
+[824.25 --> 825.87] pasti tau ya gitu ya bahwa disini
+[825.87 --> 828.01] pada saat
+[829.80 --> 832.78] impure, maka nilainya adalah 1
+[832.78 --> 835.32] maka kita bisa menghitung information gain
+[835.32 --> 837.38] untuk keseluruhan sampel data
+[837.38 --> 840.70] pada saat fiturnya adalah win
+[840.70 --> 845.14] maka entropi dari sampel data
+[845.14 --> 849.10] dikurangi banyaknya sampel data
+[849.10 --> 852.42] yang memiliki fitur winnya weak
+[852.42 --> 855.38] dibagi dengan keseluruhan sampel data
+[855.38 --> 858.56] dikalikan entropi dari sampel data yang weak
+[858.56 --> 862.72] dikurangi jumlah sampel data
+[862.72 --> 866.36] yang memiliki fitur win strong
+[866.36 --> 868.38] dibagi keseluruhan jumlah sampel data
+[868.38 --> 872.66] dikalikan dengan entropi dari sampel data yang strong
+[873.73 --> 877.05] entropi dari keseluruhan sampel datanya 0,94
+[877.05 --> 877.91] dari sini ya
+[877.91 --> 879.29] lalu yang berikutnya
+[879.29 --> 881.73] jumlah yang weak adalah
+[881.73 --> 883.17] berarti 6 plus 2
+[883.17 --> 884.85] total adalah 8
+[884.85 --> 886.63] dibagi keseluruhannya adalah 14
+[886.63 --> 889.97] dikalikan entropi dari
+[889.97 --> 893.63] fitur win yang weak
+[893.63 --> 895.57] 0,811
+[895.57 --> 897.29] dikurangi jumlah yang strong
+[897.29 --> 899.19] adalah 6
+[899.19 --> 901.65] dibagi per 14
+[901.65 --> 902.91] keseluruhan total data
+[902.91 --> 906.11] dikalikan dengan nilai entropi
+[906.11 --> 906.83] dari strong
+[906.83 --> 910.11] maka hasilnya 0,084
+[912.73 --> 920.39] Dengan cara yang sama, kita hitung lagi untuk fitur yang lain, yaitu fitur humidity.
+[921.33 --> 923.61] Ternyata kita memperoleh hasilnya adalah
+[926.84 --> 931.60] nilai information gain nya 0,152
+[931.60 --> 937.40] terakhir kita menghitung dengan cara yang sama
+[937.40 --> 944.48] kita hitung juga untuk fitur yang ketiga yaitu outlook
+[944.48 --> 949.28] dan diperoleh hasil adalah 0,247
+[949.28 --> 954.46] maka kita bisa simpulkan bahwasannya information gain
+[954.46 --> 957.96] yang diperoleh untuk fitur wind 0,048
+[957.96 --> 961.58] untuk humidity adalah 0,152
+[961.58 --> 966.28] dan untuk yang outlook adalah 0,247
+[966.84 --> 972.50] nah karena outlook disini memiliki nilai information gain yang tertinggi
+[972.50 --> 979.66] maka kita menetapkan outlook ini sebagai root node
+[979.66 --> 983.14] dan selanjutnya kita akan melakukan glowing the tree
+[983.14 --> 984.14] untuk secara iterative
+[984.46 --> 989.12] memilih fitur dengan information tertinggi
+[989.12 --> 990.12] untuk
+[992.17 --> 994.75] level yang ada di bawahnya
+[995.69 --> 998.47] berarti kita sudah memiliki
+[998.47 --> 1000.23] hasilnya seperti ini
+[1000.23 --> 1002.39] yang kita ambil di root node adalah outlook
+[1002.39 --> 1004.11] dengan 3 buah cabang yaitu
+[1004.11 --> 1005.71] sunny, overcast, dan rain
+[1005.71 --> 1007.83] lalu ini hasil
+[1007.83 --> 1009.15] subsetnya
+[1010.25 --> 1012.81] jadi ini masih belum pure set
+[1012.81 --> 1014.85] berarti masih akan di split lebih lanjut
+[1014.85 --> 1015.95] yang ini juga
+[1015.95 --> 1018.17] belum pure set maka akan
+[1018.17 --> 1020.11] di split lebih lanjut
+[1020.11 --> 1022.39] sedangkan untuk yang bagian overcast disini
+[1022.39 --> 1024.13] dia sudah pure subset berarti tidak akan
+[1024.13 --> 1026.57] kita split lebih lanjut
+[1026.57 --> 1028.63] nah untuk proses split lebih lanjut
+[1028.63 --> 1029.99] ya kita sama menghitung
+[1032.50 --> 1040.82] entropi terlebih dahulu lalu menghitung information gain untuk masing-masing fiturnya
+[1042.58 --> 1051.82] Nah sekarang coba kita lihat gitu ya jadi untuk sampel datanya ini yang sebelah kiri ya sepertinya
+[1054.21 --> 1059.43] 1, 2, 8, ya ini berarti untuk bagian yang Outlook-nya adalah Sunny terlebih dahulu.
+[1060.21 --> 1065.01] Nah, Outlook-nya sama dengan Sunny, berarti yang di bagian Outlook Sunny sudah tidak perlu kita pertimbangkan lagi, kan?
+[1065.11 --> 1074.25] Karena ini yang, apa namanya, fitur yang tadi sudah kita terapkan pada node sebelumnya.
+[1074.25 --> 1077.13] Berarti kita melihat di bagian Humidity.
+[1077.13 --> 1089.29] Humidity berarti S-nya sudah tidak lagi 14, gitu ya, tapi hanya ada 5 buah sampel data ini yang terdiri dari 2 Yes dan 3 No.
+[1089.45 --> 1092.95] Maka kita bisa menghitung nilai entropi-nya, hasilnya seperti ini.
+[1093.41 --> 1101.63] Lalu, kita ambil untuk fitur Humidity, height-nya berarti dia sudah 0 Yes dan 3 No.
+[1101.63 --> 1102.75] Berarti dia pure subset.
+[1104.57 --> 1106.91] Ya, pure subset.
+[1107.13 --> 1112.03] Pasti nilai entropi-nya adalah 0.
+[1112.21 --> 1118.55] Sedangkan untuk yang normal, dia juga 2 Yes dan 0 No.
+[1118.91 --> 1122.17] Maka dia juga nilai entropi-nya adalah 0.
+[1122.31 --> 1130.67] Sekarang kalau kita hitung information gain-nya, ya dikalikan dengan 0, maka hasilnya adalah nilai entropi-nya saja.
+[1132.93 --> 1136.07] Sebenarnya kita
+[1139.89 --> 1141.13] yang berikutnya
+[1141.13 --> 1143.83] ini humidity
+[1143.83 --> 1145.87] ya ini maaf
+[1145.87 --> 1147.11] aduh gimana sih
+[1148.28 --> 1149.28] hmm
+[1151.22 --> 1157.50] Hai Yah jadi yang berikutnya untuk fitur yang win disini
+[1158.81 --> 1174.69] Berarti sama ya kita lakukan proses perhitungan dari entropi lalu kita cari entropi untuk nilai sampel data yang memiliki fitur win-nya weak.
+[1174.69 --> 1182.03] Lalu kita juga menghitung entropi untuk sampel data yang memiliki fitur win-strong.
+[1182.03 --> 1190.13] Lalu kita hitung information gain dari sampel data S yang memiliki fitur win-strong untuk outlook-nya Sunny.
+[1191.35 --> 1196.59] Lalu kita hitung information gain-nya.
+[1198.09 --> 1200.33] Hai ini hasilnya
+[1202.01 --> 1202.87] Terima kasih.
+[1204.79 --> 1209.79] hasilnya adalah 0,020
+[1210.84 --> 1228.96] Nah ini tadi untuk yang bagian humidity 0,971, berarti kita bisa peroleh dari win ini, dari humidity 0,971, maka kita akan setting humidity sebagai internal node untuk sisi yang sebelah kiri.
+[1229.78 --> 1235.10] Jadi setelah outbox ini, kita menggunakan fitur humidity.
+[1236.49 --> 1242.73] Hai yang berikutnya tinggal yang sisi sebelah kanan gitu ya kita lakukan hal
+[1242.73 --> 1248.55] yang sama kita lihat fitur win-nya terlebih dahulu kita hitung information gain nya
+[1249.64 --> 1250.64] Terima kasih.
+[1251.37 --> 1264.81] hasilnya 0,971 lalu di bagian humidity hasilnya 0,020 lalu kita lihat ternyata
+[1264.81 --> 1272.13] besar yang win maka win ini digunakan sebagai internal node untuk ini maaf
+[1273.75 --> 1275.09] Right side
+[1275.09 --> 1277.63] Untuk sisi yang sebelah kanan
+[1278.61 --> 1289.09] Jadi hasil akhirnya adalah decision tree seperti tadi yang sudah saya contohkan di section sebelumnya.
+[1289.09 --> 1297.33] Jadi kalau section sebelumnya kan kita tidak melakukan perhitungan tapi hanya dengan mengamati mana sampel-sampel data yang pure dan tidak.
+[1297.65 --> 1302.03] Nah tetapi kan tidak mungkin kalau datanya sampai ribuan kita diminta untuk mengamati satu persatu.
+[1302.03 --> 1305.21] Maka kita perlu menerapkan suatu ukuran.
+[1305.39 --> 1309.77] Nah ukuran yang bisa diterapkan adalah dengan menggunakan nilai entropi dan information gain.
+[1310.49 --> 1317.31] Nah dengan proses perhitungan kita bisa membentuk hasil akhirnya adalah decision tree seperti yang ada di layar.

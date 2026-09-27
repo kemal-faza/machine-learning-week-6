@@ -1,0 +1,78 @@
+[2.49 --> 10.77] Baik, untuk pembahasan selanjutnya adalah mengenai contoh dari penerapan KNL Sniper.
+[11.75 --> 24.99] Jadi, di sini kita memiliki hasil survei untuk mengategorikan apakah sebuah kertas tisu termasuk berkualitas tinggi atau rendah dengan hasil survei sebagai berikut.
+[24.99 --> 31.45] Jadi, kita menggunakan dua buah fitur yaitu daya tahan keasaman atau X1 dan kekuatan atau X2.
+[31.45 --> 39.53] Lalu, kategorinya ini menunjukkan kelasnya yaitu kelas berkualitas tinggi atau T atau kertas berkualitas rendah atau R.
+[40.29 --> 46.13] Nah, sekarang kita punya empat buah sampel data sebagaimana ditunjukkan dalam tabel.
+[46.13 --> 51.11] Lalu, yang berikutnya pabrik tersebut akan memproduksi sebuah kertas tisu baru.
+[51.23 --> 58.17] Ternyata, setelah diuji ini tingkat keasamannya adalah 3 dan kekuatannya adalah 7.
+[58.59 --> 60.83] Maka, berdasarkan sampel data yang ada,
+[60.83 --> 66.63] kita diminta untuk memprediksi termasuk kategori apakah
+[68.89 --> 72.61] kertas tisu baru tersebut
+[72.61 --> 75.21] dan algoritma yang digunakan adalah
+[75.21 --> 76.59] algoritma kinerja sneaker
+[76.59 --> 80.69] disini untuk
+[82.20 --> 83.74] prosesnya maka yang
+[83.74 --> 85.76] pertama sebenarnya kita
+[85.76 --> 87.96] perlu menghitung jarak antara
+[87.96 --> 89.68] data uji
+[89.68 --> 92.10] dengan masing-masing sampel data latih
+[92.10 --> 93.80] nah disini untuk memudahkan
+[93.80 --> 95.50] notasinya saya berikan notasi
+[95.50 --> 98.00] untuk sampel data latih
+[98.00 --> 99.78] pertama saya tuliskan L1
+[99.78 --> 102.24] sampel data latih kedua L2
+[102.24 --> 103.84] dan seterusnya sampai dengan L4
+[103.84 --> 105.84] sedangkan untuk data ujinya
+[105.84 --> 107.80] saya notasikan sebagai U
+[107.80 --> 109.88] lalu yang berikutnya
+[109.88 --> 112.10] ini adalah nilai
+[112.10 --> 113.32] fitur X1
+[113.32 --> 115.70] nilai fitur X2
+[116.81 --> 122.87] Lalu yang berikutnya adalah kelasnya, yaitu kelas Y.
+[123.35 --> 127.05] Ini kualitas rendah, kualitas rendah, kualitas tinggi, kualitas tinggi.
+[127.51 --> 134.97] Dan kita diminta untuk memprediksi data uji ini termasuk kelas atau kategori kualitas apa, rendah atau tinggi.
+[135.81 --> 140.87] Nah, kita menghitung jarak antara data uji dengan sampel data latih ke I.
+[140.87 --> 149.63] Jadi, yang pertama berarti jarak antara data uji dengan sampel data latih pertama atau L1.
+[150.33 --> 167.59] Kita bisa menghitungnya, berarti 3 dikurangi 7, akar dari 3 dikurangi 7 wadrat, ditambah 7 minus 7 wadrat, atau sama dengan akar dari 16 plus 0, atau sama dengan 4.
+[167.97 --> 170.09] Lalu, pada saat L2.
+[170.87 --> 186.07] Jarak antara U dengan L2, berarti 3 akar dari 3 minus 7 wadrat, ditambah 7 minus 4 wadrat, atau sama dengan akar dari 16 plus 9, sama dengan akar 25, sama dengan 5.
+[186.71 --> 190.23] Dan seterusnya sampai ke data latih ke 4.
+[190.53 --> 196.17] Lalu, langkah yang berikutnya kita perlu mengurutkan atau meranking gitu ya.
+[196.17 --> 200.39] Jadi, yang paling rendah adalah L3, ini sebagai ranking pertama.
+[200.87 --> 204.13] Lalu, ranking keduanya adalah L4.
+[205.05 --> 207.01] Dengan nilai 3,61
+[207.01 --> 207.91] Lalu
+[211.62 --> 219.22] Yang berikutnya adalah L1 dengan jarak 4 dan yang terakhir adalah L2 dengan jarak 5.
+[219.85 --> 249.83] Terima kasih telah menonton
+[222.50 --> 224.78] 5, nah lalu yang berikutnya
+[224.78 --> 226.72] proses pengambilan keputusannya
+[226.72 --> 228.88] pada saat kita menggunakan
+[228.88 --> 230.90] nilai k sama dengan 1 atau one nearest neighbor
+[230.90 --> 232.60] maka berarti kita hanya
+[232.60 --> 234.54] melihat peringkat pertama saja
+[236.45 --> 239.11] berarti kelas prediksinya adalah T
+[239.11 --> 241.73] sedangkan pada saat kita menggunakan
+[241.73 --> 244.43] K sama dengan 3 atau 3 nilai snake ball
+[244.43 --> 246.33] maka berarti kita melihat
+[246.33 --> 248.39] peringkat pertama
+[249.72 --> 250.84] peringkat kedua
+[250.84 --> 253.64] dan peringkat ketiga
+[253.64 --> 255.50] atau kita bisa tahu bahwasannya
+[255.50 --> 257.60] jumlah kelas T nya ada
+[257.60 --> 259.60] dua dan jumlah kelas R nya
+[259.60 --> 260.98] ada satu
+[260.98 --> 262.98] maka berarti dominan yang T
+[262.98 --> 265.34] maka kita akan memprediksi
+[265.34 --> 267.58] sebagai kelas T
+[267.58 --> 269.42] dan kenapa kita tidak
+[269.42 --> 271.42] saya tidak mencontohkan dua dan empat
+[271.42 --> 272.92] nah ini nanti akan saya jelaskan
+[272.92 --> 275.16] lebih detail
+[275.16 --> 277.12] terkait dengan isu-isu di dalam
+[277.12 --> 277.88] kini ada sneaker
+[277.88 --> 279.88] ini
+[280.77 --> 290.27] Selanjutnya, ini adalah soal yang bisa Anda kerjakan untuk tugas pada perkembangan minggu ini.
+[290.79 --> 302.45] Jadi, bisa dibilang disitu ada data yang direpresentasikan menjadi dua, yaitu pos dan lingkaran.
+[306.87 --> 329.07] Disitu kita yang pertama jika kita ingin memprediksi data baru yaitu berupa nilai X-nya 1 dan Y-nya 1 itu setelah kita menggunakan algorithm distance dan primary sniper itu maka kelas prediksi untuk data baru tersebut apa gitu ya.
+[329.07 --> 359.05] Apakah termasuk kelas atau termasuk primary sniper.
+[361.01 --> 364.65] Kulon yang sudah disiapkan

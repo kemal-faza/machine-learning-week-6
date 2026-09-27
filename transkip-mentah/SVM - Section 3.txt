@@ -1,0 +1,164 @@
+[1.40 --> 3.38] selanjutnya pada bagian ketiga ini
+[3.38 --> 5.86] kita akan membahas contoh kasus
+[5.86 --> 7.56] untuk linear SVM
+[7.56 --> 8.86] perhatikan
+[8.86 --> 11.44] dataset berikut
+[11.44 --> 14.44] dimana kita memiliki
+[14.44 --> 16.78] 4 buah sampel data
+[16.78 --> 18.48] jadi
+[18.48 --> 21.76] sampel data tersebut
+[21.76 --> 23.14] memiliki
+[23.14 --> 24.72] untuk memprediksi
+[24.72 --> 26.68] kelas Y
+[26.68 --> 28.78] dipengaruhi oleh 2 buah
+[28.78 --> 30.48] fitur
+[30.48 --> 32.38] yaitu X1 dan X2
+[32.38 --> 34.62] dan dimana
+[34.62 --> 35.44] kelasnya
+[35.44 --> 38.36] ada 2 yaitu kelas minus 1
+[38.36 --> 39.58] dan kelas plus 1
+[39.58 --> 42.42] jadi 4 buah data tersebut
+[42.42 --> 44.10] ketika X1 nya 1
+[44.10 --> 46.64] X2 nya 1
+[46.64 --> 48.86] maka kelasnya
+[48.86 --> 49.72] adalah 1
+[51.01 --> 61.81] Lalu yang berikutnya, 1 minus 1, kelasnya minus 1, minus 1, 1, kelasnya minus 1, dan minus 1, minus 1, kelasnya minus 1.
+[61.81 --> 72.73] Atau ketika direpresentasikan ke dalam bentuk 2 dimensi, maka ini tadi untuk data ini.
+[74.61 --> 76.79] X1 sama dengan 1
+[76.79 --> 78.47] Dan X2 sama dengan 1
+[78.47 --> 79.59] Maka kelasnya adalah
+[79.59 --> 80.77] Plus 1
+[82.07 --> 84.19] lalu yang lain
+[84.19 --> 86.75] 1 minus 1
+[86.75 --> 87.21] ini
+[89.93 --> 91.15] kelasnya minus 1
+[91.15 --> 93.41] lalu yang berikutnya
+[93.41 --> 94.57] minus 1 1
+[95.46 --> 104.02] Ini kelasnya juga minus 1 dan minus 1, klik minus 1, kelasnya adalah minus 1.
+[106.47 --> 107.93] nah disini berarti
+[107.93 --> 110.61] kita bisa tahu
+[110.61 --> 111.43] bahwasannya
+[111.43 --> 114.65] untuk sampel data ke 1, ke 2
+[114.65 --> 116.71] dan ke 3 ini merupakan support vector
+[116.71 --> 118.45] sedangkan yang
+[118.45 --> 119.95] terakhir bukan merupakan
+[119.95 --> 121.95] support vector karena
+[121.95 --> 124.69] dia bukan titik
+[126.23 --> 127.79] terdekat dengan
+[127.79 --> 130.39] kemungkinan
+[130.39 --> 131.51] hyperplan yang akan
+[135.48 --> 137.90] kita tentukan atau kita cari
+[139.25 --> 141.55] maka dari situ
+[141.55 --> 142.75] kita
+[142.75 --> 145.63] tujuannya kan tadi memaksimalkan nilai margin
+[145.63 --> 146.71] yaitu pengetahuan lain
+[146.71 --> 149.49] kita akan meminimalkan nilai
+[149.49 --> 151.43] setengah kali panjang
+[151.43 --> 152.97] W2 sama dengan
+[152.97 --> 154.89] setengah kali
+[154.89 --> 156.81] W1 tambah W2
+[156.81 --> 159.11] syaratnya yaitu
+[159.11 --> 161.69] YI
+[161.69 --> 163.93] dikalikan dengan
+[163.93 --> 164.97] W
+[164.97 --> 194.95] terima kasih
+[166.37 --> 168.87] kali W X I plus B
+[168.87 --> 170.71] lebih besar dari sama dengan 1
+[170.71 --> 171.65] dimana I nya
+[171.65 --> 174.31] menunjukkan dari 1, 2, 3, dan seterusnya
+[174.31 --> 176.03] sama dengan ke N
+[177.32 --> 186.64] Nah, sekarang kita perhatikan, jadi dari sampel-sampel data ini, maka kita akan mendapatkan 4 buah persamaan gitu ya.
+[186.64 --> 201.54] Jadi pada saat kelasnya 1, y-nya 1, maka berarti disini 1 digalikan x1-nya adalah 1, maka hasilnya adalah w1.
+[201.54 --> 207.92] Lalu x2-nya sama dengan 1, berarti ditambah w2.
+[209.11 --> 213.57] lalu ditambah B lebih besar dari 1
+[213.57 --> 219.09] lalu yang berikutnya untuk kelasnya minus 1
+[219.09 --> 229.15] maka hasilnya adalah minus 1 dikalikan W1 kali 1
+[229.15 --> 235.49] ditambah W2 kali minus 1 ditambah B lebih besar dari 1
+[235.49 --> 240.35] disini berarti minus kali plus maka hasilnya adalah minus W1
+[240.35 --> 246.47] lalu yang berikutnya minus dikalikan minus maka hasilnya adalah plus W2
+[246.47 --> 252.23] minus dikalikan plus hasilnya minus B lebih besar dari 1
+[253.37 --> 255.33] Lalu yang ketiga hasilnya adalah
+[255.33 --> 257.41] W1 minus W2 minus B
+[257.41 --> 259.39] lebih besar dari sama dengan 1
+[259.39 --> 261.25] dan yang keempat adalah
+[261.25 --> 263.01] W1 plus W2 minus B
+[263.01 --> 265.47] lebih besar dari sama dengan 1.
+[266.07 --> 267.49] Nah, dari
+[267.49 --> 270.41] pertidaksamaan
+[270.41 --> 272.77] keempat pertidaksamaan tersebut
+[272.77 --> 275.47] maka kita bisa menerapkan
+[275.47 --> 276.99] tadi yang sebesar data
+[276.99 --> 279.17] programming, dimana kita
+[279.17 --> 281.45] akan menggunakan
+[281.45 --> 283.13] apa namanya
+[283.13 --> 285.27] tiga buah pertidaksamaan ini
+[285.27 --> 286.43] untuk
+[286.43 --> 289.07] mendapatkan nilai W1, W2
+[289.07 --> 290.59] dan nilai B.
+[291.07 --> 291.43] Jadi,
+[292.15 --> 294.83] persamaan 1 dan 2 ini akan
+[294.83 --> 296.23] kita jumlahkan
+[296.23 --> 298.71] maka berarti
+[298.71 --> 300.55] ini hilang ya
+[300.55 --> 303.13] ini juga hilang, maka hasilnya
+[303.13 --> 305.21] adalah 2 W2 sama dengan
+[305.21 --> 307.37] 2 atau nilai W2 sama dengan
+[307.37 --> 309.03] 1. Lalu
+[309.03 --> 310.71] antara 1 dan
+[310.71 --> 311.43] 3
+[311.43 --> 313.01] berarti
+[313.01 --> 316.33] B nya hilang
+[316.33 --> 318.97] W2 nya hilang, hasilnya adalah
+[318.97 --> 320.49] 2 W1 sama dengan
+[320.49 --> 321.87] 2 atau
+[321.87 --> 324.57] W1 sama dengan 1.
+[325.07 --> 326.41] Lalu yang berikutnya
+[326.41 --> 329.07] persamaan 2 dan 3
+[330.12 --> 330.88] Terima kasih.
+[333.13 --> 335.63] minus W1 dengan W1 hilang
+[335.63 --> 337.57] W2 dengan minus W2 hilang
+[337.57 --> 340.33] hasilnya adalah minus 2B sama dengan 2
+[340.33 --> 342.21] atau B sama dengan minus 1
+[342.21 --> 345.43] sehingga akan didapatkan
+[345.43 --> 348.25] persamaan hyperplane tadi dari
+[348.25 --> 351.91] W1 kali X1 ditambah W2 kali X2 ditambah B sama dengan 0
+[351.91 --> 355.41] kita substitusikan dari W1 nya adalah 1
+[355.41 --> 358.91] berarti 1 dikalikan X1 ditambah 1
+[358.91 --> 360.91] ditambah X2 dikalikan X2
+[360.91 --> 362.25] minus B
+[362.25 --> 364.65] plus B tapi B nya minus 1
+[364.65 --> 367.39] maka disini minus 1 sama dengan 0
+[367.39 --> 369.37] atau dengan latar lain saya bisa menuliskan
+[369.37 --> 375.07] X2 sama dengan pindah ruas 1 minus X1
+[378.61 --> 379.11] ya
+[381.17 --> 395.27] dari situ maka kita bisa menentukan Jadi kalau misalnya nilai X satunya adalah
+[396.20 --> 398.72] Minus 2
+[401.51 --> 403.75] maka
+[403.75 --> 405.45] berarti akan
+[405.45 --> 407.17] X2 nya sama dengan
+[407.17 --> 409.75] 1 minus minus 2 atau sama dengan
+[409.75 --> 410.21] 3
+[411.17 --> 422.11] Pada saat X1 sama dengan minus 1, maka X2 sama dengan 1 minus minus 1, atau 1 plus 1 sama dengan 2, dan seterusnya.
+[422.59 --> 428.15] Dan kalau kita gambarkan akan mendapatkan hyperplane garis ini.
+[436.66 --> 445.00] Lalu selanjutnya misalkan diketahui data uji atau data testing
+[445.00 --> 454.16] dimana nilainya adalah 5 data testing atau data uji yang pertama
+[454.16 --> 461.12] untuk x1 nya sama dengan 1, x2 nya sama dengan 5
+[461.12 --> 466.52] maka dimana kelasnya itu berdasarkan fungsi signum dari fx
+[466.52 --> 469.94] jadi x1 nya ini 1
+[471.08 --> 478.46] Kita substitusikan X1 sama dengan 1, ditambah X2 sama dengan 5, 1 plus 5, dikurangi.
+[480.47 --> 483.45] Hasilnya 4 atau positif
+[483.45 --> 485.27] Berarti maka kelasnya adalah
+[485.27 --> 487.17] Signum dari 4
+[487.17 --> 488.77] Maka kelasnya adalah persatu
+[490.10 --> 499.34] hai lalu yang berikutnya contoh di yang terakhir ini ya jadi x1 nya 2
+[500.85 --> 503.43] ditambah x2 nya minus 2
+[503.43 --> 505.27] 2 plus minus 2
+[505.27 --> 507.45] sama dengan 0
+[507.45 --> 508.93] dikurangi 1
+[508.93 --> 511.17] berarti hasilnya adalah minus
+[511.17 --> 513.71] 1
+[513.71 --> 515.77] signum dari minus 1
+[515.77 --> 517.41] maka kelas prediksi
+[517.41 --> 518.97] ini adalah minus 1
+[518.97 --> 521.63] untuk yang lain konsepnya
+[521.63 --> 522.27] sama

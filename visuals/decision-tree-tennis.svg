@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 520" role="img" aria-labelledby="title desc">
+  <title id="title">Decision Tree untuk keputusan bermain tenis</title>
+  <desc id="desc">Pohon dimulai dari Outlook. Cabang Sunny menguji Humidity, cabang Rain menguji Wind, dan Overcast langsung memprediksi Yes.</desc>
+  <defs>
+    <style>
+      text { font-family: Inter, Arial, sans-serif; }
+      .title { font-size: 23px; font-weight: 700; fill: #152b3c; }
+      .node { fill: #173c5a; stroke: #173c5a; stroke-width: 2; }
+      .nodeText { fill: #ffffff; font-size: 17px; font-weight: 650; text-anchor: middle; dominant-baseline: middle; }
+      .leafYes { fill: #e5f6ee; stroke: #25835a; stroke-width: 2; }
+      .leafNo { fill: #fff0ed; stroke: #c44735; stroke-width: 2; }
+      .yesText { fill: #176342; font-size: 16px; font-weight: 700; text-anchor: middle; dominant-baseline: middle; }
+      .noText { fill: #a6382b; font-size: 16px; font-weight: 700; text-anchor: middle; dominant-baseline: middle; }
+      .edge { fill: none; stroke: #7890a0; stroke-width: 2.5; }
+      .branch { fill: #324f65; font-size: 14px; font-weight: 650; text-anchor: middle; }
+      .note { fill: #536a79; font-size: 14px; }
+    </style>
+  </defs>
+  <rect width="1120" height="520" rx="18" fill="#ffffff"/>
+  <text class="title" x="560" y="34" text-anchor="middle">Decision Tree: apakah bermain tenis?</text>
+
+  <path class="edge" d="M500 118 L500 154 L260 154 L260 208"/>
+  <path class="edge" d="M560 118 L560 360"/>
+  <path class="edge" d="M620 118 L620 154 L860 154 L860 208"/>
+  <path class="edge" d="M230 270 L230 316 L130 316 L130 372"/>
+  <path class="edge" d="M290 270 L290 316 L390 316 L390 372"/>
+  <path class="edge" d="M830 270 L830 316 L770 316 L770 372"/>
+  <path class="edge" d="M890 270 L890 316 L990 316 L990 372"/>
+
+  <text class="branch" x="390" y="146">Sunny</text>
+  <text class="branch" x="580" y="190">Overcast</text>
+  <text class="branch" x="730" y="146">Rain</text>
+  <text class="branch" x="175" y="307">High</text>
+  <text class="branch" x="345" y="307">Normal</text>
+  <text class="branch" x="800" y="307">Strong</text>
+  <text class="branch" x="945" y="307">Weak</text>
+
+  <rect class="node" x="470" y="54" width="180" height="64" rx="14"/>
+  <text class="nodeText" x="560" y="86">Outlook</text>
+  <rect class="node" x="170" y="208" width="180" height="62" rx="14"/>
+  <text class="nodeText" x="260" y="239">Humidity</text>
+  <rect class="node" x="770" y="208" width="180" height="62" rx="14"/>
+  <text class="nodeText" x="860" y="239">Wind</text>
+
+  <rect class="leafNo" x="45" y="372" width="170" height="62" rx="18"/>
+  <text class="noText" x="130" y="403">Play Tennis = No</text>
+  <rect class="leafYes" x="305" y="372" width="170" height="62" rx="18"/>
+  <text class="yesText" x="390" y="403">Play Tennis = Yes</text>
+  <rect class="leafYes" x="485" y="372" width="150" height="62" rx="18"/>
+  <text class="yesText" x="560" y="403">Play Tennis = Yes</text>
+  <rect class="leafNo" x="685" y="372" width="170" height="62" rx="18"/>
+  <text class="noText" x="770" y="403">Play Tennis = No</text>
+  <rect class="leafYes" x="905" y="372" width="170" height="62" rx="18"/>
+  <text class="yesText" x="990" y="403">Play Tennis = Yes</text>
+
+  <text class="note" x="560" y="482" text-anchor="middle">Setiap jalur dari root ke leaf menjadi satu aturan; syarat pada jalur digabung dengan AND.</text>
+</svg>

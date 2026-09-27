@@ -1,0 +1,73 @@
+[0.85 --> 8.25] Pada bagian ke-6 ini kita akan membahas mengenai algoritma C45 sebagai salah satu varian dari decision tree gitu ya.
+[8.31 --> 16.93] Meskipun sebenarnya selain C45 juga ada algoritma-algoritma yang lain yang termasuk dalam kategori decision tree.
+[17.87 --> 21.67] Nah tapi yang paling umum digunakan adalah C45 gitu ya.
+[21.67 --> 23.67] Nah disini...
+[25.24 --> 26.44] motivasinya
+[26.44 --> 27.92] algoritma C45 ini
+[27.92 --> 29.90] mengatasi keterbatasan dari
+[29.90 --> 31.66] algoritma EDITRI
+[31.66 --> 34.08] yang dijelaskan sebelumnya
+[34.08 --> 34.68] dimana
+[34.68 --> 37.72] dia sangat sensitif
+[37.72 --> 39.78] terhadap fitur
+[39.78 --> 40.20] dengan
+[42.89 --> 53.33] kemungkinan nilainya sangat besar jadi satu buah fitur itu kan ada beberapa kemungkinan nilai
+[53.33 --> 61.31] gitu ya tadi misalnya anginnya strong atau weak gitu ya kencang atau tidak itu berarti kan ada
+[61.31 --> 70.21] dua kemungkinan nilai untuk fitur angin gitu nanti di ID3 ini dia akan sensitif ketika jumlah
+[70.21 --> 76.45] anginnya ini banyak gitu baik misalnya dalam bentuk kontinus maupun diskret nah pengembangan
+[76.45 --> 85.99] yang dilakukan apa ya pengembangan yang dilakukan untuk proses splitting dia menggunakan yang
+[85.99 --> 95.35] namanya gain ratio gitu ya jadi untuk mengecek apakah nanti apa namanya
+[97.41 --> 99.71] hasil 3 yang dihasilkan
+[99.71 --> 101.43] ini pure atau
+[101.43 --> 103.39] tidaknya tidak menggunakan
+[103.39 --> 105.33] teknik yang sebelumnya tetapi
+[105.33 --> 107.17] dikembangkan menggunakan yang namanya
+[107.17 --> 107.95] gain ratio
+[107.95 --> 111.01] jadi gain ratio
+[111.01 --> 113.35] disini
+[113.35 --> 115.75] rumusnya
+[115.75 --> 117.61] seperti yang terlihat di depan
+[117.61 --> 118.15] jadi
+[118.15 --> 120.99] sama dengan
+[120.99 --> 123.23] gain dari S, A dibagi dengan
+[123.23 --> 124.43] split info dari
+[124.43 --> 126.97] S, A dimana
+[126.97 --> 128.25] split info ini
+[128.25 --> 131.07] dihitung dari minus sigma
+[131.07 --> 132.49] dari I sama dengan
+[132.49 --> 134.73] 1 sampai dengan C
+[134.73 --> 138.39] SI per S kali
+[138.39 --> 140.27] log 2 SI per S
+[140.27 --> 143.11] dimana SI disini
+[143.11 --> 149.15] SI ini kan berjalan
+[149.15 --> 150.69] dari 1 sampai dengan C
+[150.69 --> 151.65] berarti disini
+[151.65 --> 154.39] S1 sampai dengan SC ini adalah
+[154.39 --> 155.73] jumlah kasus
+[155.73 --> 156.89] untuk
+[156.89 --> 159.81] masing-masing nilai
+[159.81 --> 161.19] dari
+[161.19 --> 164.21] fitur A
+[164.21 --> 166.07] jadi
+[166.07 --> 169.29] tadi kan saya sudah
+[169.29 --> 170.53] sebutkan bahasanya fitur
+[170.53 --> 172.79] sebuah fitur ini bisa
+[172.79 --> 175.37] memiliki berapa kemungkinan nilai
+[175.37 --> 176.81] nah
+[176.81 --> 178.95] fiturnya ini
+[178.95 --> 180.23] dinotasikan sebagai
+[180.23 --> 183.17] variable A
+[183.17 --> 184.59] jadi untuk
+[184.59 --> 186.17] fitur
+[186.89 --> 189.49] A ini kita akan menghitung
+[189.49 --> 191.83] berapa jumlah
+[191.83 --> 193.49] kasus untuk
+[193.49 --> 195.19] nilai fitur A pertama
+[195.19 --> 195.93] misalnya
+[195.93 --> 198.27] lalu nanti berapa jumlah kasus
+[198.27 --> 200.73] untuk fitur
+[200.73 --> 202.73] A nilai kedua dan seterusnya
+[202.73 --> 204.73] ini dituliskan
+[204.73 --> 206.73] sebagai
+[206.73 --> 212.73] S1 sampai dengan SC
+[214.66 --> 224.82] Jadi perbedaannya hanya di proses splittingnya saja gitu ya, teknik untuk merakukan proses splitting.

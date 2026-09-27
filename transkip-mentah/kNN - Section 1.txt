@@ -1,0 +1,102 @@
+[0.76 --> 3.76] Bismillahirrahmanirrahim, Assalamualaikum warahmatullahi wabarakatuh
+[3.76 --> 6.64] Selamat bergabung kembali dalam pertemuan kedua
+[6.64 --> 8.88] Mata Kuliah Pembelajaran Mesin
+[8.88 --> 11.68] Pada kesempatan kali ini kita akan membahas salah satu
+[11.68 --> 14.64] algoritma di kategori Supervised Learning
+[14.64 --> 17.32] yaitu KNR Snakebird
+[17.32 --> 21.58] Sebelum pembahasan lebih detail mengenai
+[21.58 --> 23.94] materi terkait
+[23.94 --> 27.08] berikut akan kami sampaikan
+[27.08 --> 30.74] outline untuk pertemuan kedua kali ini
+[30.76 --> 33.68] Pembahasan pertama yaitu penjelasan
+[33.68 --> 36.08] mengenai karakteristik dan definisi
+[36.08 --> 39.62] dari konsep lazy learning dan eager learning
+[39.62 --> 41.24] pada supervised learning
+[41.24 --> 44.54] Lalu yang kedua yaitu intuisi yang mendasari
+[44.54 --> 47.52] pengembangan algoritma KNR Snakebird
+[47.52 --> 51.60] dan bagaimana algoritma
+[51.60 --> 53.36] KNR Snakebird tersebut
+[53.36 --> 55.88] bekerja untuk proses klasifikasi
+[55.88 --> 59.82] Lalu penjelasan selanjutnya adalah
+[59.82 --> 60.36] kekejadian
+[60.76 --> 63.34] kekurangan atau kelemahan dari
+[63.34 --> 65.56] kategori Supervised Learning
+[65.56 --> 68.96] Penjelasan detail mengenai algoritma KNR Snakebird
+[68.96 --> 72.74] dan contoh penerapannya
+[72.74 --> 75.04] merupakan pokok bahasan lanjutan
+[75.04 --> 77.28] pada pertemuan kedua ini
+[77.28 --> 79.26] Dan penjelasan terakhir adalah
+[79.26 --> 81.60] penjelasan mengenai isu-isu
+[81.60 --> 83.56] terkait dengan
+[83.56 --> 86.34] algoritma KNR Snakebird
+[88.60 --> 93.06] Oke, langsung saja kita mulai pembahasan pada bagian atau seksion pertama,
+[93.06 --> 101.28] yakni mengenai karakteristik dan definisi dari konsep lazy learning serta eager learning.
+[102.22 --> 106.64] Nah, sebenarnya apa yang menjadi perbedaan kedua hal tersebut,
+[107.40 --> 112.10] yaitu antara lazy learning dan eager learning dalam supervised learning.
+[112.10 --> 123.10] Jadi, dalam konsep lazy learning, proses prediksi atau klasifikasi terhadap data baru di dalam data pengujian
+[123.64 --> 132.74] atau biasa disebut sebagai testing data dilakukan dengan cara menghitung kemiripan antara nilai fitur
+[132.74 --> 141.14] dari sampel data uji yang akan diprediksi dibandingkan dengan keseluruhan nilai fitur
+[141.14 --> 147.04] dari sampel-sampel yang ada di dalam koleksi data latih.
+[148.10 --> 158.32] Nah, sekarang perhatikan pipeline supervised learning yang telah saya jelaskan pada pertemuan sebelumnya.
+[160.42 --> 166.58] Jadi seperti yang telah saya jelaskan pada pertemuan yang lalu, secara garis besar
+[168.07 --> 181.53] Konsep supervised learning itu terdiri dari dua proses utama yaitu yang pertama adalah training proses, yang kedua adalah testing proses.
+[181.53 --> 188.87] Dimana training proses ini dilakukan menggunakan konsep batch learning.
+[189.94 --> 208.84] Jadi, proses pembelajaran ini bisa dilakukan terlebih dahulu, sedangkan untuk testing proses ini dilakukan menggunakan prinsip
+[210.31 --> 211.47] online learning
+[211.47 --> 213.87] mungkin lebih tepatnya real time
+[213.87 --> 215.33] real time process
+[218.34 --> 229.16] sehingga ketika ada begitu kita memiliki sebuah data baru maka testing proses ini akan dijalankan
+[229.16 --> 247.88] akan tetapi pada konsep lazy learning ini kita tidak akan melakukan proses pembelajaran menggunakan konsep batch learning ini
+[247.88 --> 259.14] jadi tahapan untuk menjalankan algoritma machine learning dan menghasilkan model klasifikasi ini
+[259.14 --> 262.20] tidak perlu dilakukan terlebih dahulu
+[262.20 --> 273.46] jadi proses batch learning yang dilakukan pada generasi network ini hanya sampai tahapan ekstraksi fitur
+[273.46 --> 279.46] jadi kalau memang misalnya disini ada tahapan preprocessing
+[282.92 --> 305.18] Tetap kita lakukan, jadi kita memiliki sekumpulan data yang sudah diberi label, lalu kalau memang ada preprocessing yang perlu kita lakukan, berarti kita menjalankan preprocessing, lalu setelahnya kita melaksanakan tahap selanjutnya yaitu ekstraksi fitur.
+[305.18 --> 318.34] Dan hasilnya adalah kita memiliki sekumpulan fitur faktor. Nah, selanjutnya fitur faktor ini akan disimpan.
+[321.17 --> 324.09] di lazy learning tahapannya
+[324.09 --> 325.49] hanya sampai seperti ini saja
+[325.49 --> 328.05] ketika feature vector ini sudah disimpan
+[328.05 --> 329.07] proses
+[331.30 --> 334.12] yang menggunakan konsep batch learning ini selesai
+[334.12 --> 341.02] nah nanti ketika misalnya kita memiliki sebuah data baru
+[341.02 --> 343.52] yang akan diprediksi
+[343.52 --> 347.62] maka untuk real time proses yang dilakukan
+[347.62 --> 349.68] dimulai dengan
+[349.68 --> 352.62] sama ya kalau memang ada preprocessing
+[352.62 --> 356.82] ya berarti kita perlu melakukan preprocessing terlebih dahulu
+[356.82 --> 360.70] lalu setelahnya tahap berikutnya adalah
+[360.70 --> 363.92] melakukan ekstraksi fitur
+[363.92 --> 366.62] atau untuk menghasilkan feature factor
+[366.62 --> 369.62] lalu setelahnya
+[369.62 --> 371.92] nah kita langsung melakukan proses
+[371.92 --> 376.54] klasifikasi atau prediksi ini
+[376.54 --> 377.66] nah caranya bagaimana?
+[377.86 --> 381.56] caranya dengan kita mengukur similarity
+[381.56 --> 386.64] antara feature factor dari data testing
+[386.64 --> 390.34] kita bandingkan satu persatu
+[390.34 --> 390.68] dan kita bandingkan satu persatu
+[390.68 --> 390.70] dan kita bandingkan satu persatu
+[390.70 --> 395.28] jadi disini ini kita melakukan
+[395.28 --> 398.46] perhitungan similarity ya
+[399.62 --> 415.10] Kita hitung similarity antara feature factor dari data testing dihitung dengan feature factor dari data training.
+[415.10 --> 418.82] Nah, proses perhitungan similarity ini dilakukan satu per satu.
+[418.82 --> 437.96] Artinya, kalau kita misalnya memiliki satu buah data uji atau data testing dan kita memiliki 100 buah data training, berarti kita akan menghitung similarity sebanyak 100 kali.
+[437.96 --> 448.80] Jadi, similarity antara data testing dengan data training pertama, lalu kita hitung similarity antara data testing dengan data training.
+[448.82 --> 456.96] Dan seterusnya, sampai keseluruhan data training sudah dihitung similarity-nya.
+[457.38 --> 466.80] Lalu, bagaimana kalau misalnya data testingnya lebih dari satu, ada 10, ya berarti sedangkan untuk data trainingnya ada 100 sama.
+[467.12 --> 476.78] Berarti kita melakukan pengujian similarity sebanyak 10 dikalikan 100 atau menguji similarity sebanyak 1000 kali.
+[476.78 --> 477.96] Seperti itu.
+[478.56 --> 478.68] Nah.
+[478.82 --> 494.36] Nanti selanjutnya, setelah kita hitung similarity kesamaannya untuk proses pengambilan keputusannya, kita ambil berdasarkan nilai similarity yang paling kecil.
+[494.72 --> 503.78] Nah, itulah nanti yang akan kita ambil sebagai expected label atau predicted class.
+[506.39 --> 532.27] Konsep yang selanjutnya adalah konsep eager learning, di mana model klasifikasi untuk konsep eager learning ini perlu dibuat atau dikembangkan terlebih dahulu yang pada umumnya dihasilkan dari penerapan suatu algoritma machine learning terhadap sekumpulan data latih.
+[532.27 --> 538.21] Dan selanjutnya model yang sudah diperoleh tersebut akan digunakan untuk memprediksi pada testing data.
+[538.33 --> 558.01] Jadi kalau kita balik lagi ke gambar ini ya berarti untuk bentuk eager learning ya seperti secara keseluruhan seperti yang sudah saya jelaskan minggu lalu, sebagaimana digambarkan dalam gambar ini yaitu ada tahapan training proses yang tadi dijalankan menggunakan konsep batch learning,
+[558.01 --> 562.01] lalu juga ada testing proses yang dijalankan menggunakan konsep.
+[562.27 --> 580.69] Konsep real time proses, real time proses disini artinya ketika kita punya data uji baru langsung kita bisa mengklasifikasi atau memprediksi berdasarkan model yang sudah diperoleh pada tahapan training proses.
+[584.33 --> 591.07] Berdasarkan dua konsep tadi yaitu antara eager learning dan
+[592.45 --> 593.95] lazy learning
+[595.81 --> 611.93] Algoritma yang akan kita pelajari pada pertemuan ini yaitu nearest neighbor atau bentuk khususnya adalah nearest neighbor ini termasuk kategori lazy learning atau biasa juga dikenal dengan nama instant based learning.
+[612.15 --> 621.63] Jadi proses komputasi ini akan ditunda sampai ada data yang akan kita prediksi atau akan kita klasifikasikan.
+[621.63 --> 638.27] Nah ini merupakan teknik yang paling sederhana karena memang kita tidak memerlukan prior knowledge atau pengetahuan sebelumnya gitu ya mengenai bagaimana distribusi dari data ya.
+[638.43 --> 649.89] Pokoknya kita hanya punya data trainingnya, kita cukup mengekstraksi fiturnya saja, kita tidak peduli terkait dengan distribusi dari datanya atau hal-hal lainnya seperti itu.
